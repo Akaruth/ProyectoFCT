@@ -191,24 +191,27 @@ $pokemon = obtenerPokemon($conn, $tipoFiltro, $ordenFiltro, $offset, $limite);
     <!-- Paginacion de los pokemons cada 40 -->
     <nav>
         <ul class="pagination justify-content-center mt-3">
-            <?php if ($pagina > 1): ?>
-                <li class="page-item">
-                    <a class="page-link" href="?pagina=<?php echo $pagina - 1; ?>&tipo=<?php echo $tipoFiltro; ?>&orden=<?php echo $ordenFiltro; ?>#akadex" aria-label="Previous">
-                        <span aria-hidden="true"><i class="bi bi-caret-left-fill"></i></span>
-                    </a>
-                </li>
-            <?php endif; ?>
-            <?php for ($i = 1; $i <= $totalPaginas; $i++): ?>
-                <li class="page-item <?php if ($i == $pagina) echo 'active'; ?>">
-                    <a class="page-link" href="?pagina=<?php echo $i; ?>&tipo=<?php echo $tipoFiltro; ?>&orden=<?php echo $ordenFiltro; ?>#akadex"><?php echo $i; ?></a>
-                </li>
-            <?php endfor; ?>
-            <?php if ($pagina < $totalPaginas): ?>
-                <li class="page-item">
-                    <a class="page-link" href="?pagina=<?php echo $pagina + 1; ?>&tipo=<?php echo $tipoFiltro; ?>&orden=<?php echo $ordenFiltro; ?>#akadex" aria-label="Next">
-                        <span aria-hidden="true"><i class="bi bi-caret-right-fill"></i></span>
-                    </a>
-                </li>
+            <?php if ($totalPaginas > 1): ?>
+
+                <?php if ($pagina > 1): ?>
+                    <li class="page-item">
+                        <a class="page-link" href="?pagina=<?php echo $pagina - 1; ?>&tipo=<?php echo $tipoFiltro; ?>&orden=<?php echo $ordenFiltro; ?>#akadex" aria-label="Previous">
+                            <span aria-hidden="true"><i class="bi bi-caret-left-fill"></i></span>
+                        </a>
+                    </li>
+                <?php endif; ?>
+                <?php for ($i = 1; $i <= $totalPaginas; $i++): ?>
+                    <li class="page-item <?php if ($i == $pagina) echo 'active'; ?>">
+                        <a class="page-link" href="?pagina=<?php echo $i; ?>&tipo=<?php echo $tipoFiltro; ?>&orden=<?php echo $ordenFiltro; ?>#akadex"><?php echo $i; ?></a>
+                    </li>
+                <?php endfor; ?>
+                <?php if ($pagina < $totalPaginas): ?>
+                    <li class="page-item">
+                        <a class="page-link" href="?pagina=<?php echo $pagina + 1; ?>&tipo=<?php echo $tipoFiltro; ?>&orden=<?php echo $ordenFiltro; ?>#akadex" aria-label="Next">
+                            <span aria-hidden="true"><i class="bi bi-caret-right-fill"></i></span>
+                        </a>
+                    </li>
+                <?php endif; ?>
             <?php endif; ?>
         </ul>
     </nav>

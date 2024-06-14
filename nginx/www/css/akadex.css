@@ -99,7 +99,8 @@
 }
 
 .boton:hover {
-  color: rgb(84, 66, 10);
+  color: white;
+  background-color: rgb(197, 157, 24);
 }
 
 .colorFondo {

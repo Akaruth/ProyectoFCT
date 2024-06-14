@@ -28,7 +28,8 @@ box-sizing: border-box;
     font-size: $veinte;
     width: $cuatrocientos;
     @include flexColum();
-
+    @include aparecerFade;
+    animation: fadeIn 1s ease forwards;
 }
 
 .boton
@@ -43,6 +44,7 @@ box-sizing: border-box;
 }
 .boton:hover
 {
-    color: $colorEnlaceHover;
+    color: $blanco;
+    background-color: $amarilloMenuOscuro;
 
 }

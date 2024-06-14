@@ -27,6 +27,17 @@
   width: 400px;
   display: flex;
   flex-flow: column;
+  animation: fadeIn 1s ease forwards;
+}
+@keyframes fadein {
+  0% {
+    opacity: 0;
+    transform: translateX(50%) scale(0) rotateZ(-60deg);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0) scale(1) rotateZ(0deg);
+  }
 }
 
 .boton {
@@ -39,7 +50,8 @@
 }
 
 .boton:hover {
-  color: rgb(84, 66, 10);
+  color: white;
+  background-color: rgb(197, 157, 24);
 }
 
 /*# sourceMappingURL=editarPanel.css.map */
