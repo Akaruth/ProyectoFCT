@@ -345,6 +345,14 @@
 
 }
 
+@mixin flexStartCol()
+{
+    display: flex;
+    flex-flow: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
 @mixin flex-rowsCent ()
 {
     display: flex;
@@ -676,6 +684,103 @@
 }
 
 
+@mixin desplizarDentro
+{
+    @keyframes slideIn {
+        from {
+          transform: translateX(-100%);
+          opacity: 0;
+        }
+        to {
+          transform: translateX(0);
+          opacity: 1;
+        }
+      }
+}
 
 
+@mixin desplizarFuera
+{
+    @keyframes slideInRight 
+    {
+        from {
+          transform: translateX(100%);
+          opacity: 0;
+        }
+        to {
+          transform: translateX(0);
+          opacity: 1;
+        }
+      }
+}
 
+
+@mixin zoom
+{
+    @keyframes zoomIn {
+        from {
+          transform: scale(0);
+          opacity: 1;
+        }
+        to {
+          transform: scale(1);
+          opacity: 1.1;
+        }
+      }
+}
+
+@mixin desdeArriba
+{
+    @keyframes slideInTop {
+        0% {
+            transform: translateY(-100%);
+            opacity: 0;
+        }
+        100% {
+            transform: translateY(0);
+            opacity: 1;
+        }
+    }
+}
+
+@mixin desdeAbajo
+{
+    @keyframes slideInBottom {
+        0% {
+            transform: translateY(100%);
+            opacity: 0;
+        }
+        100% {
+            transform: translateY(0);
+            opacity: 1;
+        }
+    }
+}
+
+@mixin desplizarDentroGirando
+{
+    @keyframes slideIn {
+        from {
+            transform: translateX(-100%) rotate(-180deg);
+            opacity: 0;
+        }
+        to {
+            transform: translateX(0) rotate(0deg);
+            opacity: 1;
+        }
+    }
+}
+
+@mixin desplizarFueraGirando 
+{
+    @keyframes slideInRight {
+        from {
+            transform: translateX(100%) rotate(180deg);
+            opacity: 0;
+        }
+        to {
+            transform: translateX(0) rotate(0deg);
+            opacity: 1;
+        }
+    }
+}

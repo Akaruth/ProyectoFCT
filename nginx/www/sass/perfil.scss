@@ -8,6 +8,10 @@
     padding: $cero;
     box-sizing: border-box;
   }
+  body {
+    margin: 0;
+    overflow-x: hidden;
+  }
   .boton
   {
       padding: $cinco;
@@ -66,6 +70,10 @@
   gap: $diez;
   background: url(../imagen/mensajeria.png);
   @include ajustesFondoFull();
+  @include desplizarDentroGirando;
+  animation: slideIn 0.5s ease-out forwards;
+  position: relative;
+
 
 }
 
@@ -78,6 +86,9 @@
   gap: $diez;
   background: url(../imagen/akachat.png);
   @include ajustesFondoFull();
+  @include desplizarDentroGirando;
+  animation: slideIn 0.5s ease-out forwards;
+  position: relative;
 
 }
 
@@ -89,6 +100,9 @@
   gap: $diez;
   background: url(../imagen/minijuego.png);
   @include ajustesFondoFull();
+  @include desplizarFueraGirando;
+  animation: slideInRight 0.5s ease-out forwards;
+  position: relative;
 
 }
 
@@ -101,7 +115,10 @@
   gap: $diez;
   background: url(../imagen/akadex.png);
   @include ajustesFondoFull();
-  
+  @include desplizarFueraGirando;
+  animation: slideInRight 0.5s ease-out forwards;
+  position: relative;
+
 }
 .espacio
 {
@@ -168,6 +185,7 @@
   background-color: $colorGrisPerfil;
   padding: $cincuenta;
   border: $uno solid $blanco;
+ 
 }
 
 .textoResaltado

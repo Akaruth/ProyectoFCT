@@ -54,6 +54,17 @@
   background-color: rgba(133, 132, 131, 0.4);
   padding: 20px;
   border-radius: 5px;
+  animation: slideIn 3s ease forwards;
+}
+@keyframes slideIn {
+  from {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
 }
 
 .formulario {
@@ -88,6 +99,17 @@
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
+  animation: fadeIn 3s ease forwards;
+}
+@keyframes fadein {
+  0% {
+    opacity: 0;
+    transform: translateX(50%) scale(0) rotateZ(-60deg);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0) scale(1) rotateZ(0deg);
+  }
 }
 
 .formu {

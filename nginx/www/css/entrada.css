@@ -175,6 +175,17 @@
   font-size: 18px;
   background-color: rgba(180, 183, 185, 0.3);
   padding: 20px;
+  animation: fadeIn 3s ease forwards;
+}
+@keyframes apareciendo {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 .envoltorioComentarios .comentario .envoltorioAutor {
   display: flex;

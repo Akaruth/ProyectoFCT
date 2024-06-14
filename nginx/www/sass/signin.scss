@@ -33,7 +33,8 @@
 }
 .boton:hover
 {
-    color: $colorEnlaceHover;
+    color: $blanco;
+    background-color: $amarilloMenuOscuro;
 
 }
 .titulo1
@@ -60,6 +61,8 @@
     
     width: $setecientos;
     height: auto;
+    @include desdeAbajo;
+    animation: slideInBottom 2s ease forwards;
 }
 
 .card

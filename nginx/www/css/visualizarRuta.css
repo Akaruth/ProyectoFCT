@@ -40,6 +40,17 @@
 .rutaFoto {
   width: 390px;
   height: 400px;
+  animation: apareciendo 1.5s ease-out 0.5s;
+}
+@keyframes apareciendo {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .fotoRuta {

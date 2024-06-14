@@ -125,9 +125,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST")
            <li><a href="../index.php">Inicio <i class="bi bi-house-fill  animar"></i></a></li>
            <li class="categoria"><a href="../rutasInteractivasJuego.php" id="">Minijuego <i class="bi bi-joystick animar"></i></a>
                <ul class="submenu">
-                   <li><a href="visualizarRuta.php?idRuta=1" id="hombre">Ruta 1</a></li>
-                   <li><a href="visualizarRuta.php?idRuta=2" id="mujer">Ruta 2</a></li>
-                   <li><a href="visualizarRuta.php?idRuta=3" id="niños">Ruta 3</a></li>
+                   <li><a href="../visualizarRuta.php?idRuta=1" id="hombre">Ruta 1</a></li>
+                   <li><a href="../visualizarRuta.php?idRuta=2" id="mujer">Ruta 2</a></li>
+                   <li><a href="../visualizarRuta.php?idRuta=3" id="niños">Ruta 3</a></li>
                </ul> 
            </li>
 

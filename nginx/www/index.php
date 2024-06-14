@@ -214,7 +214,7 @@ if ($usuario !== 'Anonimo')
     </div>
 
     <div class="fondoOferta">
-        <div class="ofertaRegistro">
+        <div class="ofertaRegistro2">
             <div>
                 <img src="./imagen/victiniV.gif" class="imagenOferta" alt="happy">
             </div>

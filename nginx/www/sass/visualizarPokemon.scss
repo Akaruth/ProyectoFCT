@@ -90,6 +90,8 @@
         "fotoEvo fotoEvo nada";
     gap: $cinco;
     max-width: $milquinientos;
+    padding: $veinte;
+
 }
 
 .deDosEnDos 
@@ -116,29 +118,44 @@
     padding: $veinte;
     border-radius: $tres;
     border: $uno solid $negroOpaco04;
+    position: relative;
+    @include desplizarFuera();
+    animation: slideInRight 1.5s ease-out 0.5s;
 
 }
 
 .etimologia 
 {
     grid-area: etimologia;
+    position: relative;
+    @include desplizarDentro();
+    animation: slideIn 1.5s ease-out 0.5s;
+
 }
 
 .biologia 
 {
     grid-area: biologia;
+    position: relative;
+    @include desplizarDentro();
+    animation: slideIn 1.5s ease-out 0.5s;
 }
 
 .evoluciones 
 {
     grid-area: evoluciones;
+    position: relative;
+    @include desplizarDentro();
+    animation: slideIn 1.5s ease-out 0.5s;
 }
 
 .fotoEvo 
 {
     grid-area: fotoEvo;
     @include flexFlowRowAlignJustCent();
-
+    position: relative;
+    @include desplizarDentro();
+    animation: slideIn 1.5s ease-out 0.5s;
 }
 
 .fotoPokemon
@@ -189,6 +206,15 @@
             "evoluciones evoluciones "
             "fotoEvo fotoEvo  ";
         gap: $cinco;
-        padding: $veinte;
+    }
+    
+}
+
+@include pixeles700
+{
+    
+    .evoFoto 
+    {
+        width: 250px;
     }
 }

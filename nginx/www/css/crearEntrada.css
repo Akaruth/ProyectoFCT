@@ -17,9 +17,20 @@
 }
 .crearEntrada .formularioCrearEntrada {
   width: 1000px;
+  animation: fadeIn 1s ease forwards;
 }
 .crearEntrada .formularioCrearEntrada .descripcionCrearEntrada {
   height: 300px;
+}
+@keyframes fadein {
+  0% {
+    opacity: 0;
+    transform: translateX(50%) scale(0) rotateZ(-60deg);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0) scale(1) rotateZ(0deg);
+  }
 }
 
 .boton {

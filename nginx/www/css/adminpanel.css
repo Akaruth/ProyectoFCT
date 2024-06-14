@@ -19,6 +19,15 @@
   background-size: cover;
   background-repeat: no-repeat;
   justify-content: center;
+  animation: aparecer 2s ease forwards;
+}
+@keyframes aparecer {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 .listado {

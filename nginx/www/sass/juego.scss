@@ -25,8 +25,9 @@
 body
 {
     background-color: $blanco;
+    margin: 0;
+    overflow-x: hidden;
 }
-
 .envoltorio
 {
     position: relative;
@@ -50,13 +51,16 @@ body
 .juntosJuego 
 {
     @include flexRowWrapJustCent();
-
+   
 
 }
 .imgJuego
 {
     width: $novecientoscuarenta;
     height: $ochocientos;
+    @include desplizarFuera ();
+    animation: slideInRight 1.5s ease-out 0.5s;
+    position: relative;
 }
 
 
@@ -82,8 +86,10 @@ table
 
 .tablero
 {
-    width: $blanco;
+    width: $seiscientoscincuenta;
     border-radius: $veinte;
+    @include aparecer ();
+    animation: apareciendo 1.5s ease-out 0.5s;
 }
 
 td 
@@ -290,8 +296,8 @@ td
     width: $trescientos; 
     text-align: $textoCentro;
     position: fixed;
-    top: $cincuentaporciento; 
-    left: $treintaporciento; 
+    top: $cincuentaysieteporciento; 
+    left: $veinticincoporciento; 
     transform: translate(-$cincuentaporciento, -$cincuentaporciento);
 
 }
@@ -322,6 +328,7 @@ td
         width: $ochocientosnoventa;
         height: $ochocientos;
     }
+    
 }
 
 
@@ -344,6 +351,13 @@ td
     {
         width: $ochocientoscincuenta;
         height: $ochocientos;
+    }
+    .modal-content-mensaje 
+    {
+        
+        top: $cincuentaycincoporciento; 
+        left: $veintiochoporciento; 
+
     }
 }
 
@@ -369,15 +383,9 @@ td
     }
     .modal-content-mensaje 
     {
-        background-color: $blancoOpaco09;
-        padding: $veinte;
-        border: $uno solid $colorModalJuego;
-        width: $trescientos; 
-        text-align: $textoCentro;
-        position: fixed;
-        top: $cincuentaporciento; 
-        left: $veinteporciento; 
-        transform: translate(-$cincuentaporciento, -$cincuentaporciento);
+        
+        top: $cincuentaycincoporciento; 
+        left: $veintiochoporciento; 
 
     }
 }
@@ -415,15 +423,8 @@ td
     }
     .modal-content-mensaje 
     {
-        background-color: $blancoOpaco09;
-        padding: $veinte;
-        border: $uno solid $colorModalJuego;
-        width: $trescientos; 
-        text-align: $textoCentro;
-        position: fixed;
         top: $cincuentaysieteporciento; 
         left: $veintiseisporciento; 
-        transform: translate(-$cincuentaporciento, -$cincuentaporciento);
 
     }
 }
@@ -486,15 +487,8 @@ td
  
     .modal-content-mensaje 
     {
-        background-color: $blancoOpaco09;
-        padding: $veinte;
-        border: $uno solid $colorModalJuego;
-        width: $trescientos; 
-        text-align: $textoCentro;
-        position: fixed;
         top: $cincuentaysieteporciento; 
         left: $cincuentaporciento; 
-        transform: translate(-$cincuentaporciento, -$cincuentaporciento);
 
     }
 }
@@ -516,15 +510,9 @@ td
     }
     .modal-content-mensaje 
     {
-        background-color: $blancoOpaco09;
-        padding: $veinte;
-        border: $uno solid $colorModalJuego;
-        width: $trescientos; 
-        text-align: $textoCentro;
-        position: fixed;
+       
         top: $cincuentaysieteporciento; 
         left: $cincuentaporciento; 
-        transform: translate(-$cincuentaporciento, -$cincuentaporciento);
 
     }
 }
@@ -560,15 +548,10 @@ td
     }
     .modal-content-mensaje 
     {
-        background-color: $blancoOpaco09;
-        padding: $veinte;
-        border: $uno solid $colorModalJuego;
-        width: $trescientos; 
-        text-align: $textoCentro;
-        position: fixed;
+        
         top: $cincuentaysieteporciento; 
         left: $cincuentaporciento; 
-        transform: translate(-$cincuentaporciento, -$cincuentaporciento);
+        
 
     }
 }
@@ -630,15 +613,9 @@ td
   }
     .modal-content-mensaje 
     {
-        background-color: $blancoOpaco09;
-        padding: $veinte;
-        border: $uno solid $colorModalJuego;
-        width: $trescientos; 
-        text-align: $textoCentro;
-        position: fixed;
+      
         top: $cincuentaysieteporciento; 
         left: $cincuentaporciento; 
-        transform: translate(-$cincuentaporciento, -$cincuentaporciento);
 
     }
   
@@ -731,15 +708,9 @@ td
 
     .modal-content-mensaje 
     {
-        background-color: $blancoOpaco09;
-        padding: $veinte;
-        border: $uno solid $colorModalJuego;
-        width: $trescientos; 
-        text-align: $textoCentro;
-        position: fixed;
+       
         top: $sesentaporciento; 
         left: $cincuentaporciento; 
-        transform: translate(-$cincuentaporciento, -$cincuentaporciento);
 
     }
 }
@@ -892,15 +863,9 @@ td
 
     .modal-content-mensaje 
     {
-        background-color: $blancoOpaco09;
-        padding: $veinte;
-        border: $uno solid $colorModalJuego;
-        width: $trescientos; 
-        text-align: $textoCentro;
-        position: fixed;
+       
         top: $cincuentaysieteporciento; 
         left: $cincuentaporciento; 
-        transform: translate(-$cincuentaporciento, -$cincuentaporciento);
 
     }
 }

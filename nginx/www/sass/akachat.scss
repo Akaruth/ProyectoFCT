@@ -8,6 +8,12 @@
     padding: $cero;
     box-sizing: border-box;
 }
+
+body {
+    margin: 0;
+    overflow-x: hidden;
+  }
+
 .page-item.active .page-link 
 {
     z-index: $tres;
@@ -61,11 +67,14 @@
         width: $miltrescientos;
         .entradaColor
         {
+            @include desplizarDentro;
+            animation: slideIn 2s ease forwards;
             background-color: $blanco;
             margin: $veinte;
             padding: $cuarenta;
             border-radius: $cinco;
-            @include sombras2Box();            
+            @include sombras2Box();     
+            position: relative;       
         }
         .tituloEntradaS
         {
@@ -101,6 +110,10 @@
                 border: $nada;
                 cursor: $cursorSenalando;
             }
+            .botonCrearEntrada:hover
+            { 
+                background-color: $amarilloMenuOscuro;
+            }
         }
        
     }
@@ -112,7 +125,10 @@
 
     .fotoEchaUnViztazo
     {
+        @include aparecerFade;
         width: $cienporciento;
+        animation: fadeIn 3s ease forwards;
+
     }
 }
 

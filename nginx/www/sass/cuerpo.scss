@@ -9,6 +9,11 @@
     box-sizing: border-box;
   }
 
+  body {
+    margin: 0;
+    overflow-x: hidden;
+  }
+
 .fondoInicio
 {
     background: url(../imagen/fondoInicio.png);
@@ -165,17 +170,34 @@
 .boton
 {
     padding: $cinco;
-    border-radius: $diez;
     background-color: $amarilloMenu;
     color: $negro;
     text-decoration: $nada;
     border: $nada;
+    position: relative;
+    transition: color 0.3s ease;
 
-}
-.boton:hover
-{
-    color: $colorEnlaceHover;
+    &::before 
+    {
+        content: '';
+        position: absolute;
+        width: $cero;
+        height: $dos;
+        bottom: $cero;
+        left: $cincuentaporciento;
+        background-color: $colorEnlaceHover;
+        transition: width 0.3s ease, left 0.3s ease;
+    }
 
+    &:hover 
+    {
+        color: $colorEnlaceHover;
+
+        &::before {
+            width: $cienporciento;
+            left: $cero;
+        }
+    }
 }
 .fondoOferta
 {
@@ -183,11 +205,31 @@
 }
 .ofertaRegistro
 {
+    @include desplizarDentro();
     @include flex-rowsCent ();
     background-color: $blanco;
     border-radius:$cinco;
     padding: $cinco;
     border: $uno solid $negroOpaco03;
+    animation: slideIn 1.5s ease-out 0.5s;
+    position: relative;
+
+}
+.ofertaRegistro:hover,.ofertaRegistro2:hover
+{
+    transform: scale(1.02);
+}
+.ofertaRegistro2
+{
+    @include desplizarFuera();
+    @include flex-rowsCent ();
+    background-color: $blanco;
+    border-radius:$cinco;
+    padding: $cinco;
+    border: $uno solid $negroOpaco03;
+    animation: slideInRight 1.5s ease-out 0.5s;
+    position: relative;
+
 }
 
 .imagenOferta
@@ -204,11 +246,18 @@
 
 .div1,.div2
 {
+    @include aparecer ();
+
     background-color: $blanco;
     padding: $veinte;   
     border-radius: $cinco;
     border: $uno solid $negroOpaco03;
+    animation: apareciendo 1.5s ease-out 0.5s;
 
+}
+.div1:hover,.div2:hover
+{
+    transform: scale(1.02);
 }
 
 .div1,.div2
@@ -255,7 +304,7 @@
         @include flexJustiCenter();
 
     }
-    .ofertaRegistro
+    .ofertaRegistro,.ofertaRegistro2
     {
       width: $milsetecientos;
     }
@@ -434,7 +483,7 @@
         width: $trescientoscinquenta;
     }
   
-    .ofertaRegistro
+    .ofertaRegistro,.ofertaRegistro2
     {
         width: $mil;
     }
@@ -490,7 +539,7 @@
 
     }
    
-    .ofertaRegistro
+    .ofertaRegistro,.ofertaRegistro2
     {
         @include flexColSpaceAligCent();
         background-color: $blanco;
@@ -545,7 +594,7 @@
 
     }
    
-    .ofertaRegistro
+    .ofertaRegistro,.ofertaRegistro2
     {
         @include flexColSpaceAligCent();
         background-color: $blanco;
@@ -620,7 +669,7 @@
 
     }
    
-    .ofertaRegistro
+    .ofertaRegistro,.ofertaRegistro2
     {
         @include flexColSpaceAligCent();
         background-color: $blanco;
@@ -700,7 +749,7 @@
 
     }
     
-    .ofertaRegistro
+    .ofertaRegistro,.ofertaRegistro2
     {
         @include flexColSpaceAligCent();
         background-color: $blanco;
@@ -771,7 +820,7 @@
         width: $cuatrocientoscinquenta;
     }
    
-    .ofertaRegistro
+    .ofertaRegistro,.ofertaRegistro2
     {
         @include flexColSpaceAligCent();
         background-color: $blanco;

@@ -29,6 +29,8 @@ box-sizing: border-box;
     background-size: cover;
     background-repeat: no-repeat;
     justify-content: center;
+    @include aparecerKey;
+    animation: aparecer 2s ease forwards;
 }
 
 .listado

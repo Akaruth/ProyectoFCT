@@ -47,6 +47,8 @@
 {
     width: $trescientosnoventa; 
     height: $cuatrocientos;
+    @include aparecer ();
+    animation: apareciendo 1.5s ease-out 0.5s;
 }
 .fotoRuta
 {

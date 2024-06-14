@@ -25,7 +25,10 @@
             height: $trescientos;
 
         }
+        @include aparecerFade;
+        animation: fadeIn 1s ease forwards;
     }
+   
 }
 .boton
 {

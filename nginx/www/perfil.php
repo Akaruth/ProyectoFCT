@@ -146,7 +146,7 @@ if ($usuario !== 'Anonimo')
                     <img class="iconoPerfil" src="<?php echo $imagenUsuario; ?>" alt="Imagen de perfil">
                     <?php endif; ?>     
 
-                    <div class="centrarFoto mt-2">
+                    <div class="centrarFoto my-2">
                         <button class="boton" data-bs-toggle="modal" data-bs-target="#cambiarFotoModal"><i class="bi bi-camera"></i></button>
                     </div>
                 </div>

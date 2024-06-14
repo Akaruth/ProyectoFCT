@@ -29,12 +29,16 @@
 }
 .boton:hover
 {
-    color: $colorEnlaceHover;
-
+    color: $blanco;
+    transform: scale(1.05);
+    background-color: $amarilloMenuOscuro;
 }
 .foto
 {
     width: $setecientos;
+    @include desdeAbajo;
+    animation: slideInBottom 0.5s ease-out forwards;
+
 }
 
 .espacio
@@ -48,6 +52,8 @@
     background-color: $colorFormuContacto;
     padding: $veinte;
     border-radius: $cinco;
+    @include desdeArriba;
+    animation: slideInTop 0.5s ease-out forwards;
 }
 
 

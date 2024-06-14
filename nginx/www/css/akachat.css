@@ -4,6 +4,11 @@
   box-sizing: border-box;
 }
 
+body {
+  margin: 0;
+  overflow-x: hidden;
+}
+
 .page-item.active .page-link {
   z-index: 3px;
   color: white;
@@ -56,11 +61,23 @@
   width: 1300px;
 }
 .envoltorioContenido .contenido .entradaColor {
+  animation: slideIn 2s ease forwards;
   background-color: white;
   margin: 20px;
   padding: 40px;
   border-radius: 5px;
   box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.2);
+  position: relative;
+}
+@keyframes slideIn {
+  from {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
 }
 .envoltorioContenido .contenido .tituloEntradaS {
   font-size: 30px;
@@ -93,6 +110,9 @@
   border: none;
   cursor: pointer;
 }
+.envoltorioContenido .contenido .envoltorioBotonEntrada .botonCrearEntrada:hover {
+  background-color: rgb(197, 157, 24);
+}
 
 .fotoEntradas {
   display: flex;
@@ -101,6 +121,17 @@
 }
 .fotoEntradas .fotoEchaUnViztazo {
   width: 100%;
+  animation: fadeIn 3s ease forwards;
+}
+@keyframes fadein {
+  0% {
+    opacity: 0;
+    transform: translateX(50%) scale(0) rotateZ(-60deg);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0) scale(1) rotateZ(0deg);
+  }
 }
 
 .envoltorioCrud {

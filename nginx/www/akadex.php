@@ -141,7 +141,7 @@ $pokemon = obtenerPokemon($conn, $tipoFiltro, $ordenFiltro, $offset, $limite);
                 <h5 class="offcanvas-title" id="filtrosOffcanvasLabel">Filtros</h5>
                 <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
             </div>
-            <div class="offcanvas-body">
+            <div class="offcanvas-body fondo">
                 <form method="GET">
                     <div class="mb-3">
                         <label for="tipo" class="form-label">Filtrar por tipo:</label>

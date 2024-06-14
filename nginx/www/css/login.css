@@ -24,7 +24,8 @@
 }
 
 .boton:hover {
-  color: rgb(84, 66, 10);
+  color: white;
+  background-color: rgb(197, 157, 24);
 }
 
 .titulo2 {
@@ -53,6 +54,17 @@
 .tamanoFormulario2 {
   width: 700px;
   height: auto;
+  animation: slideInBottom 2s ease forwards;
+}
+@keyframes slideInBottom {
+  0% {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
 }
 
 .card {

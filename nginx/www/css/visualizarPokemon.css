@@ -76,6 +76,7 @@
   grid-template-areas: "etimologia etimologia  cuadroImagen" "biologia biologia cuadroImagen" "evoluciones evoluciones cuadroImagen" "fotoEvo fotoEvo nada";
   gap: 5px;
   max-width: 1500px;
+  padding: 20px;
 }
 
 .deDosEnDos {
@@ -99,18 +100,66 @@
   padding: 20px;
   border-radius: 3px;
   border: 1px solid rgba(0, 0, 0, 0.4);
+  position: relative;
+  animation: slideInRight 1.5s ease-out 0.5s;
+}
+@keyframes slideInRight {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
 }
 
 .etimologia {
   grid-area: etimologia;
+  position: relative;
+  animation: slideIn 1.5s ease-out 0.5s;
+}
+@keyframes slideIn {
+  from {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
 }
 
 .biologia {
   grid-area: biologia;
+  position: relative;
+  animation: slideIn 1.5s ease-out 0.5s;
+}
+@keyframes slideIn {
+  from {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
 }
 
 .evoluciones {
   grid-area: evoluciones;
+  position: relative;
+  animation: slideIn 1.5s ease-out 0.5s;
+}
+@keyframes slideIn {
+  from {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
 }
 
 .fotoEvo {
@@ -119,6 +168,18 @@
   flex-flow: row;
   justify-content: center;
   align-items: center;
+  position: relative;
+  animation: slideIn 1.5s ease-out 0.5s;
+}
+@keyframes slideIn {
+  from {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
 }
 
 .fotoPokemon {
@@ -160,7 +221,11 @@
     display: grid;
     grid-template-areas: "cuadroImagen cuadroImagen " "etimologia etimologia " "biologia biologia " "evoluciones evoluciones " "fotoEvo fotoEvo  ";
     gap: 5px;
-    padding: 20px;
+  }
+}
+@media screen and (max-width: 700px) {
+  .evoFoto {
+    width: 250px;
   }
 }
 

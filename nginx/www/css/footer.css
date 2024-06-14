@@ -32,7 +32,7 @@
 
 #footer .contacto {
   grid-area: contacto;
-  height: auto;
+  height: 350px;
   padding: 0px 10px 0px 10px;
   display: flex;
   flex-flow: column;
@@ -150,7 +150,7 @@
   }
   #footer .logoFooter {
     grid-area: logo;
-    height: auto;
+    height: 350px;
     border-top: 2px solid white;
     border-bottom: 2px solid white;
     border-right: none;
@@ -162,8 +162,7 @@
   #footer .contacto {
     border-top: 2px solid white;
     grid-area: contacto;
-    height: auto;
-    margin: 20px 0 40px 0;
+    height: 350px;
     display: flex;
     flex-flow: column;
     justify-content: center;
@@ -223,11 +222,11 @@
     display: flex;
     flex-flow: column;
     align-items: center;
-    margin: 20px 0 40px 0;
+    margin-top: 20px;
   }
   #footer .contacto {
     grid-area: contacto;
-    height: auto;
+    height: 200px;
     margin: 20px 0 40px 0;
     display: flex;
     flex-flow: column;
@@ -238,12 +237,12 @@
   }
   #footer .faqs {
     grid-area: faqs;
-    height: auto;
+    height: 200px;
     width: auto;
     margin: 20px 0 40px 0;
     display: flex;
     flex-flow: column;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     border-right: none;
     border-bottom: 2px solid white;
@@ -255,7 +254,7 @@
   }
   #footer .autor {
     grid-area: autor;
-    height: auto;
+    height: 200px;
     margin: 20px 0 40px 0;
     display: flex;
     flex-flow: column;

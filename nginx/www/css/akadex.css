@@ -46,6 +46,27 @@
   color: rgb(186, 148, 21);
 }
 
+.fotoDex {
+  animation: fadeIn 3s ease forwards;
+}
+@keyframes fadein {
+  0% {
+    opacity: 0;
+    transform: translateX(50%) scale(0) rotateZ(-60deg);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0) scale(1) rotateZ(0deg);
+  }
+}
+
+.fondo {
+  background: url(../imagen/fondoInicio.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
 .enlace:hover {
   text-decoration: none;
   color: rgb(84, 66, 10);

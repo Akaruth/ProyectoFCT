@@ -9,6 +9,7 @@
         box-sizing: border-box;
     }
 
+
     .visually-hidden 
     {
         position: absolute;
@@ -180,9 +181,12 @@
             @include flexColumWrap();
             width: $mildoscientos ;
             border-radius: $tres;
-            font-size: 18px;
-            background-color: rgba(180, 183, 185,0.3);
+            font-size: $dieciocho;
+            background-color: $fondoComentarios;
             padding: $veinte;
+            @include aparecer ();
+            animation: fadeIn 3s ease forwards;
+
             .envoltorioAutor
             {
                 @include flexRowWrapSpaceBet ();

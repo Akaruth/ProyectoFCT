@@ -59,6 +59,8 @@
     background-color: $colorFondoReporte;
     padding: $veinte;
     border-radius: $cinco;
+    @include desplizarDentro;
+    animation: slideIn 3s ease forwards;
 }
 .formulario 
 {
@@ -90,7 +92,8 @@
     height: $cuatrocientos;
     gap: $diez;
     @include ajustesFondoFull();
-
+    @include aparecerFade;
+    animation: fadeIn 3s ease forwards;
 }
 .formu
 {

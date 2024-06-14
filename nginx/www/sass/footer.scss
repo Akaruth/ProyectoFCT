@@ -36,7 +36,7 @@
   #footer .contacto 
   {
     grid-area: contacto;
-    height: auto;
+    height: $trescientoscinquenta;
     @include paddingFooterLogo();
     @include flexColumCentrada();
     @include borderRightBlanco2px();
@@ -45,6 +45,8 @@
   {
     font-size: $dieciseis;
     font-weight: $negrita;
+   
+
   }
   #footer .faqs 
   {
@@ -101,6 +103,7 @@
     text-align: $textoCentro;
   }
   
+  
   .fondoTiempo
   {
     background: url(../imagen/clima.png);
@@ -143,11 +146,12 @@
     #footer .contacto 
     {
       border: $nada;
+      
     }
     #footer .logoFooter 
     {
       grid-area: logo;
-      height: auto;
+      height: $trescientoscinquenta;
       @include borderTopBlanco2px();
       @include borderBottomBlanco2px();
       border-right: $nada;
@@ -160,8 +164,7 @@
     {
       @include borderTopBlanco2px();
       grid-area: contacto;
-      height: auto;
-      @include paddingFooterLogo2();
+      height: $trescientoscinquenta;
       @include flexColumCentrada();
       border-right: $nada;
       @include borderBottomBlanco2px();
@@ -221,13 +224,13 @@
       border-bottom: $nada;
       border-right: $nada;
       @include flexFlowColumAlignCent();
-      @include paddingFooterLogo2();
+      margin-top: $veinte;
 
     }
     #footer .contacto 
     {
       grid-area: contacto;
-      height: auto;
+      height: 200px;
       @include paddingFooterLogo2();
       @include flexColumCentrada();
       border-right: $nada;
@@ -236,10 +239,10 @@
     #footer .faqs 
     {
       grid-area: faqs;
-      height: auto;
+      height: 200px;
       width: auto;
       @include paddingFooterLogo2();
-      @include flexColumCentrada();
+      @include flexStartCol();
       border-right: $nada;
       @include borderBottomBlanco2px();
     }
@@ -251,7 +254,7 @@
     #footer .autor 
     {
       grid-area: autor;
-      height: auto;
+      height: 200px;
       @include paddingFooterLogo2();
       @include flexFlowColumAlignCent();
 

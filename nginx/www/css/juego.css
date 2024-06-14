@@ -16,6 +16,8 @@
 
 body {
   background-color: white;
+  margin: 0;
+  overflow-x: hidden;
 }
 
 .envoltorio {
@@ -46,6 +48,18 @@ body {
 .imgJuego {
   width: 940px;
   height: 800px;
+  animation: slideInRight 1.5s ease-out 0.5s;
+  position: relative;
+}
+@keyframes slideInRight {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
 }
 
 .envoltorioModal {
@@ -70,8 +84,19 @@ table {
 }
 
 .tablero {
-  width: white;
+  width: 600px;
   border-radius: 20px;
+  animation: apareciendo 1.5s ease-out 0.5s;
+}
+@keyframes apareciendo {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 td {
@@ -157,7 +182,7 @@ td {
   font-size: 20px;
   height: 600px;
   position: fixed;
-  top: 55%;
+  top: 60%;
   left: 26%;
   transform: translate(-50%, -50%);
 }
@@ -264,8 +289,8 @@ td {
   width: 300px;
   text-align: center;
   position: fixed;
-  top: 50%;
-  left: 30%;
+  top: 57%;
+  left: 25%;
   transform: translate(-50%, -50%);
 }
 
@@ -299,6 +324,10 @@ td {
     width: 850px;
     height: 800px;
   }
+  .modal-content-mensaje {
+    top: 55%;
+    left: 28%;
+  }
 }
 @media screen and (max-width: 1750px) {
   .envoltorio {
@@ -314,15 +343,8 @@ td {
     height: 800px;
   }
   .modal-content-mensaje {
-    background-color: rgba(255, 255, 255, 0.9);
-    padding: 20px;
-    border: 1px solid #888;
-    width: 300px;
-    text-align: center;
-    position: fixed;
-    top: 50%;
-    left: 20%;
-    transform: translate(-50%, -50%);
+    top: 55%;
+    left: 28%;
   }
 }
 @media screen and (max-width: 1650px) {
@@ -346,15 +368,8 @@ td {
     left: 25%;
   }
   .modal-content-mensaje {
-    background-color: rgba(255, 255, 255, 0.9);
-    padding: 20px;
-    border: 1px solid #888;
-    width: 300px;
-    text-align: center;
-    position: fixed;
     top: 57%;
     left: 26%;
-    transform: translate(-50%, -50%);
   }
 }
 @media screen and (max-width: 1500px) {
@@ -400,15 +415,8 @@ td {
     left: 50%;
   }
   .modal-content-mensaje {
-    background-color: rgba(255, 255, 255, 0.9);
-    padding: 20px;
-    border: 1px solid #888;
-    width: 300px;
-    text-align: center;
-    position: fixed;
     top: 57%;
     left: 50%;
-    transform: translate(-50%, -50%);
   }
 }
 @media screen and (max-width: 1400px) {
@@ -425,15 +433,8 @@ td {
     left: 50%;
   }
   .modal-content-mensaje {
-    background-color: rgba(255, 255, 255, 0.9);
-    padding: 20px;
-    border: 1px solid #888;
-    width: 300px;
-    text-align: center;
-    position: fixed;
     top: 57%;
     left: 50%;
-    transform: translate(-50%, -50%);
   }
 }
 @media screen and (max-width: 1100px) {
@@ -466,15 +467,8 @@ td {
     transform: translate(-50%, -50%);
   }
   .modal-content-mensaje {
-    background-color: rgba(255, 255, 255, 0.9);
-    padding: 20px;
-    border: 1px solid #888;
-    width: 300px;
-    text-align: center;
-    position: fixed;
     top: 57%;
     left: 50%;
-    transform: translate(-50%, -50%);
   }
 }
 @media screen and (max-width: 750px) {
@@ -517,15 +511,8 @@ td {
     text-align: center;
   }
   .modal-content-mensaje {
-    background-color: rgba(255, 255, 255, 0.9);
-    padding: 20px;
-    border: 1px solid #888;
-    width: 300px;
-    text-align: center;
-    position: fixed;
     top: 57%;
     left: 50%;
-    transform: translate(-50%, -50%);
   }
 }
 @media screen and (max-width: 700px) {
@@ -597,15 +584,8 @@ td {
     transform: translate(-50%, -50%);
   }
   .modal-content-mensaje {
-    background-color: rgba(255, 255, 255, 0.9);
-    padding: 20px;
-    border: 1px solid #888;
-    width: 300px;
-    text-align: center;
-    position: fixed;
     top: 60%;
     left: 50%;
-    transform: translate(-50%, -50%);
   }
 }
 @media screen and (max-width: 600px) {
@@ -730,15 +710,8 @@ td {
     width: 150px;
   }
   .modal-content-mensaje {
-    background-color: rgba(255, 255, 255, 0.9);
-    padding: 20px;
-    border: 1px solid #888;
-    width: 300px;
-    text-align: center;
-    position: fixed;
     top: 57%;
     left: 50%;
-    transform: translate(-50%, -50%);
   }
 }
 

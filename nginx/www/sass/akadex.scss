@@ -20,6 +20,18 @@ box-sizing: border-box;
 
 }
 
+.fotoDex
+{
+    @include aparecerFade;
+    animation: fadeIn 3s ease forwards;
+
+}
+.fondo
+{
+    background: url(../imagen/fondoInicio.png);
+    @include ajustesFondoFull();
+}
+
 .enlace:hover
 {
     text-decoration: $nada;

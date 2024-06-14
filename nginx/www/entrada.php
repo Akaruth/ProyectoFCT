@@ -267,7 +267,7 @@ if ($resultado_comentarios_paginacion->num_rows > 0) {
         <form id="formularioValorar" method="post" action="./crud/valorarEntrada.php" class="valorarEntrada">
             <input type="hidden" name="id_entrada" value="<?php echo $id_entrada; ?>">
             <label for="valoracion"><i class='bi bi-star-fill estrellita'></i> Estrellas: </label>
-            <select name="valoracion" id="valoracion" class="nuevaValoracion">
+            <select name="valoracion" id="valoracion" class="nuevaValoracion p-1 rounded">
                 <option value="1">1 </option>
                 <option value="2">2 </option>
                 <option value="3">3 </option>
