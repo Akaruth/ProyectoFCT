@@ -1,0 +1,167 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+.buscadorPokemon {
+  background-color: #B6B1B1;
+  padding: 20px 0 20px 20px;
+}
+
+.enlace {
+  text-decoration: none;
+  color: rgb(186, 148, 21);
+}
+
+.enlace:hover {
+  text-decoration: none;
+  color: rgb(84, 66, 10);
+}
+
+.espaciado {
+  background-color: #B6B1B1;
+  padding: 40px;
+}
+
+.formaBuscador {
+  border-radius: 5px;
+  border: none;
+  padding: 5px;
+}
+
+.botonBuscador {
+  border-radius: 3px;
+  padding: 5px;
+  border: none;
+  background-color: #dfdcdc;
+  transition: background-color 0.7s ease;
+}
+
+.botonBuscador:hover {
+  border-radius: 3px;
+  padding: 5px;
+  border: none;
+  background-color: #9e9e9e;
+  color: white;
+}
+
+.centrarFicha {
+  display: grid;
+  place-items: center;
+  background: url(../imagen/fondoakadexcarta.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  padding: 50px 0 50px 0;
+}
+
+.navegacion {
+  padding: 10px;
+}
+
+.siguientePokemon {
+  margin-top: 10px;
+  background-color: white;
+  border-radius: 3px;
+  padding: 5px;
+  display: flex;
+  flex-flow: row;
+  justify-content: center;
+  border: 1px solid rgba(0, 0, 0, 0.4);
+}
+
+.infoPokemon {
+  display: grid;
+  grid-template-areas: "etimologia etimologia  cuadroImagen" "biologia biologia cuadroImagen" "evoluciones evoluciones cuadroImagen" "fotoEvo fotoEvo nada";
+  gap: 5px;
+  max-width: 1500px;
+}
+
+.deDosEnDos {
+  padding: 10px;
+  background-color: white;
+  border-radius: 3px;
+  border: 1px solid rgba(0, 0, 0, 0.4);
+}
+
+.fotoPokemon {
+  width: 100%;
+}
+
+.etimologia {
+  grid-area: nada;
+}
+
+.cuadroImagen {
+  grid-area: cuadroImagen;
+  background-color: rgb(250, 198, 28);
+  padding: 20px;
+  border-radius: 3px;
+  border: 1px solid rgba(0, 0, 0, 0.4);
+}
+
+.etimologia {
+  grid-area: etimologia;
+}
+
+.biologia {
+  grid-area: biologia;
+}
+
+.evoluciones {
+  grid-area: evoluciones;
+}
+
+.fotoEvo {
+  grid-area: fotoEvo;
+  display: flex;
+  flex-flow: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.fotoPokemon {
+  width: 250px;
+}
+
+.fondoBlanco {
+  background-color: white;
+  padding: 5px;
+  border-radius: 3px;
+  display: flex;
+  align-items: center;
+  flex-flow: column;
+  border: 1px solid rgba(0, 0, 0, 0.4);
+}
+
+.infoBlanca {
+  background-color: white;
+  padding: 5px;
+  margin-top: 10px;
+  border-radius: 3px;
+  display: flex;
+  align-items: center;
+  flex-flow: column;
+  border: 1px solid rgba(0, 0, 0, 0.4);
+}
+
+.evoFoto {
+  border-radius: 5px;
+  border: 1px solid black;
+}
+
+.iconoPokemon {
+  width: 40px;
+}
+
+@media screen and (max-width: 950px) {
+  .infoPokemon {
+    display: grid;
+    grid-template-areas: "cuadroImagen cuadroImagen " "etimologia etimologia " "biologia biologia " "evoluciones evoluciones " "fotoEvo fotoEvo  ";
+    gap: 5px;
+    padding: 20px;
+  }
+}
+
+/*# sourceMappingURL=visualizarPokemon.css.map */

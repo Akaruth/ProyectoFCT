@@ -1,0 +1,286 @@
+@use 'partials/variables' as *;
+@use 'partials/mixins' as *;
+@use 'partials/breakpoints' as *;
+
+* 
+{
+margin: $cero;
+padding: $cero;
+box-sizing: border-box;
+}
+
+@include color();
+@include tiovivo();
+@include aumento();
+@include aparecer();
+.enlace
+{
+    text-decoration: $nada;
+    color: $colorEnlace;
+
+}
+
+.enlace:hover
+{
+    text-decoration: $nada;
+    color: $colorEnlaceHover;
+
+}
+
+.page-item.active .page-link 
+{
+    z-index: $z-3;
+    color: $blanco;
+    background-color: $amarilloMenu;
+    border-color: $borderPaginacion;
+}
+.page-link 
+{
+    position: relative;
+    display: block;
+    color: $colorEnlaceHover;
+    text-decoration: $nada;
+    background-color: $blanco;
+    border: $uno solid $borderPaginacion;
+    transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+}
+.boton
+{
+    padding: $cinco;
+    border-radius: $diez;
+    background-color: $amarilloMenu;
+    color: $negro;
+    text-decoration: $nada;
+    border: $nada;
+
+}
+.boton:hover
+{
+    color: $colorEnlaceHover;
+
+}
+.colorFondo
+{
+   background:url(../imagen/prueba4.png);
+   
+}
+.akadexContenido
+{
+    @include flexRowWrapJustAlignCent();
+    gap: $diez;
+    margin-top: $veinte;
+}
+
+.espacio
+{
+    background-color: $colorEspacio;
+    padding: $veinte;
+}
+.centrarFondo
+{
+    @include flexFlowColumAlignCent();
+    @include padding100100();
+    background: url(../imagen/fondoakadexcarta2.png);
+    @include ajustesFondoFull();
+}
+
+.espaciado
+{
+    padding: $cincuenta;
+    
+}
+
+.iconoPokemon
+{
+    width: $cientocinquenta;
+}
+.deDosEnDos
+{
+    @include flexColumCentrada();
+
+}
+.buscadorPokemon
+{
+    background-color: $fondoBuscador;
+    @include padding2002020();
+    margin-bottom: $treinta;
+}
+.formaBuscador
+{
+    border-radius: $cinco;
+    border: $nada;
+    padding: $cinco;
+}
+.botonBuscador
+{
+    border-radius: $tres;
+    padding: $cinco;
+    border: $nada;
+    background-color: $colorInicialBuscadorBoton; 
+    transition: background-color 0.7s ease;
+}
+
+.botonBuscador:hover
+{
+    border-radius: $tres;
+    padding: $cinco;
+    border: $nada;
+    background-color: $colorHoverBuscadorBoton;
+    color: $blanco;
+}
+.akadexContenido 
+{
+    margin-top: $veinte;
+}
+
+.grid-container 
+{
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    gap: $veinte;
+    animation: apareciendo 1s ease-out; 
+}
+
+.grid-item 
+{
+    text-align: center;
+    border: $dos solid $negroOpaco01;
+    padding: $cinco;
+    border-radius: $tres;
+    background-color: $blanco;
+    transition: background-color 0.3s ease;
+}
+
+.grid-item:hover 
+{
+    animation: subirBajar 0.5s infinite, cambioColor 0.5s infinite alternate; 
+}
+
+
+
+.pokemon-name
+{
+    display: block;
+    margin-top: $cinco;
+}
+a 
+{
+    text-decoration: $nada;
+}
+
+@include pixeles1900
+{
+    .grid-container {
+        grid-template-columns: repeat(10, 1fr);
+    }
+
+    .iconoPokemon {
+        width: $cientocuarenta; 
+    }
+}
+
+@include pixeles1800
+{
+    .grid-container {
+        grid-template-columns: repeat(10, 1fr); 
+    }
+
+    .iconoPokemon {
+        width: $cientotreinta; 
+    }
+}
+@include pixeles1700
+{
+    .grid-container {
+        grid-template-columns: repeat(10, 1fr); 
+    }
+
+    .iconoPokemon {
+        width: $cientoveinte; 
+    }
+}
+
+@include pixeles1600
+{
+    .grid-container {
+        grid-template-columns: repeat(8, 1fr); 
+    }
+
+    .iconoPokemon {
+        width: $cientodiez; 
+    }
+}
+@include pixeles1200
+{
+    .grid-container {
+        grid-template-columns: repeat(8, 1fr); 
+    }
+
+    .iconoPokemon {
+        width: $cien; 
+    }
+}
+
+@include pixeles1100
+{
+    .fotoDex
+    {
+        
+        width: $setecientos;
+    }
+    .grid-container {
+        grid-template-columns: repeat(6, 1fr); 
+    }
+
+    .iconoPokemon {
+        width: $cien; 
+    }
+}
+@include pixeles1000
+{
+    .fotoDex
+    {
+        
+        width: $seiscientos;
+    }
+    .grid-container {
+        grid-template-columns: repeat(6, 1fr); 
+    }
+    .iconoPokemon {
+        width: $ochenta;
+    }
+}
+
+@include pixeles800
+{
+    .fotoDex
+    {
+        
+        width: $quinientos;
+    }
+    .grid-container {
+        grid-template-columns: repeat(4, 1fr); 
+    }
+    .iconoPokemon {
+        width: $ochenta; 
+    }
+}
+@include pixeles700
+{
+    .espaciado
+    {
+        padding: $veinte;
+    }
+    .fotoDex
+    {
+        
+        width: $cuatrocientos;
+    }
+    .grid-container {
+        grid-template-columns: repeat(4, 1fr); 
+    }
+
+    .iconoPokemon {
+        width: $ochenta;
+    }
+}

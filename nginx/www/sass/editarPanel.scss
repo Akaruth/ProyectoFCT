@@ -1,0 +1,48 @@
+@use 'partials/variables' as *;
+@use 'partials/mixins' as *;
+@use 'partials/breakpoints' as *;
+
+* 
+{
+margin: $cero;
+padding: $cero;
+box-sizing: border-box;
+}
+
+.titulo
+{
+    font-size:$treinta;
+}
+.centrar
+{
+    height: $quinientos;
+    @include flexColumCentrada();
+    background: url(../imagen/prueba3.png);
+    @include ajustesFondoFull();
+}
+
+.formulario
+{
+    background-color: $blancoOpaco07;
+    padding: $veinte;
+    font-size: $veinte;
+    width: $cuatrocientos;
+    @include flexColum();
+
+}
+
+.boton
+{
+    padding: $cinco;
+    border-radius: $diez;
+    background-color: $amarilloMenu;
+    color: $negro;
+    text-decoration: $nada;
+    border: $nada;
+
+}
+.boton:hover
+{
+    color: $colorEnlaceHover;
+
+}

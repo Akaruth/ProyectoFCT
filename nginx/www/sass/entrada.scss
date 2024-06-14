@@ -1,0 +1,823 @@
+    @use 'partials/variables' as *;
+    @use 'partials/mixins' as *;
+    @use 'partials/breakpoints' as *;
+    
+    * 
+    {
+        margin: $cero;
+        padding: $cero;
+        box-sizing: border-box;
+    }
+
+    .visually-hidden 
+    {
+        position: absolute;
+        width: $uno;
+        height: $uno;
+        margin: -1px;
+        border: $cero;
+        padding: $cero;
+        overflow: hidden;
+        clip: rect($cero $cero $cero $cero);
+    }
+    .page-item.active .page-link 
+    {
+        z-index: $z-3;
+        color: $blanco;
+        background-color: $colorEditarEntrada;
+        border-color: $borderPaginacion;
+    }
+    .page-link 
+    {
+        position: relative;
+        display: block;
+        color: $colorEnlaceHover;
+        text-decoration: $nada;
+        background-color: $blanco;
+        border: $uno solid $borderPaginacion;
+        transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+    }
+   
+    .boton
+    {
+        padding: $cinco;
+        border-radius: $diez;
+        background-color: $amarilloMenu;
+        color: $negro;
+        text-decoration: $nada;
+        border: $nada;
+
+    }
+    .boton:hover
+    {
+        color: $colorEnlaceHover;
+
+    }
+    .enlace
+    {
+        text-decoration: $nada;
+        color: $colorEnlace;
+    
+    }
+    
+    .enlace:hover
+    {
+        text-decoration: $nada;
+        color: $colorEnlaceHover;
+    
+    }
+    .valoraEntradaAqui
+    {
+        @include flexFlowColumAlignJustCent();
+        background: url(../imagen/prueba1.png);
+        @include ajustesFondoFull();
+
+    }
+    .fondoValoracion
+    {
+        background-color: rgba(4, 4, 4, 0.3);
+        padding: $cuarenta;
+        margin: $veinte;
+    }
+    .valorarEntrada
+    {
+        @include flexFlowColumAlignCent();
+
+    }
+    .fondo
+    {
+        background: url(../imagen/fondocomentariosentrada.png);
+        @include ajustesFondoFull();
+
+    }
+    .buscadorEntrada
+    {
+        background-color: $colorEspacio;
+        @include padding2002020();
+
+    }
+ 
+    .formaBuscador
+    {
+        border-radius: $cinco;
+        border: $nada;
+        padding: $cinco;
+    }
+    .botonBuscador
+    {
+        border-radius: $tres;
+        padding: $cinco;
+        border: $nada;
+        background-color: $colorInicialBuscadorBoton; 
+        transition: background-color 0.7s ease;
+    }
+    
+    .botonBuscador:hover
+    {
+        border-radius: $tres;
+        padding: $cinco;
+        border: $nada;
+        background-color: $colorHoverBuscadorBoton;
+        color: $blanco;
+    }
+    .centrarEntrada
+    {
+        @include flexColumWrapAlignCent();
+    }
+    .espaciado
+    {
+        background-color: $colorEspacio;
+        padding: $cuarenta;
+    
+    }
+    .envoltorioEntrada
+    {
+        @include flexColumWrapAlignCent();
+        padding: $cuarenta;
+        background: url(../imagen/fondoentradainterno.png);
+        @include ajustesFondoFull();
+        width: $mildoscientos;
+        @include margin300300();
+
+        .descripcionEntrada
+        {
+            margin-top: $treinta;
+            width: $mil;
+            padding: $cuarenta;
+            background-color: $negroOpaco08;
+            color: $blanco;
+        }
+
+        .imagenEntrada
+        {
+            width: $setecientos;
+            height: $quinientos;
+        }
+    }
+.espaciado
+{
+    background-color: $colorEspacio;
+    padding: $cuarenta;
+
+}
+    .imagenUsuario
+    {
+        width: $setenta;
+        border-radius: $cienporciento;
+        margin-right: $diez;
+    }
+    .envoltorioComentarios
+    {
+        @include flexColumWrapAlignCent();
+
+        padding: $veinte;
+        color: $blanco;
+
+        .comentario
+        {
+            position: relative;
+            margin-top: $veinte;
+            @include flexColumWrap();
+            width: $mildoscientos ;
+            border-radius: $tres;
+            font-size: 18px;
+            background-color: rgba(180, 183, 185,0.3);
+            padding: $veinte;
+            .envoltorioAutor
+            {
+                @include flexRowWrapSpaceBet ();
+
+                .autorComentario
+                {
+                    font-weight: $negrita;
+                    
+                }
+                
+            }
+            .envoltorioContenido
+            {
+                @include flexRowWrap();
+                @include margin300300();
+            
+            }
+        }
+    }
+    .espacioFormularioComentarios
+    {
+        @include flexCentJust();
+
+        padding: $cuarenta;
+        .bordeInferior
+        {
+            width: $milcien;
+            border-bottom: $uno solid $negro;
+        }
+        .envoltorioFormulario
+        {
+            @include flexColumWrap();
+            padding: $cuarenta;
+            background-color: $fondoOpacoFormu;
+            width: $mildoscientos;
+            .textFormularioAgregar
+            {
+                margin-top: $veinte;
+                border-radius: $tres;
+                background-color: $blanco;
+                padding: $cinco;
+                width:$milcien;
+        
+            }
+            .formularioAgregarBoton
+            {
+                @include flex-justEnd ();
+                width: $milcien;
+                .botonAgregarComentario
+                {      
+                    border: $nada;
+                    border-radius: $cinco;
+                    padding: $tres;
+                    background-color: $colorEditarEntrada2;
+                }
+            }
+        
+            .nuevaValoracion
+            {
+                margin-left: $cinco;
+                width: $cuarenta;
+            }
+        }
+    }
+
+
+    .envoltorioCrud
+    {
+        @include flexRowEnd ();
+
+        gap: $diez;
+
+        .editar
+        {
+            color: $colorEditarEntrada;
+            font-weight: $negrita;
+            text-decoration: $nada;
+            cursor: $cursorSenalando;
+
+            
+        }
+
+        .eliminar
+        {
+            color: $colorEliminarEntrada;
+            font-weight: $negrita;
+            text-decoration: $nada;
+            cursor: $cursorSenalando;
+
+        }
+    }
+
+    .envoltorioEditar
+    {
+        @include flexColumStart ();
+
+        .textFormulario
+        {
+            margin-top: $veinte;
+            border-radius: $diez;
+            background-color: $blanco;
+            padding: $cinco;
+            width: $milcientocincuenta;
+
+        }
+        .envoltorioBotonEditar
+        {
+            @include flex-justEnd ();
+
+            .botonEditar
+            {
+                border: $nada;
+                border-radius: $cinco;
+                padding: $tres;
+                margin-right: $diez;
+                background-color: $colorEditarEntrada2;
+            }
+        }
+
+        .valoracionEditar
+        {
+            margin-left: $cinco;
+            width: $cuarenta;
+        }
+    }
+
+    .separado
+    {
+        @include flexSpaceBetCent();
+    }
+
+
+    .paginacion 
+    {
+        margin-top: $veinte;
+        text-align: $textoCentro;
+        padding: $cinco;
+        gap: $diez;
+        .pagina, .paginacion, .pagina-actual 
+        {
+            @include inblock();
+            padding: $cinco $diez;
+            margin-right: $diez;
+            border: $uno solid $colorBorderAdmin;
+            text-decoration: $nada;
+            color: $colorPaginacion;
+            background-color: $blanco;
+            border-radius: $cinco;
+        }
+
+        .pagina:hover
+        {
+            background-color: $colorPagina;    
+        }
+        .pagina-actual 
+        {
+            background-color: $colorPaginaActualClaro;
+            color: $blanco;
+            border-color: $colorPaginaActual;
+            cursor: $cursorSenalando;
+        }
+
+        .pagina-actual:hover
+        {
+            background-color: $colorPaginaActual;
+            color: $blanco;
+        }
+
+    }
+
+
+    @include pixeles1250
+    {
+    
+        .envoltorioEditar
+        {
+          
+            .textFormulario
+            {
+               
+                width: $novecientoscincuenta;
+
+            }
+           
+        }
+        .envoltorioEntrada
+        {
+            width: $mil;
+            
+            .descripcionEntrada
+            {
+               
+                width: $ochocientos;
+            }
+    
+            .imagenEntrada
+            {
+                width: $seiscientos;
+                height: $quinientos;
+            }
+        }
+
+        .envoltorioComentarios
+        {
+            @include flexColumWrapAlignCent();
+            padding: $veinte;
+            color: $blanco;
+    
+            .comentario
+            {
+                
+                width: $mil ;
+                
+      
+                .envoltorioContenido
+                {
+                    @include flexRowWrap();
+                    @include padding2002020();
+               
+                }
+            }
+        }
+        .espacioFormularioComentarios
+        {
+           
+            .bordeInferior
+            {
+                width: $novecientos;
+            }
+            .envoltorioFormulario
+            {
+                width: $mil;
+                .textFormularioAgregar
+                {
+                   
+                    width:$novecientos;
+            
+                }
+                .formularioAgregarBoton
+                {
+                    
+                    width: $novecientos;
+                   
+                }
+            
+                .nuevaValoracion
+                {
+                    margin-left: $cinco;
+                    width: $cuarenta;
+                }
+            }
+        }
+    
+
+    }
+
+    @include pixeles1100
+    {
+        .envoltorioEditar
+        {
+          
+            .textFormulario
+            {
+               
+                width: $setecientoscincuenta;
+
+            }
+           
+        }
+        .envoltorioEntrada
+        {
+            
+            width: $ochocientos;
+    
+            .descripcionEntrada
+            {
+               
+                width: $seiscientos;
+            }
+    
+            .imagenEntrada
+            {
+                width: $quinientos;
+                height: $cuatrocientos;
+            }
+        }
+
+        .envoltorioComentarios
+        {
+    
+            .comentario
+            {
+                
+                width: $ochocientos ;
+    
+                
+            }
+        }
+        .espacioFormularioComentarios
+        {
+            
+            .bordeInferior
+            {
+                width: $setecientos;
+            }
+            .envoltorioFormulario
+            {
+                
+                width: $ochocientos;
+                .textFormularioAgregar
+                {
+                   
+                    width:$setecientos;
+            
+                }
+                .formularioAgregarBoton
+                {
+                    
+                    width: $setecientos;
+                    
+                }
+            
+                .nuevaValoracion
+                {
+                    margin-left: $cinco;
+                    width: $cuarenta;
+                }
+            }
+        }
+    
+
+    }
+
+    @include pixeles850
+    {
+        .envoltorioEditar
+        {
+          
+            .textFormulario
+            {
+               
+                width: 650px;
+
+            }
+           
+        }
+        .envoltorioEntrada
+        {
+
+            width: $setecientos;
+    
+            .descripcionEntrada
+            {
+                width: $quinientos;
+            }
+    
+            .imagenEntrada
+            {
+                width: $cuatrocientos;
+                height: $trescientos;
+            }
+        }
+
+        .envoltorioComentarios
+        {
+         
+            .comentario
+            {
+                
+                width: $setecientos;
+              
+                
+            }
+        }
+        .espacioFormularioComentarios
+        {
+           
+            .bordeInferior
+            {
+                width: $seiscientos;
+            }
+            .envoltorioFormulario
+            {
+                
+                width: $setecientos;
+                .textFormularioAgregar
+                {
+                   
+                    width:$seiscientos;
+            
+                }
+                .formularioAgregarBoton
+                {
+                    
+                    width: $seiscientos;
+                   
+                }
+            
+                .nuevaValoracion
+                {
+                    margin-left: $cinco;
+                    width: $cuarenta;
+                }
+            }
+        }
+    
+
+    }
+
+    @include pixeles750
+    {
+        .envoltorioEditar
+        {
+          
+            .textFormulario
+            {
+               
+                width:$quinientoscincuenta;
+
+            }
+           
+        }
+        .envoltorioEntrada
+        {
+            
+            width: $seiscientos;
+    
+            .descripcionEntrada
+            {
+                width: $quinientos;
+            }
+    
+            .imagenEntrada
+            {
+                width: $cuatrocientos;
+                height: $trescientos;
+            }
+        }
+
+        .envoltorioComentarios
+        {
+           
+            .comentario
+            {
+                
+                width: $seiscientos;
+  
+                
+            }
+        }
+        .espacioFormularioComentarios
+        {
+            
+            .bordeInferior
+            {
+                width: $quinientos;
+            }
+            .envoltorioFormulario
+            {
+                width: $seiscientos;
+                .textFormularioAgregar
+                {
+                   
+                    width:$quinientos;
+            
+                }
+                .formularioAgregarBoton
+                {
+                    
+                    width: $quinientos;
+                    
+                }
+            
+                .nuevaValoracion
+                {
+                    margin-left: $cinco;
+                    width: $cuarenta;
+                }
+            }
+        }
+    
+
+    }
+
+
+    @include pixeles650
+    {
+        .envoltorioEditar
+        {
+          
+            .textFormulario
+            {
+               
+                width: $cuatrocientoscinquenta;
+
+            }
+           
+        }
+        .envoltorioEntrada
+        {
+            
+            width: $quinientos;
+    
+            .descripcionEntrada
+            {
+                
+                width: $cuatrocientos;
+            }
+    
+            .imagenEntrada
+            {
+                width: $trescientoscinquenta;
+                height: $trescientos;
+            }
+        }
+
+        .envoltorioComentarios
+        {
+    
+            .comentario
+            {
+               
+                width: $quinientos;
+              
+    
+            }
+        }
+        .espacioFormularioComentarios
+        {
+            
+            .bordeInferior
+            {
+                width: $cuatrocientos;
+            }
+            .envoltorioFormulario
+            {
+               
+                width: $quinientos;
+                .textFormularioAgregar
+                {
+                    
+                    width:$cuatrocientos;
+            
+                }
+                .formularioAgregarBoton
+                {
+                   
+                    width: $cuatrocientos;
+                   
+                }
+            
+                .nuevaValoracion
+                {
+                    margin-left: $cinco;
+                    width: $cuarenta;
+                }
+            }
+        }
+    
+
+    }
+
+
+    @include pixeles550
+    {
+        .envoltorioEditar
+        {
+          
+            .textFormulario
+            {
+               
+                width: $cuatrocientos;
+
+            }
+           
+        }
+        .envoltorioEntrada
+        {
+            
+            width: $cuatrocientoscinquenta;
+    
+            .descripcionEntrada
+            {
+                width: $trescientoscinquenta;
+                
+            }
+    
+            .imagenEntrada
+            {
+                width: $trescientoscinquenta;
+                height: $trescientos;
+            }
+        }
+
+        .envoltorioComentarios
+        {
+    
+            .comentario
+            {
+                
+                width: $cuatrocientoscinquenta;
+                
+            }
+        }
+        .espacioFormularioComentarios
+        {
+            
+            .bordeInferior
+            {
+                width: $trescientoscinquenta;
+            }
+            .envoltorioFormulario
+            {
+                
+                width: $cuatrocientoscinquenta;
+                .textFormularioAgregar
+                {
+                   
+                    width:$trescientoscinquenta;
+            
+                }
+                .formularioAgregarBoton
+                {
+                    
+                    width: $trescientoscinquenta;
+                    
+                }
+            
+                .nuevaValoracion
+                {
+                    margin-left: $cinco;
+                    width: $cuarenta;
+                }
+            }
+        }
+    
+
+    }

@@ -1,0 +1,272 @@
+@use 'partials/variables' as *;
+@use 'partials/mixins' as *;
+@use 'partials/breakpoints' as *;
+
+  * 
+  {
+    margin: $cero;
+    padding: $cero;
+    box-sizing: border-box;
+  }
+  
+  #footer 
+  {
+    display: grid;
+    grid-template-areas: "logo contacto faqs autor" "logo contacto faqs autor" "logo contacto faqs autor" "copi copi copi copi";
+    background: $grisFooter;
+    gap: $diez;
+    padding: $treinta;
+    color: $blanco;
+    @include borderTopBlanco2px();
+  }
+  #footer .logoFooter 
+  {
+    grid-area: logo;
+    height: auto;
+    @include borderRightBlanco2px();
+    @include flex();
+    @include paddingFooterLogo();
+  }
+  #footer .logo 
+  {
+    width: $cientosetenta;
+    height: $cientoveinte;
+    padding: $cinco;
+  }
+  #footer .contacto 
+  {
+    grid-area: contacto;
+    height: auto;
+    @include paddingFooterLogo();
+    @include flexColumCentrada();
+    @include borderRightBlanco2px();
+  }
+  #footer .contacto .resaltado 
+  {
+    font-size: $dieciseis;
+    font-weight: $negrita;
+  }
+  #footer .faqs 
+  {
+    grid-area: faqs;
+    height: auto;
+    width: auto;
+    @include paddingFooterLogo();
+    @include flexColumCentrada();
+    @include borderRightBlanco2px();
+  }
+  #footer .faqs a 
+  {
+    text-decoration: $nada;
+    color: $blanco;
+    cursor: $cursorSenalando;
+  }
+  #footer .faqs .titulofaqs 
+  {
+    text-decoration: $nada;
+    font-size: $dieciocho;
+    font-weight: $negrita;
+  }
+  #footer .faqs .tamano 
+  {
+    font-size: $catorce;
+    list-style: $nada;
+    padding: $cero;
+  }
+  #footer .autor 
+  {
+    grid-area: autor;
+    height: auto;
+    @include paddingFooterLogo();
+    @include flexColumCentrada();
+
+  }
+  #footer .autor .resaltadoAu 
+  {
+    font-size: $dieciocho;
+    font-weight: $negrita;
+  }
+  #footer .autor .fotoAutor 
+  {
+    width: $cientocinquenta;
+    border-radius: $diez;
+  }
+  #footer .copi 
+  {
+    grid-area: copi;
+    color: $blanco ;
+    margin-top: $diez;
+    padding-top: $cinco;
+    @include borderTopBlanco2px();
+    text-align: $textoCentro;
+  }
+  
+  .fondoTiempo
+  {
+    background: url(../imagen/clima.png);
+    @include ajustesFondoFull();
+    border-radius: $diez;
+    margin: 20px;
+    padding: $diez;
+    width: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    @include flex();
+
+  }
+  .tiempoBaza
+  {
+      background-color: rgba(255, 255, 255, 0.7);
+      border-radius: $diez;
+      padding: 20px;
+      color: black;
+      @include flexColumCentrada();
+
+  }
+
+  .juntosTiempo
+  {
+      display: flex;
+      flex-flow: row;
+      justify-content: center;
+      align-items: center;
+  }
+
+  @include pixeles1100
+  {
+    #footer 
+    {
+      display: grid;
+      grid-template-areas: "logo contacto" "logo contacto" "faqs autor" "faqs autor" "copi copi";
+    }
+    #footer .contacto 
+    {
+      border: $nada;
+    }
+    #footer .logoFooter 
+    {
+      grid-area: logo;
+      height: auto;
+      @include borderTopBlanco2px();
+      @include borderBottomBlanco2px();
+      border-right: $nada;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      @include paddingFooterLogo();
+    }
+    #footer .contacto 
+    {
+      @include borderTopBlanco2px();
+      grid-area: contacto;
+      height: auto;
+      @include paddingFooterLogo2();
+      @include flexColumCentrada();
+      border-right: $nada;
+      @include borderBottomBlanco2px();
+    }
+    #footer .faqs 
+    {
+      grid-area: faqs;
+      height: auto;
+      width: auto;
+      @include paddingFooterLogo2();
+      @include flexColumCentrada();
+      border-right: $nada;
+    }
+    #footer .faqs .tamano 
+    {
+      font-size: $catorce;
+      list-style: $nada;
+      padding: $cero;
+    }
+    #footer .autor 
+    {
+      grid-area: autor;
+      height: auto;
+      @include paddingFooterLogo2();
+      @include flexFlowColumAlignCent();
+
+    }
+    #footer .autor .fotoAutor 
+    {
+      width: $cientocinco;
+      border-radius: $diez;
+    }
+    #footer .copi 
+    {
+      grid-area: copi;
+      color: $blanco;
+      margin-top: $diez;
+      padding-top: $cinco;
+      @include borderTopBlanco2px();
+      text-align: $textoCentro;
+    }
+  }
+
+  @include pixeles700
+  {
+    #footer 
+    {
+      display: grid;
+      grid-template-areas: "logo" "contacto" "faqs" "autor" "copi";
+      grid-auto-flow: column;
+    }
+    #footer .logoFooter 
+    {
+      grid-area: logo;
+      height: auto;
+      @include borderTopBlanco2px();
+      border-bottom: $nada;
+      border-right: $nada;
+      @include flexFlowColumAlignCent();
+      @include paddingFooterLogo2();
+
+    }
+    #footer .contacto 
+    {
+      grid-area: contacto;
+      height: auto;
+      @include paddingFooterLogo2();
+      @include flexColumCentrada();
+      border-right: $nada;
+      @include borderBottomBlanco2px();
+    }
+    #footer .faqs 
+    {
+      grid-area: faqs;
+      height: auto;
+      width: auto;
+      @include paddingFooterLogo2();
+      @include flexColumCentrada();
+      border-right: $nada;
+      @include borderBottomBlanco2px();
+    }
+    #footer .faqs .tamano {
+      font-size: $catorce;
+      list-style: $nada;
+      padding: $cero;
+    }
+    #footer .autor 
+    {
+      grid-area: autor;
+      height: auto;
+      @include paddingFooterLogo2();
+      @include flexFlowColumAlignCent();
+
+    }
+    #footer .autor .fotoAutor {
+      width: $cientocinquenta;
+      border-radius: $diez;
+    }
+    #footer .copi 
+    {
+      grid-area: copi;
+      color: $blanco;
+      margin-top: $diez;
+      padding-top: $cinco;
+      @include borderTopBlanco2px();
+      text-align: $textoCentro;
+    }
+  }

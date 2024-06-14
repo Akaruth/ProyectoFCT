@@ -1,0 +1,383 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+.botonDesplegable {
+  display: none;
+}
+
+.envoltorioPanel {
+  display: grid;
+  grid-template-areas: "izq izq dere dere" "izq izq dere dere";
+  color: white;
+  padding: 20px;
+  margin: 0px;
+  background: url(../imagen/prueba2.png);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  justify-content: center;
+}
+
+.listado {
+  grid-area: izq;
+  height: 700px;
+  width: 400px;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+  background: url(../imagen/adminpanel2.png);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  gap: 20px;
+  padding: 30px 20px 20px 20px;
+}
+
+.nombreAdmin {
+  font-size: 35px;
+  color: black;
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 5px;
+  border-radius: 3px;
+}
+
+.apartados {
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  text-align: center;
+}
+
+.list {
+  padding: 5px;
+  margin: 5px;
+  background-color: rgba(255, 255, 255, 0.8);
+  width: 250px;
+  color: black;
+  border: none;
+}
+
+.iconoPerfil {
+  width: 250px;
+  height: 250px;
+  border-radius: 20%;
+  border: 1px solid white;
+}
+
+.contenido {
+  grid-area: dere;
+  background-color: rgba(255, 255, 255, 0.8);
+  width: 1200px;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+.list:hover,
+.list:hover a {
+  background-color: rgba(204, 172, 68, 0.8);
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.mensajeRotativo {
+  font-size: 40px;
+}
+
+.ordenar {
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  gap: 60px;
+  padding: 30px;
+}
+
+.tablas {
+  width: 1000px;
+  color: black;
+  text-align: center;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  padding: 50px 0 50px 0;
+}
+
+.tituloseccion {
+  font-size: 30px;
+  margin-bottom: 20px;
+}
+
+.responsive-table {
+  width: auto;
+  border-collapse: collapse;
+  background-color: #f2f2f2;
+}
+
+.responsive-table th, .responsive-table td {
+  border: 1px solid black;
+  padding: 8px;
+}
+
+.responsive-table th {
+  background-color: #f2f2f2;
+}
+
+.fondoTiempo {
+  background: url(../imagen/clima.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 10px;
+  padding: 20px;
+  width: 400px;
+}
+
+.tiempoBaza {
+  background-color: rgba(255, 255, 255, 0.7);
+  border-radius: 10px;
+  padding: 20px;
+}
+
+.juntosTiempo {
+  display: flex;
+  flex-flow: row;
+  justify-content: center;
+  align-items: center;
+}
+
+@media screen and (max-width: 1700px) {
+  .listado {
+    height: 700px;
+    width: 400px;
+  }
+  .tablas {
+    width: 700px;
+  }
+  .contenido {
+    width: 1000px;
+  }
+}
+@media screen and (max-width: 1500px) {
+  .contenido {
+    width: 900px;
+  }
+  .mensajeRotativo {
+    font-size: 35px;
+  }
+  .nombreAdmin {
+    font-size: 30px;
+  }
+  .iconoPerfil {
+    width: 200px;
+    height: 200px;
+  }
+}
+@media screen and (max-width: 1400px) {
+  .responsive-table {
+    width: auto;
+    border-collapse: collapse;
+    background-color: #f2f2f2;
+    font-size: 14px;
+  }
+  .listado {
+    height: 700px;
+    width: 350px;
+  }
+  .contenido {
+    width: 800px;
+  }
+}
+@media screen and (max-width: 1200px) {
+  .listado {
+    height: 700px;
+    width: 300px;
+  }
+  .tablas {
+    width: 600px;
+  }
+  .contenido {
+    width: 700px;
+  }
+}
+@media screen and (max-width: 1050px) {
+  .listado {
+    height: 700px;
+    width: 300px;
+  }
+  .tablas {
+    width: 500px;
+  }
+  .contenido {
+    width: 600px;
+  }
+}
+@media screen and (max-width: 950px) {
+  .apartados {
+    display: none;
+    flex-direction: column;
+    background-color: rgba(248, 249, 250, 0.5);
+    position: absolute;
+    top: 400px;
+    right: 140px;
+    width: 200px;
+    border: 1px solid #ccc;
+    z-index: 1000;
+  }
+  .list {
+    background-color: white;
+  }
+  .apartados.mostrar {
+    display: flex;
+    align-items: center;
+  }
+  .botonDesplegable {
+    display: block;
+    background-color: #8F5B2C;
+    color: black;
+    padding: 5px;
+    width: 50px;
+    border: none;
+    cursor: pointer;
+    font-size: 25px;
+  }
+  .envoltorioPanel {
+    display: grid;
+    grid-template-areas: "izq izq izq izq" "dere dere dere dere";
+    color: white;
+    padding: 20px;
+    margin: 0px;
+    background: url(../imagen/prueba2.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    justify-content: center;
+  }
+  .listado {
+    grid-area: izq;
+    height: 300px;
+    width: 700px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    background: url(../imagen/adminpanel2.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+    gap: 20px;
+    padding: 30px 20px 20px 20px;
+  }
+  .tablas {
+    width: 500px;
+  }
+  .contenido {
+    border-bottom-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    width: 700px;
+  }
+  .list {
+    width: 150px;
+  }
+}
+@media screen and (max-width: 750px) {
+  .envoltorioPanel {
+    display: grid;
+    grid-template-areas: "izq izq izq izq" "dere dere dere dere";
+  }
+  .listado {
+    grid-area: izq;
+    height: 300px;
+    width: 600px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+    gap: 20px;
+    padding: 30px 20px 20px 20px;
+  }
+  .tablas {
+    width: 500px;
+  }
+  .contenido {
+    border-bottom-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    width: 600px;
+  }
+}
+@media screen and (max-width: 650px) {
+  .iconoPerfil {
+    width: 150px;
+    height: 150px;
+  }
+  .envoltorioPanel {
+    display: grid;
+    grid-template-areas: "izq izq izq izq" "dere dere dere dere";
+  }
+  .listado {
+    grid-area: izq;
+    width: 480px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+    gap: 20px;
+    padding: 30px 20px 20px 20px;
+  }
+  .tablas {
+    width: 480px;
+  }
+  .contenido {
+    border-bottom-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    width: 480px;
+  }
+  .mensajeRotativo {
+    font-size: 30px;
+  }
+  .list {
+    width: 120px;
+  }
+  .responsive-table {
+    font-size: 12px;
+  }
+  .apartados {
+    display: none;
+    flex-direction: column;
+    background-color: rgba(248, 249, 250, 0.5);
+    position: absolute;
+    top: 400px;
+    right: 90px;
+    width: 200px;
+    border: 1px solid #ccc;
+    z-index: 1000;
+  }
+}
+@media screen and (max-width: 550px) {
+  .apartados {
+    right: 30px;
+  }
+}
+@media screen and (max-width: 500px) {
+  .apartados {
+    right: 20px;
+  }
+}
+
+/*# sourceMappingURL=adminpanel.css.map */

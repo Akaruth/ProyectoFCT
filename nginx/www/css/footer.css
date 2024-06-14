@@ -1,0 +1,278 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+#footer {
+  display: grid;
+  grid-template-areas: "logo contacto faqs autor" "logo contacto faqs autor" "logo contacto faqs autor" "copi copi copi copi";
+  background: rgb(76, 80, 87);
+  gap: 10px;
+  padding: 30px;
+  color: white;
+  border-top: 2px solid white;
+}
+
+#footer .logoFooter {
+  grid-area: logo;
+  height: auto;
+  border-right: 2px solid white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0px 10px 0px 10px;
+}
+
+#footer .logo {
+  width: 170px;
+  height: 120px;
+  padding: 5px;
+}
+
+#footer .contacto {
+  grid-area: contacto;
+  height: auto;
+  padding: 0px 10px 0px 10px;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  border-right: 2px solid white;
+}
+
+#footer .contacto .resaltado {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+#footer .faqs {
+  grid-area: faqs;
+  height: auto;
+  width: auto;
+  padding: 0px 10px 0px 10px;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  border-right: 2px solid white;
+}
+
+#footer .faqs a {
+  text-decoration: none;
+  color: white;
+  cursor: pointer;
+}
+
+#footer .faqs .titulofaqs {
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+#footer .faqs .tamano {
+  font-size: 14px;
+  list-style: none;
+  padding: 0px;
+}
+
+#footer .autor {
+  grid-area: autor;
+  height: auto;
+  padding: 0px 10px 0px 10px;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#footer .autor .resaltadoAu {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+#footer .autor .fotoAutor {
+  width: 150px;
+  border-radius: 10px;
+}
+
+#footer .copi {
+  grid-area: copi;
+  color: white;
+  margin-top: 10px;
+  padding-top: 5px;
+  border-top: 2px solid white;
+  text-align: center;
+}
+
+.fondoTiempo {
+  background: url(../imagen/clima.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 10px;
+  margin: 20px;
+  padding: 10px;
+  width: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.tiempoBaza {
+  background-color: rgba(255, 255, 255, 0.7);
+  border-radius: 10px;
+  padding: 20px;
+  color: black;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.juntosTiempo {
+  display: flex;
+  flex-flow: row;
+  justify-content: center;
+  align-items: center;
+}
+
+@media screen and (max-width: 1100px) {
+  #footer {
+    display: grid;
+    grid-template-areas: "logo contacto" "logo contacto" "faqs autor" "faqs autor" "copi copi";
+  }
+  #footer .contacto {
+    border: none;
+  }
+  #footer .logoFooter {
+    grid-area: logo;
+    height: auto;
+    border-top: 2px solid white;
+    border-bottom: 2px solid white;
+    border-right: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0px 10px 0px 10px;
+  }
+  #footer .contacto {
+    border-top: 2px solid white;
+    grid-area: contacto;
+    height: auto;
+    margin: 20px 0 40px 0;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    border-right: none;
+    border-bottom: 2px solid white;
+  }
+  #footer .faqs {
+    grid-area: faqs;
+    height: auto;
+    width: auto;
+    margin: 20px 0 40px 0;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    border-right: none;
+  }
+  #footer .faqs .tamano {
+    font-size: 14px;
+    list-style: none;
+    padding: 0px;
+  }
+  #footer .autor {
+    grid-area: autor;
+    height: auto;
+    margin: 20px 0 40px 0;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+  }
+  #footer .autor .fotoAutor {
+    width: 105px;
+    border-radius: 10px;
+  }
+  #footer .copi {
+    grid-area: copi;
+    color: white;
+    margin-top: 10px;
+    padding-top: 5px;
+    border-top: 2px solid white;
+    text-align: center;
+  }
+}
+@media screen and (max-width: 700px) {
+  #footer {
+    display: grid;
+    grid-template-areas: "logo" "contacto" "faqs" "autor" "copi";
+    grid-auto-flow: column;
+  }
+  #footer .logoFooter {
+    grid-area: logo;
+    height: auto;
+    border-top: 2px solid white;
+    border-bottom: none;
+    border-right: none;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    margin: 20px 0 40px 0;
+  }
+  #footer .contacto {
+    grid-area: contacto;
+    height: auto;
+    margin: 20px 0 40px 0;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    border-right: none;
+    border-bottom: 2px solid white;
+  }
+  #footer .faqs {
+    grid-area: faqs;
+    height: auto;
+    width: auto;
+    margin: 20px 0 40px 0;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    border-right: none;
+    border-bottom: 2px solid white;
+  }
+  #footer .faqs .tamano {
+    font-size: 14px;
+    list-style: none;
+    padding: 0px;
+  }
+  #footer .autor {
+    grid-area: autor;
+    height: auto;
+    margin: 20px 0 40px 0;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+  }
+  #footer .autor .fotoAutor {
+    width: 150px;
+    border-radius: 10px;
+  }
+  #footer .copi {
+    grid-area: copi;
+    color: white;
+    margin-top: 10px;
+    padding-top: 5px;
+    border-top: 2px solid white;
+    text-align: center;
+  }
+}
+
+/*# sourceMappingURL=footer.css.map */

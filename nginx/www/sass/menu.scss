@@ -1,0 +1,377 @@
+@use 'partials/variables' as *;
+@use 'partials/mixins' as *;
+@use 'partials/breakpoints' as *;
+
+* 
+{
+    margin: $cero;
+    padding: $cero;
+    box-sizing: border-box;
+}
+  
+  .logoP 
+  {
+    width: $cientocinquenta;
+  }
+  
+  @include sacudir();
+  @include rebote();
+  .nav 
+  {
+    @include flex ();
+    background: $amarilloMenu;
+    color: $blanco;
+    @include paddingLeftRight20();
+  }
+  
+  .nav .mainMenu 
+  {
+    @include flex-center ();
+    list-style: $nada;
+  }
+  
+  .box 
+  {
+    list-style: $nada;
+  }
+
+  .botonUsuario
+  {
+    border-radius: $diez;
+    padding: $siete;
+    font-size: $dieciseis;
+    background: $amarilloMenu;
+    border: $nada;
+  }
+ 
+
+  .animar:hover 
+  {
+    animation: bounce 1s ease infinite;
+  }
+  
+  
+  .iconos i:hover 
+  {
+    animation: shake 0.5s ease infinite;
+  }
+ 
+  .carrito 
+  {
+    text-decoration: $nada;
+    border: $nada;
+    background: $nada;
+    color: $negro;
+  }
+  .nav .mainMenu li a 
+  {
+    display: inline-block;
+    margin-top: $quince;
+    @include padding10301030();
+    text-decoration: $nada;
+    color: $blanco;
+    font-size: $veinte;
+    transition: 0.2s ease;
+  }
+  
+  .nav .mainMenu li a:hover 
+  {
+    background: $colorHoverSubmenu;
+    border-radius: $cinco;
+    
+  }
+  
+  .nav .abrirMenu 
+  {
+    font-size: $rem2;
+    margin: $veinte;
+    display: $nada;
+    cursor: $cursorSenalando;
+  }
+  
+  .nav .mainMenu .cerrarMenu, .iconos i 
+  {
+    font-size: $rem2;
+    display: $nada;
+    cursor: $cursorSenalando;
+  }
+  
+  .bi-facebook:hover 
+  {
+    color: $colorFacebook;
+  }
+  
+  .bi-twitter:hover 
+  {
+    color: $colorTwitter;
+  }
+  
+  .bi-instagram:hover 
+  {
+    color: $colorInstagram;
+  }
+  
+  .encabezado
+  {
+    @include flexSpaceCenterEnca ();
+    background-color: $blanco;
+  }
+
+  .nav .logo 
+  {
+    margin: $cinco;
+    cursor: $cursorSenalando;
+  }
+  
+  .nav .mainMenu .submenu 
+  {
+    display: $nada;
+    position: absolute;
+    background-color: $amarilloSubmenu;
+    padding: $diez;
+    @include borderSub2px() ;   
+  }
+  
+  .nav .mainMenu .submenu li 
+  {
+    margin-bottom: $cinco;
+    list-style: $nada;
+  }
+  
+  .nav .mainMenu .categoria:hover .submenu 
+  {
+    display: block;
+  }
+
+  .centrarflex
+  {
+    @include flexJustiCenter();
+    
+  }
+
+  .imagenLanding
+  {
+    position: relative;
+    @include inblock();
+    text-align: $textoCentro;
+    width: $cienporciento;
+    opacity: $cero;
+    animation: fadeIn 3s ease forwards;
+  }
+
+  @keyframes fadeIn 
+  {
+    from {
+      opacity: 0.2;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  .centrado
+  {
+    position: absolute;
+    top: $cincuentaporciento;
+    left: $cincuentaporciento;
+    transform: translate(-$cincuentaporciento, -$cincuentaporciento);
+    color: $blanco;
+    font-weight: $negrita;
+    font-size: $cuarenta;
+    @include sombrasText5Box();
+    width: $setecientos;
+
+  }
+  .no-decoracion
+  {
+    text-decoration: $nada;
+    color:  $blanco;
+  }
+  .no-decoracion:hover
+  {
+    color:$amarilloSubmenu;
+  }
+
+  .no-decoracion-dark
+  {
+    text-decoration: $nada;
+    color: $blanco;
+  }
+  .no-decoracion-dark:hover
+  {
+    color:$colorLetraSesiones;
+  }
+
+@include pixeles1450
+{
+  .centrado
+  {
+    position: absolute;
+    top: $cuarentaycincoporciento;
+    left: $cincuentaporciento;
+    font-size: $cuarenta;
+
+  }
+}
+
+@include pixeles1300
+{
+  .centrado
+  {
+    position: absolute;
+    top: $cuarentaporciento;
+    left: $cincuentaycincoporciento;
+    font-size: $treintacinco;
+
+  }
+}
+
+@include pixeles1200
+{
+  .nav .mainMenu li a 
+  {
+    @include padding10201020();
+  }
+}
+
+@include pixeles1150
+{
+  .nav .mainMenu li a 
+  {
+    @include padding10201020();
+  }
+  .centrado
+  {
+    position: absolute;
+    top: $treintaochoporciento;
+    left: $sesentacincoporciento;
+    font-size: $veinticinco;
+
+  }
+}
+
+
+
+
+@include pixeles1050
+{
+  .nav .mainMenu 
+  {
+    @include columCentrada();
+    height: $cienvh;
+    position: fixed;
+    top: $cero;
+    right: $cero;
+    left: $cero;
+    z-index: $z-10;
+    background: $amarilloMenu;
+    transition: top 1s ease 0s;
+    display: $nada;
+    position: absolute;
+  }
+  .nav .mainMenu .cerrarMenu 
+  {
+    display: block;
+    position: absolute;
+    top: $veinte;
+    right: $veinte;
+  }
+  .nav .abrirMenu 
+  {
+    display: block;
+  }
+  .nav .mainMenu li a:hover 
+  {
+    background: $nada;
+    color: $colorLetraMenuDesplegable;
+  }
+  .iconos i 
+  {
+    @include inblock();
+    padding: $doce;
+  }
+  .nav .mainMenu .submenu 
+  {
+    display: $nada;
+    position: absolute;
+    background-color: $amarilloSubmenu;
+    padding: $diez;
+    left: $doscientoscinco;
+    @include borderSub2px();
+  }
+
+  .centrado
+  {
+    position: absolute;
+    top: $treintaochoporciento;
+    left: $cincuentaycincoporciento;
+    font-size: $veinticinco;
+    width: $quinientos;
+  }
+}
+
+
+@include pixeles900
+{
+  .centrado
+  {
+    position: absolute;
+    top: $treintaochoporciento;
+    left: $cincuentaporciento;
+    font-size: $veinticinco;
+    width: auto;
+    text-align: $textoCentro;
+}
+}
+
+@include pixeles800
+{
+  .centrado
+  {
+    position: absolute;
+    top: $treintaochoporciento;
+    left: $cincuentaporciento;
+    font-size: $veinticinco;
+    width: auto;
+    text-align: $textoCentro;
+}
+}
+
+@include pixeles700
+{
+  .centrado
+  {
+    position: absolute;
+    top: $treintacuatroporciento;
+    left: $cincuentaporciento;
+    font-size: $veinticinco;
+    width: auto;
+    text-align: $textoCentro;
+}
+}
+
+@include pixeles600
+{
+  .centrado
+  {
+    position: absolute;
+    top: $treintadosporciento;
+    left: $cincuentaporciento;
+    font-size: $veinticinco;
+    width: auto;
+    text-align: $textoCentro;
+  }
+}
+
+@include pixeles550
+{
+  .centrado
+  {
+    position: absolute;
+    top: $treintaporciento;
+    left: $cincuentaporciento;
+    font-size: $veinte;
+    width: auto;
+    text-align: $textoCentro;
+}
+}

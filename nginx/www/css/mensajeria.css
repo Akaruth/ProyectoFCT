@@ -1,0 +1,175 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+.boton {
+  padding: 5px;
+  border-radius: 10px;
+  background-color: gray;
+  color: white;
+  text-decoration: none;
+  border: none;
+  transition: background-color 0.3s ease;
+}
+
+.boton:hover {
+  color: black;
+  background-color: rgb(168, 167, 167);
+}
+
+.juntos {
+  display: flex;
+  flex-flow: row;
+  justify-content: space-evenly;
+}
+
+.page-item.active .page-link {
+  z-index: 3;
+  color: white;
+  background-color: rgb(250, 198, 28);
+  border-color: #dee2e6;
+}
+
+.page-link {
+  position: relative;
+  display: block;
+  color: rgb(84, 66, 10);
+  text-decoration: none;
+  background-color: white;
+  border: 1px solid #dee2e6;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.fondo {
+  background: url(../imagen/prueba1.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  padding-bottom: 15px;
+}
+
+.estiloReportes, .estiloRespuestas {
+  background-color: rgba(133, 132, 131, 0.4);
+  padding: 20px;
+  border-radius: 5px;
+}
+
+.formulario {
+  display: flex;
+  flex-flow: column;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0px;
+  padding: 0px;
+  overflow: hidden;
+  clip: rect(0px 0px 0px 0px);
+}
+
+.envoltorioMensajeria {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 50px 0 50px 0;
+  color: black;
+}
+
+.fotoMensajeria {
+  background: url(../imagen/mejoradamensajeria2.png);
+  height: 400px;
+  gap: 10px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.formu {
+  width: 700px;
+  background-color: #979797;
+  padding: 20px;
+  border-radius: 5px;
+}
+
+@media screen and (max-width: 1500px) {
+  .foto {
+    width: 600px;
+  }
+  .formu {
+    width: 600px;
+    background-color: #979797;
+    padding: 20px;
+    border-radius: 5px;
+  }
+}
+@media screen and (max-width: 1500px) {
+  .foto {
+    width: 600px;
+  }
+  .formu {
+    width: 600px;
+    background-color: #979797;
+    padding: 20px;
+    border-radius: 5px;
+  }
+}
+@media screen and (max-width: 1300px) {
+  .foto {
+    width: 500px;
+  }
+  .formu {
+    width: 500px;
+    background-color: #979797;
+    padding: 20px;
+    border-radius: 5px;
+  }
+}
+@media screen and (max-width: 1100px) {
+  .foto {
+    width: 500px;
+  }
+  .formu {
+    width: 450px;
+    background-color: #979797;
+    padding: 20px;
+    border-radius: 5px;
+  }
+}
+@media screen and (max-width: 1000px) {
+  .envoltorioMensajeria {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: space-evenly;
+    padding: 50px 0 50px 0;
+  }
+  .foto {
+    width: 500px;
+  }
+  .formu {
+    margin-top: 20px;
+    width: 500px;
+    background-color: #979797;
+    padding: 20px;
+    border-radius: 5px;
+  }
+}
+@media screen and (max-width: 600px) {
+  .foto {
+    width: 450px;
+  }
+  .formu {
+    margin-top: 20px;
+    width: 450px;
+    background-color: #979797;
+    padding: 20px;
+    border-radius: 5px;
+  }
+}
+
+/*# sourceMappingURL=mensajeria.css.map */

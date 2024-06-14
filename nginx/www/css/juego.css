@@ -1,0 +1,745 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+.flecha {
+  width: 40px;
+  height: 40px;
+  opacity: 0.5;
+}
+
+.negrita {
+  font-weight: bold;
+}
+
+body {
+  background-color: white;
+}
+
+.envoltorio {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 80px 0px;
+  width: 940px;
+  height: 800px;
+}
+
+.envoltorio .imagenJuego {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  z-index: -1;
+  width: 940px;
+  height: 1000px;
+}
+
+.juntosJuego {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+}
+
+.imgJuego {
+  width: 940px;
+  height: 800px;
+}
+
+.envoltorioModal {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.juntos {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+}
+
+table {
+  border-collapse: collapse;
+  background-image: url(../imagen/ciudadinicio.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.tablero {
+  width: white;
+  border-radius: 20px;
+}
+
+td {
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.letra {
+  font-size: 14px;
+  font-weight: bold;
+}
+
+#personaje {
+  width: 30px;
+  height: 30px;
+}
+
+.envoltorioBotonCapturar {
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.no-decoration {
+  border: none;
+  cursor: pointer;
+  background: none;
+}
+
+.imagenCapturar {
+  width: 45px;
+  height: 50px;
+  border-radius: 100%;
+}
+
+.modalMio {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-capturados {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+}
+
+.imagenModal {
+  width: 200px;
+}
+
+.margin5 {
+  margin-top: 5px;
+}
+
+.modal-content-juego {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  background-image: url(../imagen/fondoModal.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  padding: 40px;
+  border: 1px solid white;
+  width: 500px;
+  border-radius: 10px;
+  font-size: 20px;
+  height: 600px;
+  position: fixed;
+  top: 55%;
+  left: 26%;
+  transform: translate(-50%, -50%);
+}
+
+.envoltorioModalCapturados {
+  margin: 3px;
+}
+
+.modal-content-captura {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  background-image: url(../imagen/fondoCapturados.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  padding: 40px;
+  margin-right: 10px;
+  border: 1px solid #888;
+  width: 300px;
+  border-radius: 10px;
+  font-size: 20px;
+  position: fixed;
+  top: 50%;
+  left: 33%;
+  transform: translate(-50%, -50%);
+}
+
+.capturadosModal {
+  width: 40px;
+  height: 40px;
+}
+
+.fondoTextoModal {
+  background-color: rgba(255, 255, 255, 0.5);
+  padding: 15px;
+  border-radius: 5px;
+}
+
+.letraMediana {
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.close {
+  margin-right: 10px;
+  color: #aaa;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.modalPerso {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content-perso {
+  background-color: white;
+  margin: 20% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 50%;
+  text-align: center;
+}
+
+.boton {
+  margin: 10px;
+  padding: 10px 20px;
+}
+
+.eligePersonaje {
+  width: 50px;
+}
+
+.modalMensaje {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content-mensaje {
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 20px;
+  border: 1px solid #888;
+  width: 300px;
+  text-align: center;
+  position: fixed;
+  top: 50%;
+  left: 30%;
+  transform: translate(-50%, -50%);
+}
+
+@media screen and (max-width: 1900px) {
+  .fondoNegro {
+    background-color: black;
+  }
+  .envoltorio {
+    width: 890px;
+    height: 800px;
+  }
+  .envoltorio .imagenJuego {
+    width: 890px;
+    height: 1000px;
+  }
+  .imgJuego {
+    width: 890px;
+    height: 800px;
+  }
+}
+@media screen and (max-width: 1850px) {
+  .envoltorio {
+    width: 850px;
+    height: 800px;
+  }
+  .envoltorio .imagenJuego {
+    width: 850px;
+    height: 1000px;
+  }
+  .imgJuego {
+    width: 850px;
+    height: 800px;
+  }
+}
+@media screen and (max-width: 1750px) {
+  .envoltorio {
+    width: 770px;
+    height: 800px;
+  }
+  .envoltorio .imagenJuego {
+    width: 770px;
+    height: 1000px;
+  }
+  .imgJuego {
+    width: 770px;
+    height: 800px;
+  }
+  .modal-content-mensaje {
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    border: 1px solid #888;
+    width: 300px;
+    text-align: center;
+    position: fixed;
+    top: 50%;
+    left: 20%;
+    transform: translate(-50%, -50%);
+  }
+}
+@media screen and (max-width: 1650px) {
+  .fondoNegro {
+    background-color: black;
+  }
+  .envoltorio {
+    width: 750px;
+    height: 800px;
+  }
+  .envoltorio .imagenJuego {
+    width: 750px;
+    height: 1000px;
+  }
+  .imgJuego {
+    width: 750px;
+    height: 800px;
+  }
+  .modal-content-juego {
+    top: 60%;
+    left: 25%;
+  }
+  .modal-content-mensaje {
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    border: 1px solid #888;
+    width: 300px;
+    text-align: center;
+    position: fixed;
+    top: 57%;
+    left: 26%;
+    transform: translate(-50%, -50%);
+  }
+}
+@media screen and (max-width: 1500px) {
+  .fondoNegro {
+    background-color: black;
+  }
+  .envoltorio {
+    width: 750px;
+    height: 800px;
+  }
+  .envoltorio .imagenJuego {
+    width: 750px;
+    height: 1000px;
+  }
+  .imgJuego {
+    width: 750px;
+    height: 800px;
+  }
+  .modal-content-captura {
+    top: 50%;
+    left: 60%;
+  }
+  .modalPerso {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+  .modal-content-perso {
+    background-color: white;
+    margin: 30% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 50%;
+    text-align: center;
+  }
+  .modal-content-juego {
+    top: 60%;
+    left: 50%;
+  }
+  .modal-content-mensaje {
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    border: 1px solid #888;
+    width: 300px;
+    text-align: center;
+    position: fixed;
+    top: 57%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+@media screen and (max-width: 1400px) {
+  .modal-content-perso {
+    background-color: white;
+    margin: 40% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 50%;
+    text-align: center;
+  }
+  .modal-content-juego {
+    top: 60%;
+    left: 50%;
+  }
+  .modal-content-mensaje {
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    border: 1px solid #888;
+    width: 300px;
+    text-align: center;
+    position: fixed;
+    top: 57%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+@media screen and (max-width: 1100px) {
+  .modal-content-perso {
+    background-color: white;
+    margin: 40% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 50%;
+    text-align: center;
+  }
+  .modal-content-juego {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    background-image: url(../imagen/fondoModal.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    padding: 40px;
+    border: 1px solid white;
+    width: 500px;
+    border-radius: 10px;
+    font-size: 20px;
+    height: 600px;
+    position: fixed;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .modal-content-mensaje {
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    border: 1px solid #888;
+    width: 300px;
+    text-align: center;
+    position: fixed;
+    top: 57%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+@media screen and (max-width: 750px) {
+  .fondoNegro {
+    background-color: black;
+  }
+  .envoltorio {
+    width: 700px;
+    height: 800px;
+    padding: 60px 0px;
+  }
+  .envoltorio .imagenJuego {
+    width: 700px;
+    height: 1000px;
+  }
+  .imgJuego {
+    width: 700px;
+    height: 700px;
+  }
+  .tablero {
+    width: 600px;
+    border-radius: 20px;
+  }
+  td {
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    vertical-align: middle;
+  }
+  .modal-content-captura {
+    top: 50%;
+    left: 65%;
+  }
+  .modal-content-perso {
+    background-color: white;
+    margin: 40% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 50%;
+    text-align: center;
+  }
+  .modal-content-mensaje {
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    border: 1px solid #888;
+    width: 300px;
+    text-align: center;
+    position: fixed;
+    top: 57%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+@media screen and (max-width: 700px) {
+  .fondoNegro {
+    background-color: black;
+  }
+  .envoltorio {
+    width: 500px;
+    padding: 20px 0px;
+  }
+  .envoltorio .imagenJuego {
+    width: 500px;
+    height: 700px;
+  }
+  .imgJuego {
+    width: 600px;
+    height: 600px;
+  }
+  .tablero {
+    width: 550px;
+    height: 550px;
+    border-radius: 20px;
+  }
+  td {
+    width: 35px;
+    height: 35px;
+    text-align: center;
+    vertical-align: middle;
+  }
+  .modal-content-captura {
+    top: 53%;
+    left: 60%;
+  }
+  .fondoTextoModal {
+    background-color: rgba(255, 255, 255, 0.5);
+    padding: 15px;
+    border-radius: 5px;
+    font-size: 18px;
+  }
+  .imagenModal {
+    width: 180px;
+  }
+  .modal-content-perso {
+    background-color: white;
+    margin: 70% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 70%;
+    text-align: center;
+  }
+  .modal-content-juego {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    background-image: url(../imagen/fondoModal.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    padding: 20px;
+    border: 1px solid white;
+    width: 400px;
+    border-radius: 10px;
+    font-size: 20px;
+    height: 550px;
+    position: fixed;
+    top: 57%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .modal-content-mensaje {
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    border: 1px solid #888;
+    width: 300px;
+    text-align: center;
+    position: fixed;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+@media screen and (max-width: 600px) {
+  .fondoNegro {
+    background-color: black;
+  }
+  .envoltorio {
+    width: 500px;
+  }
+  .envoltorio .imagenJuego {
+    width: 500px;
+    height: 500px;
+  }
+  .imgJuego {
+    width: 500px;
+    height: 500px;
+  }
+  .tablero {
+    width: 550px;
+    height: 550px;
+    border-radius: 20px;
+  }
+  td {
+    width: 35px;
+    height: 35px;
+    text-align: center;
+    vertical-align: middle;
+  }
+  .modal-content-perso {
+    background-color: white;
+    margin: 80% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 50%;
+    text-align: center;
+  }
+  .fondoTextoModal {
+    background-color: rgba(255, 255, 255, 0.5);
+    padding: 15px;
+    border-radius: 5px;
+    font-size: 18px;
+  }
+  .imagenModal {
+    width: 150px;
+  }
+  .modal-content-juego {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    background-image: url(../imagen/fondoModal.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    padding: 20px;
+    border: 1px solid white;
+    width: 400px;
+    border-radius: 10px;
+    font-size: 20px;
+    height: 500px;
+    position: fixed;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+@media screen and (max-width: 550px) {
+  .fondoNegro {
+    background-color: black;
+  }
+  .envoltorio {
+    width: 450px;
+  }
+  .envoltorio .imagenJuego {
+    width: 450px;
+    height: 450px;
+  }
+  .imgJuego {
+    width: 450px;
+    height: 450px;
+  }
+  .tablero {
+    width: 500px;
+    height: 500px;
+    border-radius: 20px;
+  }
+  td {
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    vertical-align: middle;
+  }
+  .modal-content-perso {
+    background-color: white;
+    margin: 80% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 50%;
+    text-align: center;
+  }
+  .modal-content-juego {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    background-image: url(../imagen/fondoModal.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    padding: 20px;
+    border: 1px solid white;
+    width: 400px;
+    border-radius: 10px;
+    font-size: 20px;
+    height: 500px;
+    position: fixed;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .imagenModal {
+    width: 150px;
+  }
+  .modal-content-mensaje {
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    border: 1px solid #888;
+    width: 300px;
+    text-align: center;
+    position: fixed;
+    top: 57%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+/*# sourceMappingURL=juego.css.map */

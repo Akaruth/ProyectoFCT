@@ -1,0 +1,207 @@
+@use 'partials/variables' as *;
+@use 'partials/mixins' as *;
+@use 'partials/breakpoints' as *;
+
+* 
+{
+    margin: $cero;
+    padding: $cero;
+    box-sizing: border-box;
+}
+
+.boton
+{
+    padding: $cinco;
+    border-radius: $diez;
+    background-color: $colorGrisBotonMensajeria;
+    color: $blanco;
+    text-decoration: $nada;
+    border: $nada;
+    transition: background-color 0.3s ease; 
+
+}
+.boton:hover
+{
+    color: $negro;
+    background-color: $colorHoverBotonMensajeria;
+
+}
+
+.juntos
+{
+    @include flexRow();
+}
+.page-item.active .page-link 
+{
+    z-index: $z-3;
+    color: $blanco;
+    background-color: $amarilloMenu;
+    border-color: $borderPaginacion;
+}
+.page-link 
+{
+    position: relative;
+    display: block;
+    color: $colorEnlaceHover;
+    text-decoration: $nada;
+    background-color: $blanco;
+    border: $uno solid $borderPaginacion;
+    transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+}
+.fondo
+{
+    background: url(../imagen/prueba1.png);
+    @include ajustesFondoFull();
+    padding-bottom: $quince;
+}
+.estiloReportes  ,.estiloRespuestas
+{
+    background-color: $colorFondoReporte;
+    padding: $veinte;
+    border-radius: $cinco;
+}
+.formulario 
+{
+    @include flexColum();
+
+}
+.visually-hidden 
+{
+    position: absolute;
+    width: $uno;
+    height: $uno;
+    margin: -1px;
+    border: $cero;
+    padding: $cero;
+    overflow: hidden;
+    clip: rect($cero $cero $cero $cero);
+}
+
+.envoltorioMensajeria
+{
+    @include flexSpaceEvenly();
+    @include padding500500();
+    color: $negro;
+  
+}
+.fotoMensajeria
+{
+    background: url(../imagen/mejoradamensajeria2.png);
+    height: $cuatrocientos;
+    gap: $diez;
+    @include ajustesFondoFull();
+
+}
+.formu
+{
+    width: $setecientos;
+    background-color: $colorFormuContacto;
+    padding: $veinte;
+    border-radius: $cinco;
+}
+
+
+@include pixeles1500
+{
+   
+    .foto
+    {
+        width: $seiscientos;
+    }
+    .formu
+    {
+        width: $seiscientos;
+        background-color: $colorFormuContacto;
+        padding: $veinte;
+        border-radius: $cinco;
+    }
+}
+
+@include pixeles1500
+{
+   
+    .foto
+    {
+        width: $seiscientos;
+    }
+    .formu
+    {
+        width: $seiscientos;
+        background-color: $colorFormuContacto;
+        padding: $veinte;
+        border-radius: $cinco;
+    }
+}
+
+@include pixeles1300
+{
+  
+    .foto
+    {
+        width: $quinientos;
+    }
+    .formu
+    {
+        width: $quinientos;
+        background-color: $colorFormuContacto;
+        padding: $veinte;
+        border-radius: $cinco;
+    }
+}
+
+
+@include pixeles1100
+{
+    
+    .foto
+    {
+        width: $quinientos;
+    }
+    .formu
+    {
+        width: $cuatrocientoscinquenta;
+        background-color: $colorFormuContacto;
+        padding: $veinte;
+        border-radius: $cinco;
+    }
+}
+
+
+@include pixeles1000
+{
+    .envoltorioMensajeria
+    {
+        @include flexColumSpace();
+        @include padding500500();
+
+    }
+    .foto
+    {
+        width: $quinientos;
+    }
+    .formu
+    {
+        margin-top: $veinte;
+        width: $quinientos;
+        background-color: $colorFormuContacto;
+        padding: $veinte;
+        border-radius: $cinco;
+    }
+}
+
+@include pixeles600
+{
+    
+    .foto
+    {
+        width: $cuatrocientoscinquenta;
+    }
+    .formu
+    {
+        margin-top: $veinte;
+        width: $cuatrocientoscinquenta;
+        background-color: $colorFormuContacto;
+        padding: $veinte;
+        border-radius: $cinco;
+    }
+}

@@ -1,0 +1,906 @@
+@use 'partials/variables' as *;
+@use 'partials/mixins' as *;
+@use 'partials/breakpoints' as *;
+
+* 
+{
+    margin: $cero;
+    padding: $cero;
+    box-sizing: border-box;
+}
+
+
+
+.flecha 
+{
+    width: $cuarenta;
+    height: $cuarenta;
+    opacity: 0.5;
+}   
+.negrita
+{
+    font-weight: $negrita;
+}
+
+body
+{
+    background-color: $blanco;
+}
+
+.envoltorio
+{
+    position: relative;
+    @include flex ();
+    padding: $ochenta $cero;
+    width: $novecientoscuarenta;
+    height: $ochocientos;
+
+}
+
+.envoltorio .imagenJuego 
+{
+    position: absolute;
+    top: $cero;
+    left: $cero;
+    z-index: -1; 
+    width: $novecientoscuarenta;
+    height: $mil;
+}
+
+.juntosJuego 
+{
+    @include flexRowWrapJustCent();
+
+
+}
+.imgJuego
+{
+    width: $novecientoscuarenta;
+    height: $ochocientos;
+}
+
+
+
+.envoltorioModal
+{
+    @include flexColNoWrapJustCent();
+
+
+}
+.juntos
+{
+    @include flexRowWrapSpaceBet ();
+
+}
+table 
+{
+    border-collapse: collapse;
+    background-image: url( ../imagen/ciudadinicio.png);
+    @include ajustesFondoFull();
+
+}
+
+.tablero
+{
+    width: $blanco;
+    border-radius: $veinte;
+}
+
+td 
+{
+    width: $cuarenta;
+    height:$cuarenta;
+    text-align: $textoCentro;
+    vertical-align: middle; 
+}
+
+.letra
+{
+    font-size:$catorce;
+    font-weight: $negrita;
+}
+
+#personaje
+{
+    width: $treinta;
+    height: $treinta;
+}
+
+.envoltorioBotonCapturar
+{
+    @include flexColumWrapAlignCent();
+    margin-top:$veinte;
+
+}
+.no-decoration
+{
+    border: $nada;
+    cursor: $cursorSenalando;
+    background:$nada;
+}
+.imagenCapturar
+{
+    width: $cuarentacinco;
+    height: $cincuenta;
+    border-radius:$cienporciento;
+
+}
+
+
+.modalMio
+{
+    display: $nada; 
+    position: fixed; 
+    z-index: $z-1; 
+    left: $cero;
+    top: $cero;
+    width: $cienporciento;
+    height: $cienporciento;
+    overflow: auto; 
+    background-color: $negroOpaco05; 
+}
+
+.modal-capturados
+{
+    display: $nada; 
+    position: fixed; 
+    z-index: $z-1; 
+    left: $cero;
+    top: $cero;
+    width:$cienporciento;
+    height: $cienporciento;
+    overflow: auto; 
+}
+
+.imagenModal
+{
+    width: $doscientos;
+
+}
+
+.margin5
+{
+    margin-top: $cinco;
+}
+.modal-content-juego 
+{
+    @include flexColNoWrapJustCent();
+    background-image: url(../imagen/fondoModal.jpg);
+    @include ajustesFondoFull();
+    padding: $cuarenta;
+    border: $uno solid $blanco;
+    width: $quinientos;
+    border-radius: $diez;
+    font-size: $veinte;
+    height: $seiscientos;
+    position: fixed; 
+    top: $sesentaporciento; 
+    left: $veintiseisporciento; 
+    transform: translate(-$cincuentaporciento, -$cincuentaporciento); 
+}
+.envoltorioModalCapturados
+{
+    margin: $tres;
+}
+.modal-content-captura
+{
+    @include flexRowWrapJustCent();
+    background-image: url(../imagen/fondoCapturados.png);
+    @include ajustesFondoFull();
+
+    padding: $cuarenta;
+    margin-right:$diez;
+    border: $uno solid $colorModalJuego;
+    width: $trescientos; 
+    border-radius:$diez;
+    font-size:$veinte;
+
+    position: fixed;
+    top: $cincuentaporciento; 
+    left: $treintatresporciento; 
+    transform: translate(-$cincuentaporciento, -$cincuentaporciento);
+
+}
+
+.capturadosModal
+{
+    width:$cuarenta;
+    height:$cuarenta;
+}
+.fondoTextoModal
+{
+    background-color: $blancoOpaco05;
+    padding: $quince;
+    border-radius: $cinco;
+}
+.letraMediana
+{
+    font-size: $treinta;
+    font-weight:$negrita;
+}
+
+.close 
+{
+    margin-right:$diez;
+    color: $colorClose;
+    font-size: $veintiocho;
+    font-weight: $negrita;
+}
+
+.close:hover,
+.close:focus 
+{
+    color: $negro;
+    text-decoration: $nada;
+    cursor: $cursorSenalando;
+}
+
+
+.modalPerso 
+{
+    display: $nada;
+    position: fixed;
+    z-index: $z-1;
+    left: $cero;
+    top: $cero;
+    width: $cienporciento;
+    height: $cienporciento;
+    background-color: $negroOpaco05;
+}
+  
+  .modal-content-perso 
+  {
+    background-color: $blanco;
+    margin: $veinteporciento auto;
+    padding: $veinte;
+    border: $uno solid $colorModalJuego;
+    width: $cincuentaporciento;
+    text-align: $textoCentro;
+  }
+  
+  .boton 
+  {
+    margin: $diez;
+    padding: $diez $veinte;
+  }
+  
+  .eligePersonaje
+  {
+    width: $cincuenta;
+  }
+
+.modalMensaje 
+{
+    display: $nada;
+    position: fixed; 
+    z-index: $z-1; 
+    left: $cero;
+    top: $cero;
+    width: $cienporciento; 
+    height: $cienporciento; 
+    overflow: auto; 
+    background-color: $negroOpaco05; 
+}
+
+.modal-content-mensaje 
+{
+    background-color: $blancoOpaco09;
+    padding: $veinte;
+    border: $uno solid $colorModalJuego;
+    width: $trescientos; 
+    text-align: $textoCentro;
+    position: fixed;
+    top: $cincuentaporciento; 
+    left: $treintaporciento; 
+    transform: translate(-$cincuentaporciento, -$cincuentaporciento);
+
+}
+
+
+
+@include pixeles1900
+{
+    .fondoNegro
+    {
+        background-color: $negro;
+    }
+    .envoltorio
+    {
+        
+        width: $ochocientosnoventa;
+        height: $ochocientos;
+    }
+    .envoltorio .imagenJuego 
+    {
+       
+        width: $ochocientosnoventa;;
+        height: $mil;
+    }
+
+    .imgJuego
+    {
+        width: $ochocientosnoventa;
+        height: $ochocientos;
+    }
+}
+
+
+@include pixeles1850
+{
+    .envoltorio
+    {
+        
+        width: $ochocientoscincuenta;
+        height: $ochocientos;
+    }
+    .envoltorio .imagenJuego 
+    {
+       
+        width:$ochocientoscincuenta;
+        height: $mil;
+    }
+
+    .imgJuego
+    {
+        width: $ochocientoscincuenta;
+        height: $ochocientos;
+    }
+}
+
+@include pixeles1750
+{
+    .envoltorio
+    {
+        
+        width: $setecientossetenta;
+        height: $ochocientos;
+    }
+    .envoltorio .imagenJuego 
+    {
+       
+        width:$setecientossetenta;
+        height: $mil;
+    }
+
+    .imgJuego
+    {
+        width: $setecientossetenta;
+        height: $ochocientos;
+    }
+    .modal-content-mensaje 
+    {
+        background-color: $blancoOpaco09;
+        padding: $veinte;
+        border: $uno solid $colorModalJuego;
+        width: $trescientos; 
+        text-align: $textoCentro;
+        position: fixed;
+        top: $cincuentaporciento; 
+        left: $veinteporciento; 
+        transform: translate(-$cincuentaporciento, -$cincuentaporciento);
+
+    }
+}
+
+
+@include pixeles1650
+{
+    .fondoNegro
+    {
+        background-color: $negro;
+    }
+    .envoltorio
+    {
+        
+        width: $setecientoscincuenta;
+        height: $ochocientos;
+    }
+    .envoltorio .imagenJuego 
+    {
+       
+        width:$setecientoscincuenta;
+        height: $mil;
+    }
+
+    .imgJuego
+    {
+        width: $setecientoscincuenta;
+        height: $ochocientos;
+    }
+    .modal-content-juego 
+    {
+  
+        top: $sesentaporciento; 
+        left: $veinticincoporciento; 
+    }
+    .modal-content-mensaje 
+    {
+        background-color: $blancoOpaco09;
+        padding: $veinte;
+        border: $uno solid $colorModalJuego;
+        width: $trescientos; 
+        text-align: $textoCentro;
+        position: fixed;
+        top: $cincuentaysieteporciento; 
+        left: $veintiseisporciento; 
+        transform: translate(-$cincuentaporciento, -$cincuentaporciento);
+
+    }
+}
+@include pixeles1500
+{
+    .fondoNegro
+    {
+        background-color: $negro;
+    }
+    .envoltorio
+    {
+        
+        width: $setecientoscincuenta;
+        height: $ochocientos;
+    }
+    .envoltorio .imagenJuego 
+    {
+       
+        width:$setecientoscincuenta;
+        height: $mil;
+    }
+
+    .imgJuego
+    {
+        width: $setecientoscincuenta;
+        height: $ochocientos;
+    }
+    .modal-content-captura
+    {
+        top: $cincuentaporciento; 
+        left: $sesentaporciento; 
+       
+    }
+    .modalPerso 
+    {
+        display: $nada;
+        position: fixed;
+        z-index: $z-1;
+        left: $cero;
+        top: $cero;
+        width: $cienporciento;
+        height: $cienporciento;
+        background-color: $negroOpaco05;
+    }
+    .modal-content-perso 
+    {
+        background-color: $blanco;
+        margin: $treintaporciento auto;
+        padding: $veinte;
+        border: $uno solid $colorModalJuego;
+        width: $cincuentaporciento;
+        text-align: $textoCentro;
+    }
+    .modal-content-juego 
+    {
+  
+        top: $sesentaporciento; 
+        left: $cincuentaporciento;  
+    }
+ 
+    .modal-content-mensaje 
+    {
+        background-color: $blancoOpaco09;
+        padding: $veinte;
+        border: $uno solid $colorModalJuego;
+        width: $trescientos; 
+        text-align: $textoCentro;
+        position: fixed;
+        top: $cincuentaysieteporciento; 
+        left: $cincuentaporciento; 
+        transform: translate(-$cincuentaporciento, -$cincuentaporciento);
+
+    }
+}
+@include pixeles1400
+{
+    .modal-content-perso {
+        background-color: $blanco;
+        margin: $cuarentaporciento auto;
+        padding: $veinte;
+        border: $uno solid $colorModalJuego;
+        width: $cincuentaporciento;
+        text-align: $textoCentro;
+      }
+    .modal-content-juego 
+    {
+  
+        top: $sesentaporciento; 
+        left: $cincuentaporciento;  
+    }
+    .modal-content-mensaje 
+    {
+        background-color: $blancoOpaco09;
+        padding: $veinte;
+        border: $uno solid $colorModalJuego;
+        width: $trescientos; 
+        text-align: $textoCentro;
+        position: fixed;
+        top: $cincuentaysieteporciento; 
+        left: $cincuentaporciento; 
+        transform: translate(-$cincuentaporciento, -$cincuentaporciento);
+
+    }
+}
+
+@include pixeles1100
+{
+    .modal-content-perso {
+        background-color: $blanco;
+        margin: $cuarentaporciento auto;
+        padding: $veinte;
+        border: $uno solid $colorModalJuego;
+        width: $cincuentaporciento;
+        text-align: $textoCentro;
+      }
+    .modal-content-juego 
+    {
+        @include flexColNoWrapJustCent();
+
+        background-image: url(../imagen/fondoModal.jpg);
+        @include ajustesFondoFull();
+
+        padding: $cuarenta;
+        border: $uno solid $blanco;
+        width: $quinientos;
+        border-radius: $diez;
+        font-size: $veinte;
+        height: $seiscientos;
+        
+        position: fixed; 
+        top: $sesentaporciento; 
+        left: $cincuentaporciento; 
+        transform: translate(-$cincuentaporciento, -$cincuentaporciento); 
+    }
+    .modal-content-mensaje 
+    {
+        background-color: $blancoOpaco09;
+        padding: $veinte;
+        border: $uno solid $colorModalJuego;
+        width: $trescientos; 
+        text-align: $textoCentro;
+        position: fixed;
+        top: $cincuentaysieteporciento; 
+        left: $cincuentaporciento; 
+        transform: translate(-$cincuentaporciento, -$cincuentaporciento);
+
+    }
+}
+
+@include pixeles750
+{
+    .fondoNegro
+    {
+        background-color: $negro;
+    }
+    .envoltorio
+    {
+        
+        width: $setecientos;
+        height: $ochocientos;
+        padding: $sesenta $cero;
+
+    }
+    .envoltorio .imagenJuego 
+    {
+       
+        width:$setecientos;
+        height: $mil;
+    }
+
+    .imgJuego
+    {
+        width: $setecientos;
+        height: $setecientos;
+    }
+    .tablero
+    {
+        width: $seiscientos;
+        border-radius: $veinte;
+    }
+
+    td 
+    {
+        width: $cuarenta;
+        height:$cuarenta;
+        text-align: $textoCentro;
+        vertical-align: middle; 
+    }
+    .modal-content-captura
+    {
+        top: $cincuentaporciento; 
+        left: $sesentacincoporciento; 
+       
+    }
+
+  
+  .modal-content-perso {
+    background-color: $blanco;
+    margin: $cuarentaporciento auto;
+    padding: $veinte;
+    border: $uno solid $colorModalJuego;
+    width: $cincuentaporciento;
+    text-align: $textoCentro;
+  }
+    .modal-content-mensaje 
+    {
+        background-color: $blancoOpaco09;
+        padding: $veinte;
+        border: $uno solid $colorModalJuego;
+        width: $trescientos; 
+        text-align: $textoCentro;
+        position: fixed;
+        top: $cincuentaysieteporciento; 
+        left: $cincuentaporciento; 
+        transform: translate(-$cincuentaporciento, -$cincuentaporciento);
+
+    }
+  
+}
+
+@include pixeles700
+{
+    .fondoNegro
+    {
+        background-color: $negro;
+    }
+    .envoltorio
+    {
+        
+        width: $quinientos;
+        padding: $veinte 0px;
+
+    }
+    .envoltorio .imagenJuego 
+    {
+       
+        width:$quinientos;
+        height: $setecientos;
+    }
+
+    .imgJuego
+    {
+        width: $seiscientos;
+        height: $seiscientos;
+    }
+    .tablero
+    {
+        width: $quinientoscincuenta;
+        height: $quinientoscincuenta;
+        border-radius: $veinte;
+    }
+
+    td 
+    {
+        width: $treintacinco;
+        height:$treintacinco;
+        text-align: $textoCentro;
+        vertical-align: middle; 
+    }
+    .modal-content-captura
+    {
+        top: $cincuentatresporciento; 
+        left: $sesentaporciento; 
+       
+    }
+    .fondoTextoModal
+    {
+        background-color: $blancoOpaco05;
+        padding: $quince;
+        border-radius: $cinco;
+        font-size: $dieciocho;
+    }
+    .imagenModal
+    {
+        width: $cientoochenta;
+
+    }
+    .modal-content-perso 
+    {
+        background-color: $blanco;
+        margin: $setentaporciento auto;
+        padding: $veinte;
+        border: $uno solid $colorModalJuego;
+        width: $setentaporciento;
+        text-align: $textoCentro;
+    }
+    .modal-content-juego 
+    {
+        @include flexColNoWrapJustCent();
+        background-image: url(../imagen/fondoModal.jpg);
+        @include ajustesFondoFull();
+
+        padding: $veinte;
+        border: $uno solid $blanco;
+        width: $cuatrocientos;
+        border-radius: $diez;
+        font-size: $veinte;
+        height: $quinientoscincuenta;
+        
+        position: fixed; 
+        top: $cincuentaysieteporciento; 
+        left: $cincuentaporciento;  
+        transform: translate(-$cincuentaporciento, -$cincuentaporciento); 
+    }
+
+    .modal-content-mensaje 
+    {
+        background-color: $blancoOpaco09;
+        padding: $veinte;
+        border: $uno solid $colorModalJuego;
+        width: $trescientos; 
+        text-align: $textoCentro;
+        position: fixed;
+        top: $sesentaporciento; 
+        left: $cincuentaporciento; 
+        transform: translate(-$cincuentaporciento, -$cincuentaporciento);
+
+    }
+}
+
+@include pixeles600
+{
+    .fondoNegro
+    {
+        background-color: $negro;
+    }
+    .envoltorio
+    {
+        
+        width: $quinientos;
+
+    }
+    .envoltorio .imagenJuego 
+    {
+       
+        width:$quinientos;
+        height: $quinientos;
+    }
+    .imgJuego
+    {
+        width: $quinientos;
+        height: $quinientos;
+    }
+    .tablero
+    {
+        width: $quinientoscincuenta;
+        height: $quinientoscincuenta;
+        border-radius: $veinte;
+    }
+
+    td 
+    {
+        width: $treintacinco;
+        height:$treintacinco;
+        text-align: $textoCentro;
+        vertical-align: middle; 
+    }
+    .modal-content-perso {
+        background-color: $blanco;
+        margin: $ochentaporciento auto;
+        padding: $veinte;
+        border: $uno solid $colorModalJuego;
+        width: $cincuentaporciento;
+        text-align: $textoCentro;
+      }
+    .fondoTextoModal
+    {
+        background-color: $blancoOpaco05;
+        padding: $quince;
+        border-radius: $cinco;
+        font-size: $dieciocho;
+    }
+    .imagenModal
+    {
+        width: $cientocinquenta;
+
+    }
+
+    .modal-content-juego 
+    {
+        @include flexColNoWrapJustCent();
+        background-image: url(../imagen/fondoModal.jpg);
+        @include ajustesFondoFull();
+        padding: $veinte;
+        border: $uno solid $blanco;
+        width: $cuatrocientos;
+        border-radius: $diez;
+        font-size: $veinte;
+        height: $quinientos;
+        position: fixed; 
+        top: $sesentaporciento; 
+        left: $cincuentaporciento;  
+        transform: translate(-$cincuentaporciento, -$cincuentaporciento); 
+    }
+}
+
+@include pixeles550
+{
+    .fondoNegro
+    {
+        background-color: $negro;
+    }
+    .envoltorio
+    {
+        
+        width: $cuatrocientoscinquenta;
+
+    }
+    .envoltorio .imagenJuego 
+    {
+       
+        width:$cuatrocientoscinquenta;
+        height: $cuatrocientoscinquenta;
+    }
+    .imgJuego
+    {
+        width: $cuatrocientoscinquenta;
+        height: $cuatrocientoscinquenta;
+    }
+    .tablero
+    {
+        width: $quinientos;
+        height: $quinientos;
+        border-radius: $veinte;
+    }
+
+    td 
+    {
+        width: $treinta;
+        height:$treinta;
+        text-align: $textoCentro;
+        vertical-align: middle; 
+    }
+    .modal-content-perso 
+    {
+        background-color: $blanco;
+        margin: $ochentaporciento auto;
+        padding: $veinte;
+        border: $uno solid $colorModalJuego;
+        width: $cincuentaporciento;
+        text-align: $textoCentro;
+      }
+
+      .modal-content-juego 
+    {
+        @include flexColNoWrapJustCent();
+        background-image: url(../imagen/fondoModal.jpg);
+        @include ajustesFondoFull();
+        padding: $veinte;
+        border: $uno solid $blanco;
+        width: $cuatrocientos;
+        border-radius: $diez;
+        font-size: $veinte;
+        height: $quinientos;
+        
+        position: fixed; 
+        top: $sesentaporciento; 
+        left: $cincuentaporciento;  
+        transform: translate(-$cincuentaporciento, -$cincuentaporciento); 
+    }
+    .imagenModal
+    {
+        width: $cientocinquenta;
+
+    }
+
+    .modal-content-mensaje 
+    {
+        background-color: $blancoOpaco09;
+        padding: $veinte;
+        border: $uno solid $colorModalJuego;
+        width: $trescientos; 
+        text-align: $textoCentro;
+        position: fixed;
+        top: $cincuentaysieteporciento; 
+        left: $cincuentaporciento; 
+        transform: translate(-$cincuentaporciento, -$cincuentaporciento);
+
+    }
+}

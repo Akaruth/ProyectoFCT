@@ -1,0 +1,84 @@
+@use 'partials/variables' as *;
+@use 'partials/mixins' as *;
+@use 'partials/breakpoints' as *;
+
+* 
+  {
+    margin: $cero;
+    padding: $cero;
+    box-sizing: border-box;
+  }
+
+.crearEntrada
+{
+    @include flexFlowColumAlignCent();
+    padding-top: $sesenta;
+    padding-bottom: $sesenta;
+    background: url(../imagen/prueba3.png);
+    @include ajustesFondoFull();
+
+    .formularioCrearEntrada
+    {
+        width: $mil;
+        .descripcionCrearEntrada
+        {
+            height: $trescientos;
+
+        }
+    }
+}
+.boton
+{
+    padding: $cinco;
+    border-radius: $diez;
+    background-color: $amarilloMenu;
+    color: $negro;
+    text-decoration: $nada;
+    border: $nada;
+
+}
+.boton:hover
+{
+    color: $colorEnlaceHover;
+
+}
+
+@include pixeles1050
+{
+    .crearEntrada
+    {
+        .formularioCrearEntrada
+        {
+            width: $ochocientos;
+            .descripcionCrearEntrada
+            {
+                height: $doscientoscincuenta;
+
+            }
+        }
+    }
+}
+
+@include pixeles850
+{
+    .crearEntrada
+    {
+        .formularioCrearEntrada
+        {
+            width: $seiscientos;
+            
+        }
+    }
+}
+
+@include pixeles650
+{
+    .crearEntrada
+    {
+        .formularioCrearEntrada
+        {
+            width: $cuatrocientoscinquenta;
+            
+        }
+    }
+}

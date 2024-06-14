@@ -1,0 +1,852 @@
+@use 'partials/variables' as *;
+@use 'partials/mixins' as *;
+@use 'partials/breakpoints' as *;
+
+  * 
+  {
+    margin: $cero;
+    padding: $cero;
+    box-sizing: border-box;
+  }
+  .boton
+  {
+      padding: $cinco;
+      border-radius: $diez;
+      background-color: $amarilloMenu;
+      color: $negro;
+      text-decoration: $nada;
+      border: $nada;
+
+  }
+  .boton:hover
+  {
+      color: $colorEnlaceHover;
+
+  }
+
+  .dropdown-item.active, .dropdown-item:active 
+  {
+    color: $blanco;
+    text-decoration: $nada;
+    background-color: $amarilloMenu;
+  }
+ 
+.iconoPokemon
+{
+  width: $cincuenta;
+}
+.iconoPerfil
+{
+  width: $doscientoscincuenta;
+  height: $doscientoscincuenta;
+  border-radius: $veinteporciento;
+  border: $uno solid $blanco;
+
+}
+.envoltorio
+{
+  @include flexFlowRowAlignJustCent();  
+  position: relative;
+  gap: $cincuenta;
+  background: url(../imagen/fondopokemon.png);
+  @include ajustesFondoFull();
+}
+
+.centrarDiv1, .centrarDiv2
+{
+  @include flexFlowColumAlignJustCent();
+  font-size: $treinta;
+  
+}
+.mensajeriaPerfil
+{
+  @include flex ();
+  width:  $cuatrocientos;
+  height: $trescientos;
+  gap: $diez;
+  background: url(../imagen/mensajeria.png);
+  @include ajustesFondoFull();
+
+}
+
+.entradasPerfil 
+{
+  margin-top: $veinte;
+  @include flex ();
+  width:  $cuatrocientos;
+  height: $trescientos;
+  gap: $diez;
+  background: url(../imagen/akachat.png);
+  @include ajustesFondoFull();
+
+}
+
+.minijuegoPerfil
+{
+  @include flex ();
+  width:  $cuatrocientos;
+  height: $trescientos;
+  gap: $diez;
+  background: url(../imagen/minijuego.png);
+  @include ajustesFondoFull();
+
+}
+
+.akadexPerfil
+{
+  margin-top: $veinte;
+  @include flex ();
+  width:  $cuatrocientos;
+  height: $trescientos;
+  gap: $diez;
+  background: url(../imagen/akadex.png);
+  @include ajustesFondoFull();
+  
+}
+.espacio
+{
+  background-color: $colorEspacio;
+  padding: $veinte;
+}
+.efecto:hover
+{
+  background-color:  $colorEfectoHover;
+}
+
+.juntos
+{
+  @include flexSpaceBetween();
+
+}
+.formuPoke
+{
+  font-size: $veinte; 
+}
+
+.centrarFoto
+{
+  @include flexFlowRowAlignJustCent();
+
+}
+
+.tamanoFormu
+{
+  @include flexRowWrap();
+
+}
+
+.gridPerfil 
+{
+  position: relative;
+  @include flex ();
+
+}
+
+.imagenFondo 
+{
+  position: absolute;
+  top: $cero;
+  left: $cero;
+  width: $cienporciento;
+  height: $cienporciento;
+  z-index: $cero; 
+  overflow: hidden;
+}
+
+.imagenFondo img 
+{
+  width: $cienporciento;
+  height: $cienporciento;
+  object-fit: cover;
+}
+
+.perfil 
+{
+  position: relative;
+  width: $novecientos;
+  height: $ochocientos;
+  background-color: $colorGrisPerfil;
+  padding: $cincuenta;
+  border: $uno solid $blanco;
+}
+
+.textoResaltado
+{
+  padding: $cinco;
+  background-color: $blancoOpaco07;
+  border-radius: $cien;
+}
+
+.modal-dialog 
+{
+  
+  top: $veintidosporciento;
+
+}
+
+.modal-backdrop 
+{
+  z-index: $cero !important;
+}
+
+.nickFoto
+{
+  @include flexRowBet();
+  @include margin200400();
+}
+.hidden 
+{
+  display: $nada;
+}
+
+
+.cuerpoPerfil
+{
+  @include flexColum();
+  background-color: $blancoOpaco05;
+  border-radius: $cinco;
+  padding: $quince;
+}
+
+.nick
+{
+  font-size: $cuarenta;
+  color: $negro;
+  
+}
+.pokeFav
+{
+  font-size: $veinte;
+  color: $negro;
+}
+.regionFav
+{
+  font-size: $veinte;
+  color: $negro;
+}
+.cantComentarios
+{
+  color: $negro;
+  font-size: $veinte;
+}
+.area3
+{
+  @include flexColum();
+  height: $cien;
+}
+.cantEntradas
+{
+  color: $negro;
+  font-size: $veinte;
+
+}
+
+.area4
+{
+  @include flexColum();
+  height: $cien;
+}
+
+
+.fondoPerfil 
+{
+  height: $cienporciento;
+  width: $quinientos;
+
+}
+
+@include pixeles1850
+{
+  .centrarDiv1, .centrarDiv2
+  {
+  
+    font-size: $treinta;
+  }
+  .mensajeriaPerfil
+  {
+    width:  $trescientoscinquenta;
+    height: $doscientoscincuenta;
+    gap: $diez;
+  }
+  
+  .entradasPerfil 
+  {
+    width:  $trescientoscinquenta;
+    height: $doscientoscincuenta;
+    gap: $diez;
+  }
+  
+  .minijuegoPerfil
+  {
+    width:  $trescientoscinquenta;
+    height: $doscientoscincuenta;
+    gap: $diez;
+  }
+  
+  .akadexPerfil
+  {
+    width:  $trescientoscinquenta;
+    height: $doscientoscincuenta;
+    gap: $diez;
+    
+  }
+  .envoltorio
+  {
+    gap: $treinta;
+
+  }
+
+}
+
+
+@include pixeles1800
+{
+  .perfil
+  {
+    width: $ochocientoscincuenta;
+    padding: $cincuenta;
+    border: $uno solid $blanco;
+  }
+  .fondoPerfil 
+  {
+    height: $cienporciento;
+    width: $cuatrocientoscinquenta;
+
+  }
+}
+
+@include pixeles1700
+{
+  .centrarDiv1, .centrarDiv2
+  {
+  
+    font-size: $treinta;
+  }
+  .mensajeriaPerfil
+  {
+    width:  $trescientos;
+    height: $doscientos;
+    gap: $diez;
+  }
+  
+  .entradasPerfil 
+  {
+    width:  $trescientos;
+    height: $doscientos;
+    gap: $diez;
+  }
+  
+  .minijuegoPerfil
+  {
+    width:  $trescientos;
+    height: $doscientos;
+    gap: $diez;
+  }
+  
+  .akadexPerfil
+  {
+    width:  $trescientos;
+    height: $doscientos;
+    gap: $diez;
+    
+  }
+  .envoltorio
+  {
+    gap: $veinte;
+
+  }
+
+
+}
+
+@include pixeles1600
+{
+  .perfil
+  {
+    width: $ochocientos;
+    padding: $cincuenta;
+    border: $uno solid $blanco;
+  }
+}
+
+@include pixeles1500
+{
+  .perfil
+  {
+    width: $setecientoscincuenta;
+    padding: $cincuenta;
+    border: $uno solid $blanco;
+  }
+  .centrarDiv1, .centrarDiv2
+  {
+  
+    font-size: $veinticinco;
+  }
+  .mensajeriaPerfil
+  {
+    width:  $doscientosochenta;
+    height: $doscientos;
+    gap: $diez;
+  }
+  
+  .entradasPerfil 
+  {
+    width:  $doscientosochenta;
+    height: $doscientos;
+    gap: $diez;
+  }
+  
+  .minijuegoPerfil
+  {
+    width:  $doscientosochenta;
+    height: $doscientos;
+    gap: $diez;
+  }
+  
+  .akadexPerfil
+  {
+    width:  $doscientosochenta;
+    height: $doscientos;
+    gap: $diez;
+    
+  }
+  .envoltorio
+  {
+    gap: $veinte;
+
+  }
+}
+
+@include pixeles1400
+{
+  .perfil
+  {
+    width: $setecientos;
+    padding: $cincuenta;
+    padding: $treinta;
+    border: $uno solid $blanco;
+  }
+  .iconoPerfil
+  {
+      width: $doscientos;
+      height: $doscientos;
+      border-radius: $veinteporciento;
+      border: $uno solid $blanco;
+
+  }
+  .envoltorio
+  {
+    gap: $diez;
+  }
+}
+
+
+@include pixeles1300
+{
+  .perfil
+  {
+    width: $setecientos;
+    padding: $veinte;
+    border: $uno solid $blanco;
+  }
+  
+  .iconoPerfil
+  {
+      width: $doscientos;
+      height: $doscientos;
+      border-radius: $veinteporciento;
+      border: $uno solid $blanco;
+
+  }
+
+  .centrarDiv1, .centrarDiv2
+  {
+  
+    font-size: $veinticinco;
+  }
+  .mensajeriaPerfil
+  {
+    width:  $doscientoscincuenta;
+    height: $doscientos;
+    gap: $diez;
+  }
+  
+  .entradasPerfil 
+  {
+    width:  $doscientoscincuenta;
+    height: $doscientos;
+    gap: $diez;
+  }
+  
+  .minijuegoPerfil
+  {
+    width:  $doscientoscincuenta;
+    height: $doscientos;
+    gap: $diez;
+  }
+  
+  .akadexPerfil
+  {
+    width:  $doscientoscincuenta;
+    height: $doscientos;
+    gap: $diez;
+    
+  }
+
+
+}
+
+@include pixeles1250
+{
+
+  
+  .centrarDiv1, .centrarDiv2
+  {
+  
+    font-size: $veinticinco;
+  }
+  .mensajeriaPerfil
+  {
+    width:  $doscientosveinte;
+    height: $cientocinquenta;
+    gap: $diez;
+    margin-top: $diez;
+
+  }
+  
+  .entradasPerfil 
+  {
+    width:  $doscientosveinte;
+    height: $cientocinquenta;
+    gap: $diez;
+  }
+  
+  .minijuegoPerfil
+  {
+    width:  $doscientosveinte;
+    height: $cientocinquenta;
+    gap: $diez;
+  }
+  
+  .akadexPerfil
+  {
+    width:  $doscientosveinte;
+    height: $cientocinquenta;
+    gap: $diez;
+    margin-bottom: $diez;
+
+  }
+
+}
+
+@include pixeles1200
+{
+  .perfil
+  {
+    width: $novecientos;
+    padding: $cuarenta;
+    border: $uno solid $blanco;
+  }
+  
+  .iconoPerfil
+  {
+    width: $doscientos;
+    height: $doscientos;
+    border-radius: $veinteporciento;
+    border: $uno solid $blanco;
+
+  }
+  .centrarDiv1, .centrarDiv2
+  {
+  
+    font-size: $treinta;
+  }
+  .mensajeriaPerfil
+  {
+    width:  $novecientos;
+    height: $doscientos;
+    gap: $diez;
+    margin-top: $diez;
+
+  }
+  
+  .entradasPerfil 
+  {
+    width:  $novecientos;
+    height: $doscientos;
+    gap: $diez;
+  }
+  
+  .minijuegoPerfil
+  {
+    width:  $novecientos;
+    height: $doscientos;
+    gap: $diez;
+  }
+  
+  .akadexPerfil
+  {
+    width:  $novecientos;
+    height: $doscientos;
+    gap: $diez;
+    margin-bottom: $diez;
+
+  }
+  .envoltorio
+  {
+    @include flexColumCentrada();
+    position: relative;
+    gap: $diez;
+  }
+}
+
+
+@include pixeles1100
+{
+  .perfil
+  {
+    width: $novecientos;
+    padding: $cuarenta;
+    border: $uno solid $blanco;
+  }
+  
+  .iconoPerfil
+  {
+      width: $doscientos;
+      height: $doscientos;
+      border-radius: $veinteporciento;
+      border: $uno solid $blanco;
+
+  }
+  .centrarDiv1, .centrarDiv2
+  {
+  
+    font-size: $treinta;
+  }
+  .mensajeriaPerfil
+  {
+    width:  $novecientos;
+    height: $doscientos;
+    gap: $diez;
+    margin-top: $diez;
+
+  }
+  
+  .entradasPerfil 
+  {
+    width:  $novecientos;
+    height: $doscientos;
+    gap: $diez;
+  }
+  
+  .minijuegoPerfil
+  {
+    width:  $novecientos;
+    height: $doscientos;
+    gap: $diez;
+  }
+  
+  .akadexPerfil
+  {
+    width:  $novecientos;
+    height: $doscientos;
+    gap: $diez;
+    margin-bottom: $diez;
+
+  }
+  .envoltorio
+  {
+    @include flexColumCentrada();
+    position: relative;
+    gap: $diez;
+  }
+}
+
+
+@include pixeles1000
+{
+  .perfil
+  {
+    width: $setecientos;
+    padding: $veinte;
+    border: $uno solid $blanco;
+  }
+  
+  .iconoPerfil
+  {
+      width: $cientoochenta;
+      height: $cientoochenta;
+      border-radius: $veinteporciento;
+      border: $uno solid $blanco;
+
+  }
+
+  .centrarDiv1, .centrarDiv2
+  {
+  
+    font-size: $treinta;
+  }
+  .mensajeriaPerfil
+  {
+    width:  $setecientos;
+    height: $doscientos;
+    gap: $diez;
+    margin-top: $diez;
+
+  }
+  
+  .entradasPerfil 
+  {
+    width:  $setecientos;
+    height: $doscientos;
+    gap: $diez;
+  }
+  
+  .minijuegoPerfil
+  {
+    width:  $setecientos;
+    height: $doscientos;
+    gap: $diez;
+  }
+  
+  .akadexPerfil
+  {
+    width:  $setecientos;
+    height: $doscientos;
+    gap: $diez;
+    margin-bottom: $diez;
+
+  }
+  .envoltorio
+  {
+    @include flexColumCentrada();
+    position: relative;
+    gap: $diez;
+  }
+  .nick
+  {
+    font-size: $treintacinco;
+    color: $negro;
+    
+  }
+}
+
+@include pixeles800
+{
+  .perfil
+  {
+    width: $quinientoscincuenta;
+    padding: $veinte;
+    border: $uno solid $blanco;
+  }
+  
+  .iconoPerfil
+  {
+      width: $cientoochenta;
+      height: $cientoochenta;
+      border-radius: $veinteporciento;
+      border: $uno solid $blanco;
+
+  }
+
+  
+  .centrarDiv1, .centrarDiv2
+  {
+  
+    font-size: $veinte;
+  }
+  .mensajeriaPerfil
+  {
+    width:  $quinientoscincuenta;
+    height: $cientocinquenta;
+    gap: $diez;
+  }
+  
+  .entradasPerfil 
+  {
+    width:  $quinientoscincuenta;
+    height: $cientocinquenta;
+    gap: $diez;
+  }
+  
+  .minijuegoPerfil
+  {
+    width:  $quinientoscincuenta;
+    height: $cientocinquenta;
+    gap: $diez;
+  }
+  
+  .akadexPerfil
+  {
+    width:  $quinientoscincuenta;
+    height: $cientocinquenta;
+    gap: $diez;
+    
+  }
+  .nick
+  {
+    font-size: $treinta;
+    color: $negro;
+    
+  }
+  
+}
+
+@include pixeles600
+{
+  .perfil
+  {
+    width: $cuatrocientoscinquenta;
+    padding: $veinte;
+    border: $uno solid $blanco;
+  }
+  
+  .iconoPerfil
+  {
+      width: $cientocinquenta;
+      height: $cientocinquenta;
+      border-radius: $veinteporciento;
+      border: $uno solid $blanco;
+
+  }
+  .centrarDiv1, .centrarDiv2
+  {
+  
+    font-size: $treinta;
+  }
+  .mensajeriaPerfil
+  {
+    width:  $cuatrocientoscinquenta;
+    height: $doscientos;
+    gap: $diez;
+  }
+  
+  .entradasPerfil 
+  {
+    width:  $cuatrocientoscinquenta;
+    height: $doscientos;
+    gap: $diez;
+  }
+  
+  .minijuegoPerfil
+  {
+    width:  $cuatrocientoscinquenta;
+    height: $doscientos;
+    gap: $diez;
+  }
+  
+  .akadexPerfil
+  {
+    width:  $cuatrocientoscinquenta;
+    height: $doscientos;
+    gap: $diez;
+
+    
+  }
+  .nick
+  {
+    font-size: $veinticinco;
+    color: $negro;
+    
+  }
+}

@@ -1,0 +1,105 @@
+@use 'partials/variables' as *;
+@use 'partials/mixins' as *;
+@use 'partials/breakpoints' as *;
+
+* 
+{
+    margin: $cero;
+    padding: $cero;
+    box-sizing: border-box;
+}
+
+.contenido
+{
+    background: url(../imagen/fondoakadexcarta.png);
+    @include ajustesFondoFull();
+    
+}
+.enlace
+{
+    text-decoration: $nada;
+    color: $colorEnlace;
+
+}
+
+.enlace:hover
+{
+    text-decoration: $nada;
+    color: $colorEnlaceHover;
+
+}
+.centrar
+{
+    @include flexFlowColumAlignCent();
+}
+.espacio
+{
+    background-color: $colorEspacio;
+    padding: $veinte;
+}
+.iconoPokemon 
+{
+    width: $cien; 
+    height: auto;
+}
+
+.rutaFoto
+{
+    width: $trescientosnoventa; 
+    height: $cuatrocientos;
+}
+.fotoRuta
+{
+    @include flexSpaceEvenly();
+    @include margin400400();
+
+}
+.envoltorioRuta
+{
+    width: $mildoscientos;
+    @include flexColJustCenter();
+    
+
+}
+.tituloRuta
+{
+    @include padding2002040();
+    background-color: $colorEspacio;
+}
+
+@include pixeles1300
+{
+    .envoltorioRuta
+    {
+        width: $mil;
+       
+
+    }
+}
+
+@include pixeles1150
+{
+    .envoltorioRuta
+    {
+        width: $ochocientos;
+
+    }
+}
+
+@include pixeles850
+{
+    .envoltorioRuta
+    {
+        width: $seiscientos;
+
+    }
+}
+
+@include pixeles650
+{
+    .envoltorioRuta
+    {
+        width: $cuatrocientos;
+
+    }
+}

@@ -1,0 +1,515 @@
+@use 'partials/variables' as *;
+@use 'partials/mixins' as *;
+@use 'partials/breakpoints' as *;
+
+* 
+{
+margin: $cero;
+padding: $cero;
+box-sizing: border-box;
+}
+.botonDesplegable 
+{
+    display: $nada;
+}
+
+
+.envoltorioPanel
+{
+    display: grid;
+    grid-template-areas: 
+        'izq izq dere dere'
+        'izq izq dere dere'
+    ;
+    color: $blanco;
+    padding: $veinte;
+    margin: $cero;
+    background: url(../imagen/prueba2.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    justify-content: center;
+}
+
+.listado
+{
+    grid-area: izq;
+    height: $setecientos;
+    width: $cuatrocientos;
+    border-top-left-radius: $veinte;
+    border-bottom-left-radius: $veinte;
+    background: url(../imagen/adminpanel2.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    gap: $veinte;
+    @include padding30202020();
+}
+
+.nombreAdmin
+{
+    font-size: 35px;
+    color: $negro;
+    background-color: rgba(255, 255, 255,0.8);
+    padding: $cinco;
+    border-radius: $tres;
+
+}
+
+.apartados
+{
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    text-align: $textoCentro;
+}
+
+.list
+{
+   
+    padding: $cinco;
+    margin: $cinco;
+    background-color: rgba(255, 255, 255,0.8);
+    width: 250px;
+    color: $negro;
+    border: $nada;
+}
+
+
+.iconoPerfil
+{
+    width: $doscientoscincuenta;
+    height: $doscientoscincuenta;
+    border-radius: $veinteporciento;
+    border: $uno solid $blanco;
+
+}
+
+.contenido
+{
+    grid-area: dere;
+    background-color: $blancoOpaco08;
+    width: $mildoscientos;
+    border-top-right-radius: $veinte;
+    border-bottom-right-radius: $veinte;
+    @include flexColumCentrada();
+}
+
+a
+{
+    text-decoration: $nada;
+    color: $negro;
+
+}
+
+.list:hover,
+.list:hover a 
+{
+    background-color: $fondoApartadosIndi;
+    color: $blancoOpaco08;
+}   
+.mensajeRotativo
+{
+    font-size: $cuarenta;
+}
+.ordenar
+{
+    @include flexColumCentrada();
+    gap: $sesenta;
+    padding: $treinta;
+}
+.tablas
+{
+    width: $mil;
+    color: $negro;
+    text-align: $textoCentro;
+    @include flexColumCentrada();
+    @include padding500500();
+}
+.tituloseccion
+{
+    font-size: $treinta;
+    margin-bottom: $veinte;
+}
+.responsive-table {
+    width: auto;
+    border-collapse: collapse;
+    background-color: $colorTablaAdmin;
+
+}
+
+.responsive-table th, .responsive-table td 
+{
+    border: $uno solid $negro;
+    padding: $ocho;
+}
+
+.responsive-table th {
+    background-color: $colorTablaAdmin;
+}
+
+.fondoTiempo
+{
+    background: url(../imagen/clima.png);
+    @include ajustesFondoFull();
+    border-radius: $diez;
+    padding: $veinte;
+    width: $cuatrocientos;
+
+  
+}
+.tiempoBaza
+{
+    background-color: $blancoOpaco07;
+    border-radius: $diez;
+    padding: $veinte;
+   
+}
+
+.juntosTiempo
+{
+    @include flexFlowRowAlignJustCent();
+
+}
+
+@include pixeles1700
+{
+    
+    .listado
+    {
+       
+        height: $setecientos;
+        width: $cuatrocientos;
+      
+    }
+    .tablas
+    {
+    
+        width: $setecientos;
+        
+    }
+    
+    .contenido
+    {
+        
+        width: $mil;
+      
+    }
+}
+
+@include pixeles1500
+{
+    
+    .contenido
+    {
+        
+        width: $novecientos;
+       
+    }
+    .mensajeRotativo
+    {
+        font-size: $treintacinco;
+    }
+    .nombreAdmin
+    {
+        font-size: $treinta;
+       
+
+    }
+    .iconoPerfil
+    {
+        width: $doscientos;
+        height: $doscientos;
+       
+
+    }
+}
+
+@include pixeles1400
+{
+ 
+    .responsive-table 
+    {
+        width: auto;
+        border-collapse: collapse;
+        background-color: $colorTablaAdmin;
+        font-size: $catorce;
+    }  
+    .listado
+    {
+       
+        height: $setecientos;
+        width: $trescientoscinquenta;
+       
+    }
+   
+    
+    .contenido
+    {
+       
+        width: $ochocientos;
+        
+    }
+}
+
+@include pixeles1200
+{
+        
+    .listado
+    {
+       
+        height: $setecientos;
+        width: $trescientos;
+       
+    }
+   
+    .tablas
+    {
+    
+        width: $seiscientos;
+        
+    }
+    .contenido
+    {
+       
+        width: $setecientos;
+        
+    }
+}
+
+@include pixeles1050
+{
+        
+    .listado
+    {
+       
+        height: $setecientos;
+        width: $trescientos;
+       
+    }
+   
+    .tablas
+    {
+    
+        width: $quinientos;
+        
+    }
+    .contenido
+    {
+       
+        width: $seiscientos;
+        
+    }
+}
+
+@include pixeles950
+{
+        
+    .apartados 
+    {
+        display: $nada;
+        flex-direction: column;
+        background-color: $fondoApartadosAdmin; 
+        position: absolute;
+        top: $cuatrocientos; 
+        right: $cientocuarenta; 
+        width:$doscientos; 
+        border: $uno solid $colorBorderAdmin;
+        z-index: $z-1000;
+    }
+    .list
+    {
+        background-color: $blanco;
+
+    }
+    .apartados.mostrar 
+    {
+        @include flexAligCent();
+
+    }
+
+    .botonDesplegable 
+    {
+        display: block;
+        background-color: $colorBotonDesplegableAdmin;
+        color: $negro;
+        padding: $cinco;
+        width: $cincuenta;
+        border: $nada;
+        cursor: $cursorSenalando;
+        font-size: $veinticinco;
+    }
+
+
+    .envoltorioPanel
+    {
+        display: grid;
+        grid-template-areas: 
+            'izq izq izq izq'
+            'dere dere dere dere'
+        ;
+        color: $blanco;
+        padding: $veinte;
+        margin: $cero;
+        background: url(../imagen/prueba2.png);
+        @include ajustesFondoFull();
+        justify-content: $textoCentro;
+    }
+    .listado
+    {
+        grid-area: izq;
+        height: $trescientos;
+        width: $setecientos;
+        border-top-left-radius: $veinte;
+        border-top-right-radius: $veinte;
+        background: url(../imagen/adminpanel2.png);
+        @include ajustesFondoFull();
+        @include flexFlowRowAlignCent();
+        gap: $veinte;
+        @include padding30202020();
+    }
+   
+    .tablas
+    {
+    
+        width: $quinientos;
+        
+    }
+    .contenido
+    {
+        border-bottom-right-radius: $veinte;
+        border-bottom-left-radius: $veinte;
+        width: $setecientos;
+
+    }
+    .list
+    {
+        width: $cientocinquenta;
+    }
+}
+
+@include pixeles750
+{
+        
+    .envoltorioPanel
+    {
+        display: grid;
+        grid-template-areas: 
+            'izq izq izq izq'
+            'dere dere dere dere'
+        ;
+              
+    }
+    .listado
+    {
+        grid-area: izq;
+        height: $trescientos;
+        width: $seiscientos;
+        border-top-left-radius: $veinte;
+        border-top-right-radius: $veinte;
+        @include flexFlowRowAlignCent();
+        gap: $veinte;
+        @include padding30202020();
+    }
+   
+    .tablas
+    {
+    
+        width: $quinientos;
+        
+    }
+    .contenido
+    {
+        border-bottom-right-radius: $veinte;
+        border-bottom-left-radius: $veinte;
+        width: $seiscientos;
+        
+    }
+}
+
+@include pixeles650
+{
+    .iconoPerfil
+    {
+        width: $cientocinquenta;
+        height: $cientocinquenta;
+       
+
+    }   
+    .envoltorioPanel
+    {
+        display: grid;
+        grid-template-areas: 
+            'izq izq izq izq'
+            'dere dere dere dere'
+        ;
+              
+    }
+    .listado
+    {
+        grid-area: izq;
+        width: $cuatrocientosochenta;
+        border-top-left-radius: $veinte;
+        border-top-right-radius: $veinte;
+        @include flexFlowRowAlignCent();
+        gap: $veinte;
+        @include padding30202020();
+    }
+   
+    .tablas
+    {
+    
+        width: $cuatrocientosochenta;;
+        
+    }
+    .contenido
+    {
+        border-bottom-right-radius: $veinte;
+        border-bottom-left-radius: $veinte;
+        width: $cuatrocientosochenta;
+        
+    }
+    .mensajeRotativo
+    {
+        font-size: $treinta;
+    }
+    .list
+    {
+        width: $cientoveinte;
+    }
+    .responsive-table 
+    {
+        font-size: $doce;
+    
+    }
+    .apartados 
+    {
+        display: $nada;
+        flex-direction: column;
+        background-color: $fondoApartadosAdmin;
+        position: absolute;
+        top: $cuatrocientos; 
+        right: $noventa; 
+        width:$doscientos; 
+        border: $uno solid $colorBorderAdmin;
+        z-index: $z-1000;
+    }
+}
+@include pixeles550
+{
+    .apartados 
+    {
+        right: $treinta; 
+    }
+}
+
+@include pixeles500
+{
+    .apartados 
+    {
+        right: $veinte; 
+    }
+}

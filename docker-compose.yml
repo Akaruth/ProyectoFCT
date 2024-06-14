@@ -1,0 +1,31 @@
+version: "3.7"
+services:
+  nginx:
+    build: ./nginx/
+    container_name: nginx-container-cris
+    ports:
+      - 8080:80
+    links:
+      - php
+    volumes:
+      - ./nginx/www:/var/www/html
+      - shared-volume:/var/www/html/fondosPerfiles
+      - shared-volume:/var/www/html/fotosEntradas
+      - shared-volume:/var/www/html/fotosPerfil
+  php:
+    build: ./nginx/www/
+    container_name: php-container-cris
+    expose:
+      - 9000
+    volumes:
+      - ./nginx/www/:/var/www/html
+      - shared-volume:/var/www/html/fondosPerfiles
+      - shared-volume:/var/www/html/fotosEntradas
+      - shared-volume:/var/www/html/fotosPerfil
+  mysql:
+    build: ./init-scripts
+    container_name: mysql-container-cris
+
+volumes:
+  db_data: 
+  shared-volume:

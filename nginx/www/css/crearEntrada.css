@@ -1,0 +1,57 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+.crearEntrada {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  padding-top: 60px;
+  padding-bottom: 60px;
+  background: url(../imagen/prueba3.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.crearEntrada .formularioCrearEntrada {
+  width: 1000px;
+}
+.crearEntrada .formularioCrearEntrada .descripcionCrearEntrada {
+  height: 300px;
+}
+
+.boton {
+  padding: 5px;
+  border-radius: 10px;
+  background-color: rgb(250, 198, 28);
+  color: black;
+  text-decoration: none;
+  border: none;
+}
+
+.boton:hover {
+  color: rgb(84, 66, 10);
+}
+
+@media screen and (max-width: 1050px) {
+  .crearEntrada .formularioCrearEntrada {
+    width: 800px;
+  }
+  .crearEntrada .formularioCrearEntrada .descripcionCrearEntrada {
+    height: 250px;
+  }
+}
+@media screen and (max-width: 850px) {
+  .crearEntrada .formularioCrearEntrada {
+    width: 600px;
+  }
+}
+@media screen and (max-width: 650px) {
+  .crearEntrada .formularioCrearEntrada {
+    width: 450px;
+  }
+}
+
+/*# sourceMappingURL=crearEntrada.css.map */

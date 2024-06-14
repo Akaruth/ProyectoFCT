@@ -1,0 +1,101 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+.enlace {
+  text-decoration: none;
+  color: rgb(186, 148, 21);
+}
+
+.enlace:hover {
+  text-decoration: none;
+  color: rgb(84, 66, 10);
+}
+
+.boton {
+  padding: 5px;
+  border-radius: 10px;
+  background-color: rgb(250, 198, 28);
+  color: black;
+  text-decoration: none;
+  border: none;
+}
+
+.boton:hover {
+  color: rgb(84, 66, 10);
+}
+
+.titulo2 {
+  font-size: 35px;
+  font-weight: bold;
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 5px;
+  border-radius: 5px;
+}
+
+.centrar {
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  height: 700px;
+}
+
+.fondo2 {
+  background: url(../imagen/fondo2forms.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.tamanoFormulario2 {
+  width: 700px;
+  height: auto;
+}
+
+.card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-width: 0px;
+  word-wrap: break-word;
+  background-color: rgba(255, 255, 255, 0.8);
+  background-clip: border-box;
+  border: 1px solid rgba(0, 0, 0, 0.125);
+  border-radius: 0.25rem;
+}
+
+@media screen and (max-width: 750px) {
+  .titulo2 {
+    font-size: 30px;
+    font-weight: bold;
+  }
+  .tamanoFormulario2 {
+    width: 600px;
+    height: auto;
+  }
+}
+@media screen and (max-width: 650px) {
+  .titulo2 {
+    font-size: 25px;
+    font-weight: bold;
+  }
+  .tamanoFormulario2 {
+    width: 500px;
+    height: auto;
+  }
+}
+@media screen and (max-width: 550px) {
+  .titulo2 {
+    font-size: 25px;
+    font-weight: bold;
+  }
+  .tamanoFormulario2 {
+    width: 400px;
+    height: auto;
+  }
+}
+
+/*# sourceMappingURL=login.css.map */

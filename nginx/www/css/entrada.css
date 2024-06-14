@@ -1,0 +1,532 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0px;
+  padding: 0px;
+  overflow: hidden;
+  clip: rect(0px 0px 0px 0px);
+}
+
+.page-item.active .page-link {
+  z-index: 3;
+  color: white;
+  background-color: rgb(97, 97, 243);
+  border-color: #dee2e6;
+}
+
+.page-link {
+  position: relative;
+  display: block;
+  color: rgb(84, 66, 10);
+  text-decoration: none;
+  background-color: white;
+  border: 1px solid #dee2e6;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.boton {
+  padding: 5px;
+  border-radius: 10px;
+  background-color: rgb(250, 198, 28);
+  color: black;
+  text-decoration: none;
+  border: none;
+}
+
+.boton:hover {
+  color: rgb(84, 66, 10);
+}
+
+.enlace {
+  text-decoration: none;
+  color: rgb(186, 148, 21);
+}
+
+.enlace:hover {
+  text-decoration: none;
+  color: rgb(84, 66, 10);
+}
+
+.valoraEntradaAqui {
+  display: flex;
+  justify-content: center;
+  flex-flow: column;
+  align-items: center;
+  background: url(../imagen/prueba1.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.fondoValoracion {
+  background-color: rgba(4, 4, 4, 0.3);
+  padding: 40px;
+  margin: 20px;
+}
+
+.valorarEntrada {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+}
+
+.fondo {
+  background: url(../imagen/fondocomentariosentrada.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.buscadorEntrada {
+  background-color: #B6B1B1;
+  padding: 20px 0 20px 20px;
+}
+
+.formaBuscador {
+  border-radius: 5px;
+  border: none;
+  padding: 5px;
+}
+
+.botonBuscador {
+  border-radius: 3px;
+  padding: 5px;
+  border: none;
+  background-color: #dfdcdc;
+  transition: background-color 0.7s ease;
+}
+
+.botonBuscador:hover {
+  border-radius: 3px;
+  padding: 5px;
+  border: none;
+  background-color: #9e9e9e;
+  color: white;
+}
+
+.centrarEntrada {
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+}
+
+.espaciado {
+  background-color: #B6B1B1;
+  padding: 40px;
+}
+
+.envoltorioEntrada {
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+  padding: 40px;
+  background: url(../imagen/fondoentradainterno.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 1200px;
+  margin: 30px 0 30px 0;
+}
+.envoltorioEntrada .descripcionEntrada {
+  margin-top: 30px;
+  width: 1000px;
+  padding: 40px;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: white;
+}
+.envoltorioEntrada .imagenEntrada {
+  width: 700px;
+  height: 500px;
+}
+
+.espaciado {
+  background-color: #B6B1B1;
+  padding: 40px;
+}
+
+.imagenUsuario {
+  width: 70px;
+  border-radius: 100%;
+  margin-right: 10px;
+}
+
+.envoltorioComentarios {
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+  padding: 20px;
+  color: white;
+}
+.envoltorioComentarios .comentario {
+  position: relative;
+  margin-top: 20px;
+  display: flex;
+  flex-flow: column wrap;
+  width: 1200px;
+  border-radius: 3px;
+  font-size: 18px;
+  background-color: rgba(180, 183, 185, 0.3);
+  padding: 20px;
+}
+.envoltorioComentarios .comentario .envoltorioAutor {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+}
+.envoltorioComentarios .comentario .envoltorioAutor .autorComentario {
+  font-weight: bold;
+}
+.envoltorioComentarios .comentario .envoltorioContenido {
+  display: flex;
+  flex-flow: row wrap;
+  margin: 30px 0 30px 0;
+}
+
+.espacioFormularioComentarios {
+  display: flex;
+  justify-content: center;
+  padding: 40px;
+}
+.espacioFormularioComentarios .bordeInferior {
+  width: 1100px;
+  border-bottom: 1px solid black;
+}
+.espacioFormularioComentarios .envoltorioFormulario {
+  display: flex;
+  flex-flow: column wrap;
+  padding: 40px;
+  background-color: rgba(180, 183, 185, 0.3);
+  width: 1200px;
+}
+.espacioFormularioComentarios .envoltorioFormulario .textFormularioAgregar {
+  margin-top: 20px;
+  border-radius: 3px;
+  background-color: white;
+  padding: 5px;
+  width: 1100px;
+}
+.espacioFormularioComentarios .envoltorioFormulario .formularioAgregarBoton {
+  display: flex;
+  justify-content: end;
+  width: 1100px;
+}
+.espacioFormularioComentarios .envoltorioFormulario .formularioAgregarBoton .botonAgregarComentario {
+  border: none;
+  border-radius: 5px;
+  padding: 3px;
+  background-color: rgb(250, 198, 28);
+}
+.espacioFormularioComentarios .envoltorioFormulario .nuevaValoracion {
+  margin-left: 5px;
+  width: 40px;
+}
+
+.envoltorioCrud {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: end;
+  gap: 10px;
+}
+.envoltorioCrud .editar {
+  color: rgb(97, 97, 243);
+  font-weight: bold;
+  text-decoration: none;
+  cursor: pointer;
+}
+.envoltorioCrud .eliminar {
+  color: rgb(236, 69, 69);
+  font-weight: bold;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.envoltorioEditar {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: start;
+}
+.envoltorioEditar .textFormulario {
+  margin-top: 20px;
+  border-radius: 10px;
+  background-color: white;
+  padding: 5px;
+  width: 1150px;
+}
+.envoltorioEditar .envoltorioBotonEditar {
+  display: flex;
+  justify-content: end;
+}
+.envoltorioEditar .envoltorioBotonEditar .botonEditar {
+  border: none;
+  border-radius: 5px;
+  padding: 3px;
+  margin-right: 10px;
+  background-color: rgb(250, 198, 28);
+}
+.envoltorioEditar .valoracionEditar {
+  margin-left: 5px;
+  width: 40px;
+}
+
+.separado {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.paginacion {
+  margin-top: 20px;
+  text-align: center;
+  padding: 5px;
+  gap: 10px;
+}
+.paginacion .pagina, .paginacion .paginacion, .paginacion .pagina-actual {
+  display: inline-block;
+  padding: 5px 10px;
+  margin-right: 10px;
+  border: 1px solid #ccc;
+  text-decoration: none;
+  color: #333;
+  background-color: white;
+  border-radius: 5px;
+}
+.paginacion .pagina:hover {
+  background-color: antiquewhite;
+}
+.paginacion .pagina-actual {
+  background-color: #72adec;
+  color: white;
+  border-color: #007bff;
+  cursor: pointer;
+}
+.paginacion .pagina-actual:hover {
+  background-color: #007bff;
+  color: white;
+}
+
+@media screen and (max-width: 1250px) {
+  .envoltorioEditar .textFormulario {
+    width: 950px;
+  }
+  .envoltorioEntrada {
+    width: 1000px;
+  }
+  .envoltorioEntrada .descripcionEntrada {
+    width: 800px;
+  }
+  .envoltorioEntrada .imagenEntrada {
+    width: 600px;
+    height: 500px;
+  }
+  .envoltorioComentarios {
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    padding: 20px;
+    color: white;
+  }
+  .envoltorioComentarios .comentario {
+    width: 1000px;
+  }
+  .envoltorioComentarios .comentario .envoltorioContenido {
+    display: flex;
+    flex-flow: row wrap;
+    padding: 20px 0 20px 20px;
+  }
+  .espacioFormularioComentarios .bordeInferior {
+    width: 900px;
+  }
+  .espacioFormularioComentarios .envoltorioFormulario {
+    width: 1000px;
+  }
+  .espacioFormularioComentarios .envoltorioFormulario .textFormularioAgregar {
+    width: 900px;
+  }
+  .espacioFormularioComentarios .envoltorioFormulario .formularioAgregarBoton {
+    width: 900px;
+  }
+  .espacioFormularioComentarios .envoltorioFormulario .nuevaValoracion {
+    margin-left: 5px;
+    width: 40px;
+  }
+}
+@media screen and (max-width: 1100px) {
+  .envoltorioEditar .textFormulario {
+    width: 750px;
+  }
+  .envoltorioEntrada {
+    width: 800px;
+  }
+  .envoltorioEntrada .descripcionEntrada {
+    width: 600px;
+  }
+  .envoltorioEntrada .imagenEntrada {
+    width: 500px;
+    height: 400px;
+  }
+  .envoltorioComentarios .comentario {
+    width: 800px;
+  }
+  .espacioFormularioComentarios .bordeInferior {
+    width: 700px;
+  }
+  .espacioFormularioComentarios .envoltorioFormulario {
+    width: 800px;
+  }
+  .espacioFormularioComentarios .envoltorioFormulario .textFormularioAgregar {
+    width: 700px;
+  }
+  .espacioFormularioComentarios .envoltorioFormulario .formularioAgregarBoton {
+    width: 700px;
+  }
+  .espacioFormularioComentarios .envoltorioFormulario .nuevaValoracion {
+    margin-left: 5px;
+    width: 40px;
+  }
+}
+@media screen and (max-width: 850px) {
+  .envoltorioEditar .textFormulario {
+    width: 650px;
+  }
+  .envoltorioEntrada {
+    width: 700px;
+  }
+  .envoltorioEntrada .descripcionEntrada {
+    width: 500px;
+  }
+  .envoltorioEntrada .imagenEntrada {
+    width: 400px;
+    height: 300px;
+  }
+  .envoltorioComentarios .comentario {
+    width: 700px;
+  }
+  .espacioFormularioComentarios .bordeInferior {
+    width: 600px;
+  }
+  .espacioFormularioComentarios .envoltorioFormulario {
+    width: 700px;
+  }
+  .espacioFormularioComentarios .envoltorioFormulario .textFormularioAgregar {
+    width: 600px;
+  }
+  .espacioFormularioComentarios .envoltorioFormulario .formularioAgregarBoton {
+    width: 600px;
+  }
+  .espacioFormularioComentarios .envoltorioFormulario .nuevaValoracion {
+    margin-left: 5px;
+    width: 40px;
+  }
+}
+@media screen and (max-width: 750px) {
+  .envoltorioEditar .textFormulario {
+    width: 550px;
+  }
+  .envoltorioEntrada {
+    width: 600px;
+  }
+  .envoltorioEntrada .descripcionEntrada {
+    width: 500px;
+  }
+  .envoltorioEntrada .imagenEntrada {
+    width: 400px;
+    height: 300px;
+  }
+  .envoltorioComentarios .comentario {
+    width: 600px;
+  }
+  .espacioFormularioComentarios .bordeInferior {
+    width: 500px;
+  }
+  .espacioFormularioComentarios .envoltorioFormulario {
+    width: 600px;
+  }
+  .espacioFormularioComentarios .envoltorioFormulario .textFormularioAgregar {
+    width: 500px;
+  }
+  .espacioFormularioComentarios .envoltorioFormulario .formularioAgregarBoton {
+    width: 500px;
+  }
+  .espacioFormularioComentarios .envoltorioFormulario .nuevaValoracion {
+    margin-left: 5px;
+    width: 40px;
+  }
+}
+@media screen and (max-width: 650px) {
+  .envoltorioEditar .textFormulario {
+    width: 450px;
+  }
+  .envoltorioEntrada {
+    width: 500px;
+  }
+  .envoltorioEntrada .descripcionEntrada {
+    width: 400px;
+  }
+  .envoltorioEntrada .imagenEntrada {
+    width: 350px;
+    height: 300px;
+  }
+  .envoltorioComentarios .comentario {
+    width: 500px;
+  }
+  .espacioFormularioComentarios .bordeInferior {
+    width: 400px;
+  }
+  .espacioFormularioComentarios .envoltorioFormulario {
+    width: 500px;
+  }
+  .espacioFormularioComentarios .envoltorioFormulario .textFormularioAgregar {
+    width: 400px;
+  }
+  .espacioFormularioComentarios .envoltorioFormulario .formularioAgregarBoton {
+    width: 400px;
+  }
+  .espacioFormularioComentarios .envoltorioFormulario .nuevaValoracion {
+    margin-left: 5px;
+    width: 40px;
+  }
+}
+@media screen and (max-width: 550px) {
+  .envoltorioEditar .textFormulario {
+    width: 400px;
+  }
+  .envoltorioEntrada {
+    width: 450px;
+  }
+  .envoltorioEntrada .descripcionEntrada {
+    width: 350px;
+  }
+  .envoltorioEntrada .imagenEntrada {
+    width: 350px;
+    height: 300px;
+  }
+  .envoltorioComentarios .comentario {
+    width: 450px;
+  }
+  .espacioFormularioComentarios .bordeInferior {
+    width: 350px;
+  }
+  .espacioFormularioComentarios .envoltorioFormulario {
+    width: 450px;
+  }
+  .espacioFormularioComentarios .envoltorioFormulario .textFormularioAgregar {
+    width: 350px;
+  }
+  .espacioFormularioComentarios .envoltorioFormulario .formularioAgregarBoton {
+    width: 350px;
+  }
+  .espacioFormularioComentarios .envoltorioFormulario .nuevaValoracion {
+    margin-left: 5px;
+    width: 40px;
+  }
+}
+
+/*# sourceMappingURL=entrada.css.map */

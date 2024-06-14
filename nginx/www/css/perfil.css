@@ -1,0 +1,661 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+.boton {
+  padding: 5px;
+  border-radius: 10px;
+  background-color: rgb(250, 198, 28);
+  color: black;
+  text-decoration: none;
+  border: none;
+}
+
+.boton:hover {
+  color: rgb(84, 66, 10);
+}
+
+.dropdown-item.active, .dropdown-item:active {
+  color: white;
+  text-decoration: none;
+  background-color: rgb(250, 198, 28);
+}
+
+.iconoPokemon {
+  width: 50px;
+}
+
+.iconoPerfil {
+  width: 250px;
+  height: 250px;
+  border-radius: 20%;
+  border: 1px solid white;
+}
+
+.envoltorio {
+  display: flex;
+  flex-flow: row;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  gap: 50px;
+  background: url(../imagen/fondopokemon.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.centrarDiv1, .centrarDiv2 {
+  display: flex;
+  justify-content: center;
+  flex-flow: column;
+  align-items: center;
+  font-size: 30px;
+}
+
+.mensajeriaPerfil {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 400px;
+  height: 300px;
+  gap: 10px;
+  background: url(../imagen/mensajeria.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.entradasPerfil {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 400px;
+  height: 300px;
+  gap: 10px;
+  background: url(../imagen/akachat.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.minijuegoPerfil {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 400px;
+  height: 300px;
+  gap: 10px;
+  background: url(../imagen/minijuego.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.akadexPerfil {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 400px;
+  height: 300px;
+  gap: 10px;
+  background: url(../imagen/akadex.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.espacio {
+  background-color: #B6B1B1;
+  padding: 20px;
+}
+
+.efecto:hover {
+  background-color: rgba(250, 198, 28, 0.6);
+}
+
+.juntos {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.formuPoke {
+  font-size: 20px;
+}
+
+.centrarFoto {
+  display: flex;
+  flex-flow: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.tamanoFormu {
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.gridPerfil {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.imagenFondo {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  z-index: 0px;
+  overflow: hidden;
+}
+
+.imagenFondo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.perfil {
+  position: relative;
+  width: 900px;
+  height: 800px;
+  background-color: rgba(160, 160, 160, 0.3);
+  padding: 50px;
+  border: 1px solid white;
+}
+
+.textoResaltado {
+  padding: 5px;
+  background-color: rgba(255, 255, 255, 0.7);
+  border-radius: 100px;
+}
+
+.modal-dialog {
+  top: 22%;
+}
+
+.modal-backdrop {
+  z-index: 0px !important;
+}
+
+.nickFoto {
+  display: flex;
+  flex-flow: row;
+  justify-content: space-between;
+  padding: 0px 10px 0px 10px;
+}
+
+.hidden {
+  display: none;
+}
+
+.cuerpoPerfil {
+  display: flex;
+  flex-flow: column;
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 5px;
+  padding: 15px;
+}
+
+.nick {
+  font-size: 40px;
+  color: black;
+}
+
+.pokeFav {
+  font-size: 20px;
+  color: black;
+}
+
+.regionFav {
+  font-size: 20px;
+  color: black;
+}
+
+.cantComentarios {
+  color: black;
+  font-size: 20px;
+}
+
+.area3 {
+  display: flex;
+  flex-flow: column;
+  height: 100px;
+}
+
+.cantEntradas {
+  color: black;
+  font-size: 20px;
+}
+
+.area4 {
+  display: flex;
+  flex-flow: column;
+  height: 100px;
+}
+
+.fondoPerfil {
+  height: 100%;
+  width: 500px;
+}
+
+@media screen and (max-width: 1850px) {
+  .centrarDiv1, .centrarDiv2 {
+    font-size: 30px;
+  }
+  .mensajeriaPerfil {
+    width: 350px;
+    height: 250px;
+    gap: 10px;
+  }
+  .entradasPerfil {
+    width: 350px;
+    height: 250px;
+    gap: 10px;
+  }
+  .minijuegoPerfil {
+    width: 350px;
+    height: 250px;
+    gap: 10px;
+  }
+  .akadexPerfil {
+    width: 350px;
+    height: 250px;
+    gap: 10px;
+  }
+  .envoltorio {
+    gap: 30px;
+  }
+}
+@media screen and (max-width: 1800px) {
+  .perfil {
+    width: 850px;
+    padding: 50px;
+    border: 1px solid white;
+  }
+  .fondoPerfil {
+    height: 100%;
+    width: 450px;
+  }
+}
+@media screen and (max-width: 1700px) {
+  .centrarDiv1, .centrarDiv2 {
+    font-size: 30px;
+  }
+  .mensajeriaPerfil {
+    width: 300px;
+    height: 200px;
+    gap: 10px;
+  }
+  .entradasPerfil {
+    width: 300px;
+    height: 200px;
+    gap: 10px;
+  }
+  .minijuegoPerfil {
+    width: 300px;
+    height: 200px;
+    gap: 10px;
+  }
+  .akadexPerfil {
+    width: 300px;
+    height: 200px;
+    gap: 10px;
+  }
+  .envoltorio {
+    gap: 20px;
+  }
+}
+@media screen and (max-width: 1600px) {
+  .perfil {
+    width: 800px;
+    padding: 50px;
+    border: 1px solid white;
+  }
+}
+@media screen and (max-width: 1500px) {
+  .perfil {
+    width: 750px;
+    padding: 50px;
+    border: 1px solid white;
+  }
+  .centrarDiv1, .centrarDiv2 {
+    font-size: 25px;
+  }
+  .mensajeriaPerfil {
+    width: 280px;
+    height: 200px;
+    gap: 10px;
+  }
+  .entradasPerfil {
+    width: 280px;
+    height: 200px;
+    gap: 10px;
+  }
+  .minijuegoPerfil {
+    width: 280px;
+    height: 200px;
+    gap: 10px;
+  }
+  .akadexPerfil {
+    width: 280px;
+    height: 200px;
+    gap: 10px;
+  }
+  .envoltorio {
+    gap: 20px;
+  }
+}
+@media screen and (max-width: 1400px) {
+  .perfil {
+    width: 700px;
+    padding: 50px;
+    padding: 30px;
+    border: 1px solid white;
+  }
+  .iconoPerfil {
+    width: 200px;
+    height: 200px;
+    border-radius: 20%;
+    border: 1px solid white;
+  }
+  .envoltorio {
+    gap: 10px;
+  }
+}
+@media screen and (max-width: 1300px) {
+  .perfil {
+    width: 700px;
+    padding: 20px;
+    border: 1px solid white;
+  }
+  .iconoPerfil {
+    width: 200px;
+    height: 200px;
+    border-radius: 20%;
+    border: 1px solid white;
+  }
+  .centrarDiv1, .centrarDiv2 {
+    font-size: 25px;
+  }
+  .mensajeriaPerfil {
+    width: 250px;
+    height: 200px;
+    gap: 10px;
+  }
+  .entradasPerfil {
+    width: 250px;
+    height: 200px;
+    gap: 10px;
+  }
+  .minijuegoPerfil {
+    width: 250px;
+    height: 200px;
+    gap: 10px;
+  }
+  .akadexPerfil {
+    width: 250px;
+    height: 200px;
+    gap: 10px;
+  }
+}
+@media screen and (max-width: 1250px) {
+  .centrarDiv1, .centrarDiv2 {
+    font-size: 25px;
+  }
+  .mensajeriaPerfil {
+    width: 220px;
+    height: 150px;
+    gap: 10px;
+    margin-top: 10px;
+  }
+  .entradasPerfil {
+    width: 220px;
+    height: 150px;
+    gap: 10px;
+  }
+  .minijuegoPerfil {
+    width: 220px;
+    height: 150px;
+    gap: 10px;
+  }
+  .akadexPerfil {
+    width: 220px;
+    height: 150px;
+    gap: 10px;
+    margin-bottom: 10px;
+  }
+}
+@media screen and (max-width: 1200px) {
+  .perfil {
+    width: 900px;
+    padding: 40px;
+    border: 1px solid white;
+  }
+  .iconoPerfil {
+    width: 200px;
+    height: 200px;
+    border-radius: 20%;
+    border: 1px solid white;
+  }
+  .centrarDiv1, .centrarDiv2 {
+    font-size: 30px;
+  }
+  .mensajeriaPerfil {
+    width: 900px;
+    height: 200px;
+    gap: 10px;
+    margin-top: 10px;
+  }
+  .entradasPerfil {
+    width: 900px;
+    height: 200px;
+    gap: 10px;
+  }
+  .minijuegoPerfil {
+    width: 900px;
+    height: 200px;
+    gap: 10px;
+  }
+  .akadexPerfil {
+    width: 900px;
+    height: 200px;
+    gap: 10px;
+    margin-bottom: 10px;
+  }
+  .envoltorio {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    gap: 10px;
+  }
+}
+@media screen and (max-width: 1100px) {
+  .perfil {
+    width: 900px;
+    padding: 40px;
+    border: 1px solid white;
+  }
+  .iconoPerfil {
+    width: 200px;
+    height: 200px;
+    border-radius: 20%;
+    border: 1px solid white;
+  }
+  .centrarDiv1, .centrarDiv2 {
+    font-size: 30px;
+  }
+  .mensajeriaPerfil {
+    width: 900px;
+    height: 200px;
+    gap: 10px;
+    margin-top: 10px;
+  }
+  .entradasPerfil {
+    width: 900px;
+    height: 200px;
+    gap: 10px;
+  }
+  .minijuegoPerfil {
+    width: 900px;
+    height: 200px;
+    gap: 10px;
+  }
+  .akadexPerfil {
+    width: 900px;
+    height: 200px;
+    gap: 10px;
+    margin-bottom: 10px;
+  }
+  .envoltorio {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    gap: 10px;
+  }
+}
+@media screen and (max-width: 1000px) {
+  .perfil {
+    width: 700px;
+    padding: 20px;
+    border: 1px solid white;
+  }
+  .iconoPerfil {
+    width: 180px;
+    height: 180px;
+    border-radius: 20%;
+    border: 1px solid white;
+  }
+  .centrarDiv1, .centrarDiv2 {
+    font-size: 30px;
+  }
+  .mensajeriaPerfil {
+    width: 700px;
+    height: 200px;
+    gap: 10px;
+    margin-top: 10px;
+  }
+  .entradasPerfil {
+    width: 700px;
+    height: 200px;
+    gap: 10px;
+  }
+  .minijuegoPerfil {
+    width: 700px;
+    height: 200px;
+    gap: 10px;
+  }
+  .akadexPerfil {
+    width: 700px;
+    height: 200px;
+    gap: 10px;
+    margin-bottom: 10px;
+  }
+  .envoltorio {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    gap: 10px;
+  }
+  .nick {
+    font-size: 35px;
+    color: black;
+  }
+}
+@media screen and (max-width: 800px) {
+  .perfil {
+    width: 550px;
+    padding: 20px;
+    border: 1px solid white;
+  }
+  .iconoPerfil {
+    width: 180px;
+    height: 180px;
+    border-radius: 20%;
+    border: 1px solid white;
+  }
+  .centrarDiv1, .centrarDiv2 {
+    font-size: 20px;
+  }
+  .mensajeriaPerfil {
+    width: 550px;
+    height: 150px;
+    gap: 10px;
+  }
+  .entradasPerfil {
+    width: 550px;
+    height: 150px;
+    gap: 10px;
+  }
+  .minijuegoPerfil {
+    width: 550px;
+    height: 150px;
+    gap: 10px;
+  }
+  .akadexPerfil {
+    width: 550px;
+    height: 150px;
+    gap: 10px;
+  }
+  .nick {
+    font-size: 30px;
+    color: black;
+  }
+}
+@media screen and (max-width: 600px) {
+  .perfil {
+    width: 450px;
+    padding: 20px;
+    border: 1px solid white;
+  }
+  .iconoPerfil {
+    width: 150px;
+    height: 150px;
+    border-radius: 20%;
+    border: 1px solid white;
+  }
+  .centrarDiv1, .centrarDiv2 {
+    font-size: 30px;
+  }
+  .mensajeriaPerfil {
+    width: 450px;
+    height: 200px;
+    gap: 10px;
+  }
+  .entradasPerfil {
+    width: 450px;
+    height: 200px;
+    gap: 10px;
+  }
+  .minijuegoPerfil {
+    width: 450px;
+    height: 200px;
+    gap: 10px;
+  }
+  .akadexPerfil {
+    width: 450px;
+    height: 200px;
+    gap: 10px;
+  }
+  .nick {
+    font-size: 25px;
+    color: black;
+  }
+}
+
+/*# sourceMappingURL=perfil.css.map */

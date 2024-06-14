@@ -1,0 +1,194 @@
+@use 'partials/variables' as *;
+@use 'partials/mixins' as *;
+@use 'partials/breakpoints' as *;
+
+* 
+{
+    margin: $cero;
+    padding: $cero;
+    box-sizing: border-box;
+}
+
+.buscadorPokemon
+{
+    background-color: $colorEspacio;
+    @include padding2002020();
+
+}
+.enlace
+{
+    text-decoration: $nada;
+    color: $colorEnlace;
+
+}
+
+.enlace:hover
+{
+    text-decoration: $nada;
+    color: $colorEnlaceHover;
+
+}
+.espaciado
+{
+    background-color: $colorEspacio;
+    padding: $cuarenta;
+
+}
+.formaBuscador
+{
+    border-radius: $cinco;
+    border: $nada;
+    padding: $cinco;
+}
+.botonBuscador
+{
+    border-radius: $tres;
+    padding: $cinco;
+    border: $nada;
+    background-color: $colorInicialBuscadorBoton; 
+    transition: background-color 0.7s ease;
+}
+
+.botonBuscador:hover
+{
+    border-radius: $tres;
+    padding: $cinco;
+    border: $nada;
+    background-color: $colorHoverBuscadorBoton;
+    color: $blanco;
+}
+.centrarFicha {
+    display: grid;
+    place-items: $textoCentro;
+    background: url(../imagen/fondoakadexcarta.png);
+    @include ajustesFondoFull();
+    @include padding500500();
+}
+
+.navegacion
+{
+    padding: $diez;
+}
+
+.siguientePokemon
+{
+    margin-top: $diez;
+    background-color: $blanco;
+    border-radius: $tres;
+    padding: $cinco;
+    @include flexRowJustCent();
+    border: $uno solid $negroOpaco04;
+
+}
+.infoPokemon 
+{
+    display: grid;
+    grid-template-areas:
+        "etimologia etimologia  cuadroImagen"
+        "biologia biologia cuadroImagen"
+        "evoluciones evoluciones cuadroImagen"
+        "fotoEvo fotoEvo nada";
+    gap: $cinco;
+    max-width: $milquinientos;
+}
+
+.deDosEnDos 
+{
+    padding: $diez;
+    background-color: $blanco;
+    border-radius: $tres;
+    border: $uno solid $negroOpaco04;
+}
+
+.fotoPokemon 
+{
+    width: $cienporciento;
+}
+.etimologia 
+{
+    grid-area: nada;
+}
+
+.cuadroImagen 
+{
+    grid-area: cuadroImagen;
+    background-color: $amarilloMenu;
+    padding: $veinte;
+    border-radius: $tres;
+    border: $uno solid $negroOpaco04;
+
+}
+
+.etimologia 
+{
+    grid-area: etimologia;
+}
+
+.biologia 
+{
+    grid-area: biologia;
+}
+
+.evoluciones 
+{
+    grid-area: evoluciones;
+}
+
+.fotoEvo 
+{
+    grid-area: fotoEvo;
+    @include flexFlowRowAlignJustCent();
+
+}
+
+.fotoPokemon
+{
+    width: $doscientoscincuenta;
+
+}
+.fondoBlanco
+{
+    background-color: $blanco;
+    padding: $cinco;
+    border-radius: $tres;
+    @include flexColumAligCenter();
+    border: $uno solid $negroOpaco04;
+
+}
+.infoBlanca
+{
+    background-color: $blanco;
+    padding: $cinco;
+    margin-top: $diez;
+    border-radius: $tres;
+    @include flexColumAligCenter();
+    border: $uno solid $negroOpaco04;
+
+}
+.evoFoto
+{
+    border-radius: $cinco;
+    border: $uno solid $negro;
+
+}
+.iconoPokemon
+{
+    width: $cuarenta;
+
+}
+
+@include pixeles950
+{
+    .infoPokemon 
+    {
+        display: grid;
+        grid-template-areas:
+            "cuadroImagen cuadroImagen "
+            "etimologia etimologia "
+            "biologia biologia "
+            "evoluciones evoluciones "
+            "fotoEvo fotoEvo  ";
+        gap: $cinco;
+        padding: $veinte;
+    }
+}

@@ -1,0 +1,480 @@
+@use 'partials/variables' as *;
+@use 'partials/mixins' as *;
+@use 'partials/breakpoints' as *;
+
+* 
+{
+    margin: $cero;
+    padding: $cero;
+    box-sizing: border-box;
+}
+.page-item.active .page-link 
+{
+    z-index: $tres;
+    color: $blanco;
+    background-color: $amarilloMenu;
+    border-color: $borderPaginacion;
+}
+.page-link 
+{
+    position: relative;
+    display: block;
+    color: $colorEnlaceHover;
+    text-decoration: $nada;
+    background-color: $blanco;
+    border: $uno solid $borderPaginacion;
+    transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+}
+.enlace
+{
+    text-decoration: $nada;
+    color: $colorEnlace;
+
+}
+
+.enlace:hover
+{
+    text-decoration: $nada;
+    color: $colorEnlaceHover;
+
+}
+.visually-hidden 
+{
+    position: absolute;
+    width: $uno;
+    height: $uno;
+    margin: -1px;
+    border: $cero;
+    padding: $cero;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+}
+.envoltorioContenido
+{
+    @include flexFlowColumAlignCent();
+    @include padding5010050100();    
+    background: url(../imagen/prueba2.png);
+    @include ajustesFondoFull();
+
+    .contenido
+    {        
+        width: $miltrescientos;
+        .entradaColor
+        {
+            background-color: $blanco;
+            margin: $veinte;
+            padding: $cuarenta;
+            border-radius: $cinco;
+            @include sombras2Box();            
+        }
+        .tituloEntradaS
+        {
+            font-size: $treinta;
+        }
+        .fechaEntradaS
+        {
+            font-size: $dieciseis;
+        }
+        .separado
+        {
+            margin-top: $veinte;
+            @include flex-between ();
+        }
+        .separacionTextoEntrada
+        {
+            padding-right: $cien;
+        }
+        .envoltorioBotonEntrada
+        {
+            @include flex-justEnd ();
+
+            .botonCrearEntrada
+            {   
+                padding: $cinco;
+                border-radius: $diez;
+                margin-right: $veinte;
+                font-size: $veinticuatro;
+                background-color: $amarilloMenu;
+                color: $blanco;
+                font-weight: $negrita;
+                text-decoration: $nada;
+                border: $nada;
+                cursor: $cursorSenalando;
+            }
+        }
+       
+    }
+    
+}
+.fotoEntradas
+{
+    @include flex ();
+
+    .fotoEchaUnViztazo
+    {
+        width: $cienporciento;
+    }
+}
+
+.envoltorioCrud
+{
+    @include flexRowEnd ();
+
+    gap: $diez;
+
+    .editar
+    {
+        color: $colorEditarEntrada;
+        font-weight: $negrita;
+        text-decoration: $nada;
+        cursor: $cursorSenalando;
+
+        
+    }
+
+    .eliminar
+    {
+        color: $colorEliminarEntrada;
+        font-weight: $negrita;
+        text-decoration: $nada;
+        cursor: $cursorSenalando;
+
+    }
+}
+
+.envoltorioEditar
+{
+    @include flexColumStart ();
+    margin:  $veinte;
+    
+    .tituloEntrada
+    {
+        width: $mil ;
+        border-radius: $diez;
+        font-size: $veinticuatro;
+    }
+    .textFormulario
+    {
+        margin-top: $veinte;
+        width: $mil ;
+
+        border-radius: $diez;
+        background-color: $blanco;
+        padding: $cinco;
+
+    }
+    .envoltorioBotonEditar
+    {
+        @include flex-justEnd ();
+        .botonEditar
+        {
+            border: $nada;
+            border-radius: $cinco;
+            padding: $tres;
+            background-color: $colorGuardarEntrada;
+        }
+    }
+
+    .valoracionEditar
+    {
+        margin-left: $cinco;
+        width: $cuarenta;
+    }
+}
+
+
+@include pixeles1450
+{
+    .envoltorioContenido
+    {
+        
+        .contenido
+        {        
+            width: $mil;
+           
+            .tituloEntradaS
+            {
+                font-size: $veinticinco;
+            }
+           
+            .separacionTextoEntrada
+            {
+                padding-right: $cien;
+            }
+            
+        
+        }
+        
+    }
+
+
+    .envoltorioEditar
+    {
+        @include flexColumStart ();
+        margin:  $veinte;
+        
+        .tituloEntrada
+        {
+            width: $ochocientos;
+            border-radius: $diez;
+            font-size: $veinticuatro;
+        }
+        .textFormulario
+        {
+            margin-top: $veinte;
+            width: $ochocientos ;
+
+            border-radius: $diez;
+            background-color: $blanco;
+            padding: $cinco;
+
+        }
+        .envoltorioBotonEditar
+        {
+          
+            .botonEditar
+            {
+                
+                border-radius: $cinco;
+                padding: $tres;
+            }
+        }
+
+    }
+
+}
+
+
+@include pixeles1200
+{
+    .envoltorioContenido
+    {
+        
+        .contenido
+        {        
+            width: $ochocientos;
+        
+            .separacionTextoEntrada
+            {
+                padding-right: $cien;
+            }
+              
+        
+        }
+        
+    }
+
+
+    .envoltorioEditar
+    {
+        @include flexColumStart ();
+
+        margin:  $veinte;
+        
+        .tituloEntrada
+        {
+            width: $setecientos;
+            border-radius: $diez;
+            font-size: $veinticuatro;
+        }
+        .textFormulario
+        {
+            margin-top: $veinte;
+            width: $setecientos ;
+
+            border-radius: $diez;
+            background-color: $blanco;
+            padding: $cinco;
+
+        }
+        .envoltorioBotonEditar
+        {
+           
+            .botonEditar
+            {
+                
+                border-radius: $cinco;
+                padding: $tres;
+            }
+        }
+
+       
+    }
+
+}
+
+
+@include pixeles900
+{
+    .envoltorioContenido
+    {
+        
+        .contenido
+        {        
+            width: $seiscientos;
+            
+            .tituloEntradaS
+            {
+                font-size: $veinte;
+            }
+            
+            .separacionTextoEntrada
+            {
+                padding-right: $cien;
+            }
+            
+        
+        }
+        
+    }
+
+    .envoltorioEditar
+    {
+        @include flexColumStart ();
+
+        margin:  $veinte;
+        
+        .tituloEntrada
+        {
+            width: $quinientos;
+            border-radius: $diez;
+            font-size: $veinticuatro;
+        }
+        .textFormulario
+        {
+            margin-top: $veinte;
+            width: $quinientos ;
+            border-radius: $diez;
+            background-color: $blanco;
+            padding: $cinco;
+
+        }
+        .envoltorioBotonEditar
+        {
+            .botonEditar
+            {
+                
+                border-radius: $cinco;
+                padding: $tres;
+            }
+        }
+    }
+}
+
+@include pixeles700
+{
+    .envoltorioContenido
+    {
+        
+        .contenido
+        {        
+            width: $quinientos;
+            
+            .tituloEntradaS
+            {
+                font-size: $dieciocho;
+            }
+            .fechaEntradaS
+            {
+                font-size: $diez;
+            }
+           
+            .separacionTextoEntrada
+            {
+                padding-right: $cien;
+            }
+
+        }
+        
+    }
+
+
+    .envoltorioEditar
+    {
+        @include flexColumStart ();
+        margin:  $veinte;
+        
+        .tituloEntrada
+        {
+            width: $cuatrocientos;
+            font-size: $veinticuatro;
+        }
+        .textFormulario
+        {
+            margin-top: $veinte;
+            width: $cuatrocientos;
+            padding: $cinco;
+
+        }
+        .envoltorioBotonEditar
+        {
+            .botonEditar
+            {
+                padding: $tres;
+            }
+        }
+
+    }
+
+}
+
+@include pixeles550
+{
+    .envoltorioContenido
+    { 
+        .contenido
+        {        
+            width: $cuatrocientoscinquenta;
+            .entradaColor
+            {
+                margin: $veinte;
+                padding: $veinte;
+                
+            }
+            .tituloEntradaS
+            {
+                font-size: $dieciseis;
+            }
+            .fechaEntradaS
+            {
+                font-size: $diez;
+            }
+            
+            .separacionTextoEntrada
+            {
+                padding-right: $cien;
+            }
+        }
+        
+    }
+
+
+    .envoltorioEditar
+    {
+        .tituloEntrada
+        {
+            width: $trescientoscinquenta;
+            font-size: $dieciseis;
+        }
+        .textFormulario
+        {
+            margin-top: $veinte;
+            width: $doscientoscincuenta;
+            border-radius: $diez;
+            background-color: $blanco;
+            padding: $cinco;
+
+        }
+        .envoltorioBotonEditar
+        {
+           
+            .botonEditar
+            {
+                padding: $tres;
+            }
+        }
+
+       
+    }
+
+}

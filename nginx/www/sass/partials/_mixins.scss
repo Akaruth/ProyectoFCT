@@ -1,0 +1,681 @@
+@mixin caja($width:200px,$height:200px)
+{
+    width: $width;
+    height: $height;
+    @include radio-bun; 
+}
+@mixin radio-bun ($border_radius:50%, $border:2px solid rgb(119, 146, 91))
+{
+    border-radius: $border_radius;
+    border: $border;
+}
+@mixin flex-center ()
+{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+@mixin flex-center ()
+{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+@mixin flexRow()
+{
+    display: flex;
+    flex-flow: row;
+    justify-content: space-evenly;
+}
+
+@mixin flexRowBet()
+{
+    display: flex;
+    flex-flow: row;
+    justify-content: space-between;
+}
+
+@mixin flexSpaceBetCent()
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+@mixin flexRowWrap()
+{
+    display: flex;
+    flex-flow: row wrap;
+}
+@mixin topRight20()
+{
+    top: 20px;
+    right: 20px;
+}
+
+@mixin paddingLeftRight20()
+{
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+@mixin padding100100()
+{
+    padding: 10px 0 10px 0;
+
+}
+
+@mixin padding15301530()
+{
+    padding: 15px 30px 15px 30px;
+
+}
+
+@mixin padding10201020()
+{
+    padding: 10px 20px 10px 20px;
+
+}
+
+@mixin padding10301030()
+{
+    padding: 10px 30px 10px 30px;
+
+}
+
+@mixin padding2002020()
+{
+    padding: 20px 0  20px 20px;
+
+}
+
+@mixin margin300300()
+{
+    margin: 30px 0 30px 0;
+
+}
+
+@mixin margin2020020()
+{
+    padding: 20px 0px 20px;
+
+}
+
+@mixin paddingLeftRight20()
+{
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+@mixin paddingLeftRight60()
+{
+    padding-left: 60px;
+    padding-right: 60px;
+}
+@mixin flexColumAligCenter()
+{
+    display: flex;
+    align-items: center;
+    flex-flow: column;
+}
+
+@mixin flexcolumn()
+{
+    display: flex;
+    flex-direction: column;
+}
+
+@mixin columCentrada()
+{
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin margin400400()
+{
+    margin: 40px 0 40px 0;
+
+}
+@mixin marginTopBott()
+{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+@mixin sombras2Box()
+{
+    box-shadow: 2px 2px 2px 2px rgba(0, 0, 0,0.2);
+
+}
+
+@mixin alturaAnchura400()
+{
+    width: 400px;
+    height: 400px;
+}
+
+@mixin alturaAnchura350()
+{
+    width: 350px;
+    height: 350px;
+}
+
+
+@mixin alturaAnchura300()
+{
+    width: 300px;
+    height: 300px;
+}
+
+@mixin alturaAnchura200()
+{
+    width: 200px;
+    height: 200px;
+}
+
+@mixin padding2002040()
+{
+    padding: 20px 0 20px 40px;
+}
+
+@mixin padding30202020()
+{
+    padding: 30px 20px 20px 20px ;
+}
+
+@mixin padding5010050100()
+{
+    padding: 50px 100px 50px 100px;
+
+}
+@mixin padding500500()
+{
+    padding: 50px 0 50px 0;
+
+}
+@mixin alturaAnchura100()
+{
+    width: 100px;
+    height: 100px;
+}
+@mixin sombras3Box()
+{
+    box-shadow: 3px 3px rgba(0, 0, 0,0.2);
+}
+@mixin sombrasText5Box()
+{
+    text-shadow: 5px 5px black;
+}
+
+@mixin flexColJustCenter()
+{
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+}
+
+@mixin flexColumCentrada()
+{
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin aligJustCent()
+{
+    align-items: center;
+    justify-content: center;
+}
+
+@mixin inblock()
+{
+    display: inline-block;
+}
+
+@mixin paddingFooterLogo()
+{
+    padding: 0px 10px 0px 10px;
+}
+
+@mixin margin200400()
+{
+    padding: 0px 10px 0px 10px;
+}
+
+@mixin paddingFooterLogo2()
+{
+    margin: 20px 0 40px 0;
+}
+
+@mixin flexColumStart ()
+{
+    display: flex;
+    flex-flow:  column wrap;
+    justify-content: start;
+}
+
+@mixin flex ()
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin flexRowEnd ()
+{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: end;
+}
+
+@mixin flexColNoWrapJustCent()
+{
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin flexRowWrapJustCent()
+{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+}
+
+@mixin flexColumWrapAlignCent()
+{
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+}
+
+@mixin flexColumSpace()
+{
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: space-evenly;
+}
+
+@mixin flexColumWrap()
+{
+    display: flex;
+    flex-flow: column wrap;
+}
+@mixin flexRowWrapJustAlignCent()
+{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin flexSpaceAround()
+{
+    display: flex;
+    justify-content: space-around;
+}
+
+@mixin flexSpaceEvenly()
+{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+
+@mixin flexSpaceBetween()
+{
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+@mixin flex-rows ()
+{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    align-items: center;
+
+}
+
+@mixin flex-rowsCent ()
+{
+    display: flex;
+    flex-flow: row ;
+    justify-content: space-around;
+    align-items: center;
+
+}
+@mixin borderSub2px()
+{
+    border: 2px solid #dac5a2;
+}
+@mixin borderRightBlanco2px()
+{
+    border-right: 2px solid white;
+}
+@mixin borderBottomBlanco2px()
+{
+    border-bottom: 2px solid white;
+}
+@mixin borderTopBlanco2px()
+{
+    border-top: 2px solid white;
+}
+
+@mixin borderMarron()
+{
+    border: 2px solid  #dac5a2;
+}
+
+@mixin borderMarronOscuro()
+{
+    border-bottom: 3px solid #776B5D;
+}
+
+@mixin ajustesFondo()
+{
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+@mixin ajustesFondoFull()
+{
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+@mixin flexJustiCenter()
+{
+    display: flex;
+    justify-content: center; 
+}
+
+@mixin displayfila()
+{
+    flex-direction: row;
+}
+
+@mixin flexColum()
+{
+    display: flex;
+    flex-flow: column;
+}
+
+@mixin flexColSpaceAligCent()
+{
+    display: flex;
+    flex-flow: column ;
+    justify-content: space-around;
+    align-items: center;
+}
+
+@mixin flex-between ()
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+@mixin flex-justEnd ()
+{
+    display: flex;
+    justify-content: end;
+}
+
+@mixin flexRowBetween ()
+{
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+@mixin flexFlowRowAlignCent()
+{
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+}
+
+@mixin flexAligCent()
+{
+    display: flex;
+    align-items: center;
+}
+
+@mixin flexFlowColumAlignCent()
+{
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+}
+
+@mixin flexRowJustCent()
+{
+    display: flex;
+    flex-flow: row;
+    justify-content: center;
+}
+
+@mixin flexFlowColumAlignJustCent()
+{
+    display: flex;
+    justify-content: center;
+    flex-flow: column;
+    align-items: center;
+}
+
+@mixin flexFlowRowAlignJustCent()
+{
+    display: flex;
+    flex-flow: row;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin flexNoWrapCentJustAlign()
+{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin flexCentJust()
+{
+    display: flex;
+    justify-content: center;
+}
+@mixin flexRowWrapSpaceBet ()
+{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+}
+
+@mixin flexRowWrapSpaceAround ()
+{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+}
+@mixin flexSpaceCenterEnca ()
+{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+// Animaciones
+
+@mixin aparecerKey()
+{
+    @keyframes aparecer {
+        from {
+            opacity: 0;
+        }
+        to {
+            opacity: 1;
+        }
+    }
+}
+
+@mixin aparecerFade
+{
+
+    @keyframes fadein {
+        0% {
+          opacity: 0;
+          transform: translateX(50%) scale(0) rotateZ(-60deg);
+        }
+        
+        100% {
+          opacity: 1;
+          transform: translateX(0) scale(1) rotateZ(0deg);
+        }
+      }
+}
+
+@mixin rebote
+{
+
+    @keyframes bounce {
+        0%, 20%, 50%, 80%, 100% {
+            transform: translateY(0);
+        }
+        40% {
+            transform: translateY(-10px);
+        }
+        60% {
+            transform: translateY(-5px);
+        }
+      }
+}
+
+@mixin girar
+{
+    @keyframes flipper {
+        0% {
+        opacity: 0;
+        transform: rotateY(180deg);
+        }
+        
+        100% {
+        opacity: 1;
+        transform: rotateY(0deg);
+        }
+    }
+}
+
+@mixin aumentar
+{
+    @keyframes aumenta {
+        0% {
+          opacity: 0;
+          transform: scale(0);
+        }
+        
+        100% {
+          opacity: 1;
+          transform: scale(1);
+        }
+      }
+    
+}
+
+@mixin coloresEfecto
+{
+    @keyframes cambiaColor 
+    {
+        from { background: rgb(239, 190, 130);}  
+        30% { background: rgb(210, 151, 79);} 
+        60% { background: rgb(175, 121, 56); }
+        90% { background: rgb(210, 151, 79); }  
+        to { background: rgb(239, 190, 130);}   
+
+    }
+}
+
+
+@mixin sacudir
+{
+    @keyframes shake {
+        0% { transform: translateX(0); }
+        25% { transform: translateX(-5px) rotate(-5deg); }
+        50% { transform: translateX(5px) rotate(5deg); }
+        75% { transform: translateX(-5px) rotate(-5deg); }
+        100% { transform: translateX(0); }
+      }
+}
+
+
+@mixin aparecer
+{
+
+    @keyframes apareciendo {
+        from {
+            opacity: 0;
+            transform: translateY(-20px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+}
+
+
+@mixin color
+{
+
+    @keyframes cambioColor {
+        from {
+            background-color: #fff; 
+        }
+        to {
+            background-color: rgb(255, 226, 163); 
+        }
+    }
+}
+
+@mixin aumento
+{
+
+    @keyframes aumento {
+        from {
+            transform: scale(1);
+        }
+        to {
+            transform: scale(1.2);
+        }
+    }
+}
+
+@mixin tiovivo
+{
+
+    @keyframes subirBajar {
+        0% {
+            transform: translateY(0);
+        }
+        50% {
+            transform: translateY(-5px);
+        }
+        100% {
+            transform: translateY(0);
+        }
+    }
+}
+
+
+
+
+

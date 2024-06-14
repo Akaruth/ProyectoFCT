@@ -1,0 +1,89 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+.envoltorioContacto {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 50px 0 50px 0;
+  color: white;
+  background: url(../imagen/prueba3.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.boton {
+  padding: 5px;
+  border-radius: 10px;
+  background-color: rgb(250, 198, 28);
+  color: black;
+  text-decoration: none;
+  border: none;
+}
+
+.boton:hover {
+  color: rgb(84, 66, 10);
+}
+
+.foto {
+  width: 700px;
+}
+
+.espacio {
+  background-color: #B6B1B1;
+  padding: 40px;
+}
+
+.formu {
+  width: 700px;
+  background-color: #979797;
+  padding: 20px;
+  border-radius: 5px;
+}
+
+@media screen and (max-width: 1500px) {
+  .foto {
+    width: 600px;
+  }
+  .formu {
+    width: 600px;
+  }
+}
+@media screen and (max-width: 1300px) {
+  .foto {
+    width: 500px;
+  }
+  .formu {
+    width: 500px;
+  }
+}
+@media screen and (max-width: 1100px) {
+  .formu {
+    width: 450px;
+  }
+}
+@media screen and (max-width: 1000px) {
+  .envoltorioContacto {
+    display: flex;
+    flex-flow: column wrap;
+  }
+  .formu {
+    width: 500px;
+    margin-top: 20px;
+  }
+}
+@media screen and (max-width: 600px) {
+  .foto {
+    width: 450px;
+  }
+  .formu {
+    width: 450px;
+  }
+}
+
+/*# sourceMappingURL=contacto.css.map */

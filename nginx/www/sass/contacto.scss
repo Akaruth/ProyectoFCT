@@ -1,0 +1,122 @@
+@use 'partials/variables' as *;
+@use 'partials/mixins' as *;
+@use 'partials/breakpoints' as *;
+
+* 
+  {
+    margin: $cero;
+    padding: $cero;
+    box-sizing: border-box;
+  }
+
+.envoltorioContacto
+{
+    @include flexSpaceEvenly();
+    @include padding500500();
+    color: $blanco;
+    background: url(../imagen/prueba3.png);
+    @include ajustesFondoFull();
+}
+.boton
+{
+    padding: $cinco;
+    border-radius: $diez;
+    background-color: $amarilloMenu;
+    color: $negro;
+    text-decoration: $nada;
+    border: $nada;
+
+}
+.boton:hover
+{
+    color: $colorEnlaceHover;
+
+}
+.foto
+{
+    width: $setecientos;
+}
+
+.espacio
+{
+    background-color: $colorEspacio;
+    padding: $cuarenta;
+}
+.formu
+{
+    width: $setecientos;
+    background-color: $colorFormuContacto;
+    padding: $veinte;
+    border-radius: $cinco;
+}
+
+
+@include pixeles1500
+{
+    
+    .foto
+    {
+        width: $seiscientos;
+    }
+    .formu
+    {
+        width: $seiscientos;
+       
+    }
+}
+
+@include pixeles1300
+{
+    .foto
+    {
+        width: $quinientos;
+    }
+    .formu
+    {
+        width: $quinientos;
+       
+    }
+}
+
+
+@include pixeles1100
+{
+
+    .formu
+    {
+        width: $cuatrocientoscinquenta;
+       
+    }
+}
+
+
+@include pixeles1000
+{
+    .envoltorioContacto
+    {
+        @include flexColumWrap();
+       
+    }
+    
+    
+    .formu
+    {
+        width: $quinientos;
+        margin-top: $veinte;
+
+    }
+}
+
+@include pixeles600
+{
+    
+    .foto
+    {
+        width: $cuatrocientoscinquenta;
+    }
+    .formu
+    {
+        width: $cuatrocientoscinquenta;
+      
+    }
+}

@@ -1,0 +1,793 @@
+@use 'partials/variables' as *;
+@use 'partials/mixins' as *;
+@use 'partials/breakpoints' as *;
+
+* 
+  {
+    margin: $cero;
+    padding: $cero;
+    box-sizing: border-box;
+  }
+
+.fondoInicio
+{
+    background: url(../imagen/fondoInicio.png);
+    @include ajustesFondoFull();
+
+}
+.cuerpo
+{
+    display: grid;
+    grid-template-areas:
+        'area1 area1 area2 area2 area2 area2 area3 area3'
+        'area1 area1 area2 area2 area2 area2 area3 area3'
+        'area1 area1 area2 area2 area2 area2 area3 area3'
+
+    ;
+    align-items: $textoCentro;
+    color: $blanco;
+    padding: $veinte;
+    padding-top: $sesenta;
+    padding-bottom: $sesenta;
+}
+.tamanoContacto,.tamanoOferta,.tamanoPokedex,.tamanoMinijuego
+{
+    font-size: $treinta;
+}
+.tamanoOferta
+{
+    font-size: $treintacinco;
+    text-align: $textoCentro;
+}
+.nada1
+{
+    grid-area: nada1;
+    margin-top: $veinte;
+
+}
+.nada2
+{
+    grid-area: nada2;
+    margin-top: $veinte;
+
+}
+.area1
+{
+    grid-area: area1;
+    @include flexColumCentrada();
+    height: $cuatrocientos;
+    width: $setecientos;
+    background: url(../imagen/pokemonNegro.png);
+    @include ajustesFondoFull();
+    border-radius: $dos;
+    padding: $treinta;
+    border: $uno solid $negroOpaco03;
+
+}
+.lista1
+{
+    @include flexColum();
+    background-color: $blancoOpaco09;
+    border-radius: $cinco;
+    list-style: $nada;
+    padding: $treinta;
+    color: $negro;
+    height: $cientoochenta;
+}
+.area2
+{
+    grid-area: area2;
+    @include flexColumCentrada();
+    height: $cuatrocientos;
+    width: $cuatrocientos;
+    background: url(../imagen/medioFondo.png);
+    @include ajustesFondoFull();
+    border-radius: $dos;
+    padding: $treinta;
+    border: $uno solid $negroOpaco03;
+
+}
+.lista2
+{
+    @include flexColum();
+    background-color: $blancoOpaco09;
+    border-radius: $cinco;
+    list-style: $nada;
+    padding: $treinta;
+    color: $negro;
+    height: $cientoochenta;
+
+}
+
+.area3
+{
+    grid-area: area3;
+    @include flexColumCentrada();
+    height: $cuatrocientos;
+    width: $setecientos;
+    background: url(../imagen/pokemonBlanco.png);
+    @include ajustesFondoFull();
+    border-radius: $dos;
+    padding: $treinta;
+    border: $uno solid $negroOpaco03;
+
+}
+.lista3
+{
+    @include flexColum();
+    background-color: $blancoOpaco09;
+    border-radius: $cinco;
+    list-style: $nada;
+    @include padding15301530();
+    color: $negro;
+
+}
+
+.letraRuta
+{
+    text-shadow:
+    $uno $uno $dos $negro,
+    $cero $cero 1em $blanco,
+    $cero $cero 0.2em $blanco;}
+
+.letraRecientes
+{
+    text-shadow:
+    $uno $uno $dos $negro,
+    $cero  $cero  1em $blanco,
+    $cero  $cero  0.2em rgb(2, 2, 2);
+}
+.letraListado
+{
+    text-shadow:
+    $uno $uno $dos $negro,
+    $cero  $cero  1em $negro,
+    $cero  $cero  0.2em $negro;
+
+}
+
+.letraOferta
+{
+    text-shadow:
+    $uno $uno $dos rgb(110, 109, 109),
+    $cero  $cero  1em rgb(189, 189, 189),
+    $cero  $cero  0.2em rgb(219, 217, 217);
+    
+}
+.letraPokedex
+{
+    text-align: center;
+    text-shadow:
+    $uno $uno $dos rgb(110, 109, 109),
+    $cero  $cero 1em rgb(189, 189, 189),
+    $cero  $cero  0.2em rgb(219, 217, 217);
+}
+.boton
+{
+    padding: $cinco;
+    border-radius: $diez;
+    background-color: $amarilloMenu;
+    color: $negro;
+    text-decoration: $nada;
+    border: $nada;
+
+}
+.boton:hover
+{
+    color: $colorEnlaceHover;
+
+}
+.fondoOferta
+{
+    padding: $veinticinco;
+}
+.ofertaRegistro
+{
+    @include flex-rowsCent ();
+    background-color: $blanco;
+    border-radius:$cinco;
+    padding: $cinco;
+    border: $uno solid $negroOpaco03;
+}
+
+.imagenOferta
+{
+    padding: $cinco;   
+}
+
+.ofertaPokedex
+{
+    @include flex-rowsCent ();
+    border-radius:$cinco;
+    
+}
+
+.div1,.div2
+{
+    background-color: $blanco;
+    padding: $veinte;   
+    border-radius: $cinco;
+    border: $uno solid $negroOpaco03;
+
+}
+
+.div1,.div2
+{
+    width: $seiscientos;
+}
+.imagenPokedex
+{
+    width: $cuatrocientos;
+
+}
+
+.centrarImagen
+{
+    @include flexColumAligCenter();
+
+}
+.imagenMinijuego
+{
+    width: $doscientoscincuenta;
+    padding: $cinco;   
+    border-radius: $cinco;
+}
+
+.enlace
+{
+    text-decoration: $nada;
+    color: $colorEnlace;
+
+}
+
+.enlace:hover
+{
+    text-decoration: $nada;
+    color: $colorEnlaceHover;
+
+}
+
+@include pixeles1850
+{
+    .fondoOferta
+    {
+        padding: $veinticinco;
+        @include flexJustiCenter();
+
+    }
+    .ofertaRegistro
+    {
+      width: $milsetecientos;
+    }
+    .div2
+    {
+        margin-left: $doscientos;
+    }
+    .cuerpo
+    {
+        display: grid;
+        grid-template-areas:
+            'area1 area1 area3 area3 '
+            'nada1 area2 area2 nada2 '
+
+        ;
+        align-items: $textoCentro;
+        color: $blanco;
+        padding: $veinte;
+        padding-top: $sesenta;
+        padding-bottom: $sesenta;
+    }
+
+    .area1
+    {
+        grid-area: area1;
+        @include flexColumCentrada();
+        height: $cuatrocientos;
+        width:$ochocientos;
+        background: url(../imagen/pokemonNegro.png);
+        @include ajustesFondoFull();
+        border-radius: $dos;
+        padding: $treinta;
+
+    }
+    
+    .area2
+    {
+       
+        height: $cuatrocientos;
+        width: $mil;
+        margin-top: $veinte;
+
+    }
+    .lista2
+    {
+        width: $seiscientos;
+
+    }
+    .area3
+    {
+       
+        height: $cuatrocientos;
+        width: $ochocientos;
+    }
+    .lista3
+    {
+        padding: $treinta;
+    }
+    .tamanoOferta
+    {
+        font-size: $treinta;
+    }
+}
+
+@include pixeles1650
+{
+    .cuerpo
+    {
+        display: grid;
+        grid-template-areas:
+            'area1 area1 area1 area1 '
+            'area2 area2 area2 area2 '
+            'area3 area3 area3 area3 '
+
+        ;
+        @include aligJustCent();
+        color: $blanco;
+        padding: $veinte;
+        padding-top: $sesenta;
+        padding-bottom: $sesenta;
+    }
+
+    .area1
+    {
+        height: $cuatrocientos;
+        width: $mil;
+    }
+    
+    .area3
+    {
+        height: $cuatrocientos;
+        width: $mil;
+        margin-top: $veinte;
+
+    }
+    
+    .tamanoOferta
+    {
+        font-size: $veinticinco;
+        
+    }
+   
+}
+
+@include pixeles1450
+{
+    .div2
+    {
+        margin-left: $cien;
+    }
+}
+
+@include pixeles1350
+{
+    .div2
+    {
+        margin-left: $cincuenta;
+    }
+}
+
+@include pixeles1300
+{
+    .div1,.div2
+    {
+        width: $quinientoscincuenta;
+        height: $cuatrocientos;
+
+    }
+    .imagenPokedex
+    {
+        width: $cuatrocientosveinte;
+
+    }
+
+    .imagenMinijuego
+    {
+        width: $doscientoscincuenta;
+        padding: $cinco;   
+        border-radius: $cinco;
+    }
+    .imagenOferta
+    {
+        width: $cuatrocientos;
+    }
+}
+
+@include pixeles1200
+{
+   
+    .tamanoContacto,.tamanoPokedex,.tamanoMinijuego, .tamanoOferta
+    {
+        font-size: $veinticinco; 
+    }
+    .div1,.div2
+    {
+        width: $cuatrocientosnoventa;
+    }
+    .imagenPokedex
+    {
+        width: $cuatrocientos;
+
+    }
+    .div2
+    {
+        margin-left: $veinte;
+    }
+
+    .imagenMinijuego
+    {
+        width: $doscientoscincuenta;
+        padding: $cinco;   
+        border-radius: $cinco;
+    }
+    .imagenOferta
+    {
+        width: $trescientoscinquenta;
+    }
+  
+    .ofertaRegistro
+    {
+        width: $mil;
+    }
+}
+
+@include pixeles1100
+{
+    .div1,.div2
+    {
+        width: $trescientosnoventa;
+        height: $trescientoscinquenta;
+
+    }
+    .div2
+    {
+        margin-left: $veinte;
+    }
+    .imagenPokedex
+    {
+        width: $trescientoscinquenta;
+
+    }
+
+    .imagenMinijuego
+    {
+        width: $doscientos;
+        padding: $cinco;   
+        border-radius: $cinco;
+    }
+    .imagenMinijuego
+    {
+        width: $doscientoscincuenta;
+        padding: $cinco;   
+        border-radius: $cinco;
+    }
+
+    .area1
+    {
+        height: $cuatrocientos;
+        width: $ochocientos;
+    }
+    
+    .area2
+    {
+        height: $cuatrocientos;
+        width: $ochocientos;
+    }
+   
+    .area3
+    {
+        height: $cuatrocientos;
+        width: $ochocientos;
+
+    }
+   
+    .ofertaRegistro
+    {
+        @include flexColSpaceAligCent();
+        background-color: $blanco;
+        border-radius:$cinco;
+        width: $ochocientos;
+
+    }
+    
+    .tamanoContacto,.tamanoOferta,.tamanoPokedex,.tamanoMinijuego
+    {
+        font-size: $veinte;
+    }
+    
+}
+
+
+@include pixeles850
+{
+    .div1,.div2
+    {
+        width: $setecientos;
+        height: $trescientoscinquenta;
+
+    }
+    .div2
+    {
+        margin-top: $cincuenta;
+        margin-left: $cero;
+    }
+    
+    .area1
+    {
+        
+        height: $cuatrocientos;
+        width: $setecientos;
+    }
+   
+    .area2
+    {
+        height: $cuatrocientos;
+        width: $setecientos;
+    }
+    .lista2
+    {
+        width: $cuatrocientos;
+    }
+    .area3
+    {
+        height: $cuatrocientos;
+        width: $setecientos;
+        
+
+    }
+   
+    .ofertaRegistro
+    {
+        @include flexColSpaceAligCent();
+        background-color: $blanco;
+        border-radius:$cinco;
+        width: $setecientos;
+
+    }
+
+    .ofertaPokedex
+    {
+        @include flexColSpaceAligCent();
+        border-radius:$cinco;
+    }
+    
+    .tamanoContacto,.tamanoOferta,.tamanoPokedex,.tamanoMinijuego
+    {
+        font-size: $veinte;
+    }
+}
+
+
+
+@include pixeles750
+{
+    .div1,.div2
+    {
+        width: $seiscientos;
+        height: $trescientoscinquenta;
+
+    }
+    .div2
+    {
+        margin-top: $cincuenta;
+    }
+    .imagenPokedex
+    {
+        width: $trescientoscinquenta;
+
+    }
+
+    .imagenMinijuego
+    {
+        width: $doscientos;
+        padding: $cinco;   
+        border-radius: $cinco;
+    }
+    .imagenMinijuego
+    {
+        width: $doscientoscincuenta;
+        padding: $cinco;   
+        border-radius: $cinco;
+    }
+
+    .area1
+    {
+        
+        height: $cuatrocientos;
+        width: $seiscientos;
+    }
+  
+    .area2
+    {
+        height: $cuatrocientos;
+        width: $seiscientos;
+    }
+   
+    .area3
+    {
+        
+        height: $cuatrocientos;
+        width: $seiscientos;
+
+    }
+   
+    .ofertaRegistro
+    {
+        @include flexColSpaceAligCent();
+        background-color: $blanco;
+        border-radius:$cinco;
+        width: $seiscientos;
+
+    }
+
+    .ofertaPokedex
+    {
+        @include flexColSpaceAligCent();
+        border-radius:$cinco;
+    }
+   
+    .tamanoContacto,.tamanoOferta,.tamanoPokedex,.tamanoMinijuego
+    {
+        font-size: $veinte;
+    }
+}
+
+
+@include pixeles650
+{
+    .div1,.div2
+    {
+        width: $quinientos;
+        height: $trescientoscinquenta;
+
+    }
+    .div2
+    {
+        margin-top: $cincuenta;
+    }
+    .imagenPokedex
+    {
+        width: $trescientoscinquenta;
+
+    }
+
+    .imagenMinijuego
+    {
+        width: $doscientos;
+        padding: $cinco;   
+        border-radius: $cinco;
+    }
+    .imagenMinijuego
+    {
+        width: $doscientoscincuenta;
+        padding: $cinco;   
+        border-radius: $cinco;
+    }
+
+    .area1
+    {
+        
+        height: $cuatrocientos;
+        width: $quinientos;
+    }
+    
+    .area2
+    {
+        height: $cuatrocientos;
+        width: $quinientos;    
+
+    }
+    .lista2
+    {
+        
+        width: $trescientos;
+
+    }
+    .area3
+    {
+       
+        height: $cuatrocientos;
+        width: $quinientos;
+
+    }
+    
+    .ofertaRegistro
+    {
+        @include flexColSpaceAligCent();
+        background-color: $blanco;
+        border-radius:$cinco;
+        width: $quinientos;
+
+    }
+
+    .ofertaPokedex
+    {
+        @include flexColSpaceAligCent();
+        border-radius:$cinco;
+    }
+    
+    .tamanoContacto,.tamanoOferta,.tamanoPokedex,.tamanoMinijuego
+    {
+        font-size: $veinte;
+    }
+}
+
+
+@include pixeles550
+{
+    .div1,.div2
+    {
+        width: $cuatrocientoscinquenta;
+        height: $trescientoscinquenta;
+
+    }
+    .div2
+    {
+        margin-top: $cincuenta;
+    }
+    .imagenPokedex
+    {
+        width: $trescientoscinquenta;
+
+    }
+
+    .imagenMinijuego
+    {
+        width: $doscientos;
+        padding: $cinco;   
+        border-radius: $cinco;
+    }
+    .imagenMinijuego
+    {
+        width: $doscientoscincuenta;
+        padding: $cinco;   
+        border-radius: $cinco;
+    }
+    
+    .area1
+    {
+        height: $cuatrocientos;
+        width: $cuatrocientoscinquenta;
+    }
+    
+    .area2
+    {
+        height: $cuatrocientos;
+        width: $cuatrocientoscinquenta;
+    }
+    
+    .area3
+    {
+        height: $cuatrocientos;
+        width: $cuatrocientoscinquenta;
+    }
+   
+    .ofertaRegistro
+    {
+        @include flexColSpaceAligCent();
+        background-color: $blanco;
+        border-radius:$cinco;
+        width: $cuatrocientoscinquenta;
+
+    }
+
+    .ofertaPokedex
+    {
+        @include flexColSpaceAligCent();
+        border-radius:$cinco;
+    }
+    
+    .tamanoContacto,.tamanoPokedex,.tamanoMinijuego, .tamanoOferta
+    {
+        font-size: $veinte;
+    }
+}

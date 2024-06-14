@@ -1,0 +1,319 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+.page-item.active .page-link {
+  z-index: 3px;
+  color: white;
+  background-color: rgb(250, 198, 28);
+  border-color: #dee2e6;
+}
+
+.page-link {
+  position: relative;
+  display: block;
+  color: rgb(84, 66, 10);
+  text-decoration: none;
+  background-color: white;
+  border: 1px solid #dee2e6;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.enlace {
+  text-decoration: none;
+  color: rgb(186, 148, 21);
+}
+
+.enlace:hover {
+  text-decoration: none;
+  color: rgb(84, 66, 10);
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0px;
+  padding: 0px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+}
+
+.envoltorioContenido {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  padding: 50px 100px 50px 100px;
+  background: url(../imagen/prueba2.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.envoltorioContenido .contenido {
+  width: 1300px;
+}
+.envoltorioContenido .contenido .entradaColor {
+  background-color: white;
+  margin: 20px;
+  padding: 40px;
+  border-radius: 5px;
+  box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.2);
+}
+.envoltorioContenido .contenido .tituloEntradaS {
+  font-size: 30px;
+}
+.envoltorioContenido .contenido .fechaEntradaS {
+  font-size: 16px;
+}
+.envoltorioContenido .contenido .separado {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.envoltorioContenido .contenido .separacionTextoEntrada {
+  padding-right: 100px;
+}
+.envoltorioContenido .contenido .envoltorioBotonEntrada {
+  display: flex;
+  justify-content: end;
+}
+.envoltorioContenido .contenido .envoltorioBotonEntrada .botonCrearEntrada {
+  padding: 5px;
+  border-radius: 10px;
+  margin-right: 20px;
+  font-size: 24px;
+  background-color: rgb(250, 198, 28);
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+}
+
+.fotoEntradas {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.fotoEntradas .fotoEchaUnViztazo {
+  width: 100%;
+}
+
+.envoltorioCrud {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: end;
+  gap: 10px;
+}
+.envoltorioCrud .editar {
+  color: rgb(97, 97, 243);
+  font-weight: bold;
+  text-decoration: none;
+  cursor: pointer;
+}
+.envoltorioCrud .eliminar {
+  color: rgb(236, 69, 69);
+  font-weight: bold;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.envoltorioEditar {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: start;
+  margin: 20px;
+}
+.envoltorioEditar .tituloEntrada {
+  width: 1000px;
+  border-radius: 10px;
+  font-size: 24px;
+}
+.envoltorioEditar .textFormulario {
+  margin-top: 20px;
+  width: 1000px;
+  border-radius: 10px;
+  background-color: white;
+  padding: 5px;
+}
+.envoltorioEditar .envoltorioBotonEditar {
+  display: flex;
+  justify-content: end;
+}
+.envoltorioEditar .envoltorioBotonEditar .botonEditar {
+  border: none;
+  border-radius: 5px;
+  padding: 3px;
+  background-color: rgb(126, 188, 240);
+}
+.envoltorioEditar .valoracionEditar {
+  margin-left: 5px;
+  width: 40px;
+}
+
+@media screen and (max-width: 1450px) {
+  .envoltorioContenido .contenido {
+    width: 1000px;
+  }
+  .envoltorioContenido .contenido .tituloEntradaS {
+    font-size: 25px;
+  }
+  .envoltorioContenido .contenido .separacionTextoEntrada {
+    padding-right: 100px;
+  }
+  .envoltorioEditar {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: start;
+    margin: 20px;
+  }
+  .envoltorioEditar .tituloEntrada {
+    width: 800px;
+    border-radius: 10px;
+    font-size: 24px;
+  }
+  .envoltorioEditar .textFormulario {
+    margin-top: 20px;
+    width: 800px;
+    border-radius: 10px;
+    background-color: white;
+    padding: 5px;
+  }
+  .envoltorioEditar .envoltorioBotonEditar .botonEditar {
+    border-radius: 5px;
+    padding: 3px;
+  }
+}
+@media screen and (max-width: 1200px) {
+  .envoltorioContenido .contenido {
+    width: 800px;
+  }
+  .envoltorioContenido .contenido .separacionTextoEntrada {
+    padding-right: 100px;
+  }
+  .envoltorioEditar {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: start;
+    margin: 20px;
+  }
+  .envoltorioEditar .tituloEntrada {
+    width: 700px;
+    border-radius: 10px;
+    font-size: 24px;
+  }
+  .envoltorioEditar .textFormulario {
+    margin-top: 20px;
+    width: 700px;
+    border-radius: 10px;
+    background-color: white;
+    padding: 5px;
+  }
+  .envoltorioEditar .envoltorioBotonEditar .botonEditar {
+    border-radius: 5px;
+    padding: 3px;
+  }
+}
+@media screen and (max-width: 900px) {
+  .envoltorioContenido .contenido {
+    width: 600px;
+  }
+  .envoltorioContenido .contenido .tituloEntradaS {
+    font-size: 20px;
+  }
+  .envoltorioContenido .contenido .separacionTextoEntrada {
+    padding-right: 100px;
+  }
+  .envoltorioEditar {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: start;
+    margin: 20px;
+  }
+  .envoltorioEditar .tituloEntrada {
+    width: 500px;
+    border-radius: 10px;
+    font-size: 24px;
+  }
+  .envoltorioEditar .textFormulario {
+    margin-top: 20px;
+    width: 500px;
+    border-radius: 10px;
+    background-color: white;
+    padding: 5px;
+  }
+  .envoltorioEditar .envoltorioBotonEditar .botonEditar {
+    border-radius: 5px;
+    padding: 3px;
+  }
+}
+@media screen and (max-width: 700px) {
+  .envoltorioContenido .contenido {
+    width: 500px;
+  }
+  .envoltorioContenido .contenido .tituloEntradaS {
+    font-size: 18px;
+  }
+  .envoltorioContenido .contenido .fechaEntradaS {
+    font-size: 10px;
+  }
+  .envoltorioContenido .contenido .separacionTextoEntrada {
+    padding-right: 100px;
+  }
+  .envoltorioEditar {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: start;
+    margin: 20px;
+  }
+  .envoltorioEditar .tituloEntrada {
+    width: 400px;
+    font-size: 24px;
+  }
+  .envoltorioEditar .textFormulario {
+    margin-top: 20px;
+    width: 400px;
+    padding: 5px;
+  }
+  .envoltorioEditar .envoltorioBotonEditar .botonEditar {
+    padding: 3px;
+  }
+}
+@media screen and (max-width: 550px) {
+  .envoltorioContenido .contenido {
+    width: 450px;
+  }
+  .envoltorioContenido .contenido .entradaColor {
+    margin: 20px;
+    padding: 20px;
+  }
+  .envoltorioContenido .contenido .tituloEntradaS {
+    font-size: 16px;
+  }
+  .envoltorioContenido .contenido .fechaEntradaS {
+    font-size: 10px;
+  }
+  .envoltorioContenido .contenido .separacionTextoEntrada {
+    padding-right: 100px;
+  }
+  .envoltorioEditar .tituloEntrada {
+    width: 350px;
+    font-size: 16px;
+  }
+  .envoltorioEditar .textFormulario {
+    margin-top: 20px;
+    width: 250px;
+    border-radius: 10px;
+    background-color: white;
+    padding: 5px;
+  }
+  .envoltorioEditar .envoltorioBotonEditar .botonEditar {
+    padding: 3px;
+  }
+}
+
+/*# sourceMappingURL=akachat.css.map */

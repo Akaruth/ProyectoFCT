@@ -1,0 +1,117 @@
+@use 'partials/variables' as *;
+@use 'partials/mixins' as *;
+@use 'partials/breakpoints' as *;
+
+* 
+{
+    margin: $cero;
+    padding: $cero;
+    box-sizing: border-box;
+}
+.enlace
+{
+    text-decoration: $nada;
+    color: $colorEnlace;
+
+}
+
+.enlace:hover
+{
+    text-decoration: $nada;
+    color: $colorEnlaceHover;
+
+}
+.boton
+{
+    padding: $cinco;
+    border-radius: $diez;
+    background-color: $amarilloMenu;
+    color: $negro;
+    text-decoration: $nada;
+    border: $nada;
+
+}
+.boton:hover
+{
+    color: $colorEnlaceHover;
+
+}
+.titulo1
+{
+    font-size: $treintacinco;
+    font-weight: $negrita;
+    background-color: $blancoOpaco08;
+    padding: $cinco;
+    border-radius: $cinco;
+}
+.centrar
+{
+    @include flexColumCentrada();
+    height: $setecientos;
+}
+.fondo1
+{
+    background: url(../imagen/fondo1forms.png);
+    @include ajustesFondoFull();
+
+}
+.tamanoFormulario1
+{
+    
+    width: $setecientos;
+    height: auto;
+}
+
+.card
+{
+    position: relative;
+    @include flexcolumn();
+    min-width: $cero;
+    word-wrap: break-word;
+    background-color: $blancoOpaco08;
+    background-clip: border-box;
+    border: 1px solid rgba(0, 0, 0, .125);
+    border-radius: .25rem;
+}
+
+@include pixeles750
+{
+    .titulo1
+    {
+        font-size: $treinta;
+        font-weight: $negrita;
+    }
+    .tamanoFormulario1
+    {
+        
+        width: $seiscientos;
+        height: auto;
+    }
+}
+
+
+@include pixeles650
+{
+    .titulo1
+    {
+        font-size: $veinticinco;
+    }
+    .tamanoFormulario1
+    {
+        
+        width: $quinientos;
+        height: auto;
+    }
+}
+
+
+@include pixeles550
+{
+    
+    .tamanoFormulario1
+    {
+        
+        width: $cuatrocientos;
+        height: auto;
+    }
+}
